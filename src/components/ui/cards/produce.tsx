@@ -1,5 +1,5 @@
 import { BadgePercent } from "lucide-react";
-import { Tag } from "../chips/tags";
+import { Tag } from "@/components/ui/chips/tags"
 
 export interface iProduceCard {
   label: string;
