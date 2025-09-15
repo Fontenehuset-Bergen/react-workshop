@@ -5,6 +5,7 @@
 ## Innhold
 
 - [Om prosjektet](#om-prosjektet)
+- [Dokumentasjon](docs/README.md)
 - [Mål for kurset](#mål-for-kurset)
 - [Praktisk opplegg](#praktisk-opplegg)
 - [Teknologi og verktøy](#teknologi-og-verktøy)
