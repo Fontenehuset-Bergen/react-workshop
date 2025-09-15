@@ -38,7 +38,7 @@ Du lurer kanskje på hva de forskjellige filene gjør
 
 ## Hvordan kan vi endre på Vite oppsettet?
 
-Hovedsakelig finner du alle instillinger filen `vite.config.ts` som ligger i root av prosjektet. Vite har god [dokumentasjon](https://vite.dev/config/) for instillinger i denne filen, og guides på hva du må gjøre hvis du skal f.eks ligge til plugins
+Hovedsakelig finner du alle instillinger filen `vite.config.ts` som ligger i root av prosjektet. Vite har god [dokumentasjon](https://vite.dev/config/) for instillinger i denne filen, og guides på hva du må gjøre hvis du skal f.eks ligge til plugins eller skifte på port
 
 ```ts
 import { defineConfig } from "vite";
@@ -47,12 +47,15 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  server: {
+    port: 3000
+  }
 });
 ```
 
 <table width="100%">
   <tr>
     <td><a href="1_installation.md">← Installasjon</a></td>
-    <td align="right"><a href="../week_2/README.md">Neste emne →</a></td>
+    <td align="right"><a href="3_react.md">React →</a></td>
   </tr>
 </table>
