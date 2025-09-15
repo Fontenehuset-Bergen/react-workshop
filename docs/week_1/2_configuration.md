@@ -1,4 +1,4 @@
-# Uke 1: Oppsett
+# Oppsett
 
 Siden vi har en fungerende installasjon av Vite er det på tide at vi ser nærmere på hvordan dette egentlig fungerer og leker litt med mulighetene vi har
 
@@ -52,6 +52,9 @@ export default defineConfig({
   }
 });
 ```
+
+## Oppsumering
+Vi har kjapt sett på hvordan vi kan sitte opp Vite og konfigurere den til våre behov. I neste seksjon skal vi se nærmere på rammeverket React som vi bruker for å lage nettsiden med.
 
 <table width="100%">
   <tr>
