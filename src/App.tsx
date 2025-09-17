@@ -6,8 +6,11 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
-  return (
-  )
+  return 
+    <div>
+      <h1>Hello World</h1>
+      <p>sometext</p>
+    </div>
 }
 
 export default App
