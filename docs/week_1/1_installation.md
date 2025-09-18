@@ -1,4 +1,4 @@
-# Uke 1: Installasjon
+# Installasjon
 
 > [!NOTE]  
 > Vi kommer til å bruke linker i dokumentasjonen som tar deg videre til andre dokumentasjonsfiler, dette fungerer aller best hvis i nettleseren hvis du besøker vårt [repo](https://github.com/Fontenehuset-Bergen/react-workshop/docs). Det er også mulig å åpne linker i VS-code hvis du holder nede `ctrl` eller `alt` og trykker på linken, hvis du bruker et annet IDE må du kanskje spørre eller google for å finne denne funksjonaliteten.
@@ -49,6 +49,8 @@ Dette repositoriet inneholder gradvis progresjon av React prosjektet, du kan nav
 - `week_<nummer>_<emne>` inneholder ferdig kode og dokumentasjon for aktuelt emnet
 - `week_<nummer>_<emne>_codealong` inneholder kode fra starten av emnet hvis du heller ønsker å gjøre ting selv
 
+### Hvordan laster jeg ned koden
+todo
 
 ## Hvordan installerer jeg React?
 
@@ -96,7 +98,7 @@ Hvis du følger med i terminalen kan du se server logs for debugging, her finner
 ```
 
 ## Oppsumering
-Vi har gått igjennom hvordan vi skal lage et utviklingsmiljø hvor vi kan lage vår React nettside, vi har kjørt alle nødvendige kommandoer slik at prosjektet er klart til å jobbes med. Vi skal i neste emne se på hvordan Vite fungerer.
+Vi har gått igjennom hvordan vi skal lage et utviklingsmiljø hvor vi kan lage vår React nettside, vi har kjørt alle nødvendige kommandoer slik at prosjektet er klart til å jobbes med. Vi skal i neste emne se på hvordan Vite fungerer og hvordan vi kan endre på instillinger.
 
 <table width="100%">
   <tr>
