@@ -1,11 +1,14 @@
-import { MyButton } from "./components/buttons"
+import { MyButton } from "./components/buttons";
+import { HelloWorld } from "./components/hello";
+
 
 function App() {
   
-  return (<div>
-        <h1> HELLO </h1>
+  return (
+      <div>
+        <HelloWorld />
         <p>blablabla</p>
-        <MyButton></MyButton>
+        <MyButton />
       </div>
   );
 }
