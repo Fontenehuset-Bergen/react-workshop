@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+body {
+    
+}
+
+:root {
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+    width: 100%;
+    min-height: 100svh;
+
+}
+header {
+    
+}
+
+
+main {
+flex: 1
+
+}
+
+footer {
+
+}

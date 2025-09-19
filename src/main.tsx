@@ -1,19 +1,25 @@
 // Global imports
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-
-// Styles
-import "./assets/styles/global.css";
-
-// React components
-import { LandingPage } from "./app/page.tsx";
-import { Header } from "./components/layout/sections/header.tsx";
-import { Footer } from "./components/layout/sections/footer.tsx";
+import { MyButton } from "./components/Button";
+import "./assets/global.css"
+import { HeaderLink } from "./components/ui/link/HeaderLink";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Header />
-    <LandingPage />
-    <Footer />
+    <header className="flex flex-row justify-around p-2"> 
+  
+  <span>logo</span>
+  <nav>
+      <HeaderLink href="#" label="about" />
+      <HeaderLink href="#" label="home" />
+      </nav>
+    </header>
+    
+    <main>
+      <MyButton />
+    </main>
+    <footer></footer>
+
   </StrictMode>
 );
