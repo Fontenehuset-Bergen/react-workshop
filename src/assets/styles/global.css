@@ -28,6 +28,10 @@ body {
   min-height: 100svh;
 }
 
+main {
+  margin-top: 100px;
+}
+
 a {
   font-weight: 500;
   color: #646cff;

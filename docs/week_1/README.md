@@ -2,8 +2,10 @@
 Velkommen til introduksjon i front-end rammeverk for Fontenehuset Bergen. Vi sitter av første uken til å bli kjent med teknologi stacken vi kommer til å bruke.
 
 # Innholdsliste
-- Installasjon
-- Konfigurasjon
+- [Installasjon](./1_installation.md)
+- [Konfigurasjon](./2_configuration.md)
+- [React](./3_react.md)
+- [Styling](./4_styling.md)
 
 <table width="100%">
   <tr>
