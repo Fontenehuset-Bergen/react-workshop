@@ -7,7 +7,7 @@ import { HeaderLayout } from './components/layout/Headers.tsx'
 import { SectionLayout } from './components/layout/Sections.tsx'
 import { FooterLayout } from './components/layout/Footer.tsx'
 import './index.css'
-import { ProduceCard } from "./components/ui/cards/PoduceCards.tsx";
+import { ProduceCard } from "./components/ui/cards/ProduceCards.tsx";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -25,6 +25,14 @@ createRoot(document.getElementById('root')!).render(
       price={29}
       qnt={10}
       tags={["fruit","tasty"]}
+      />
+      <ProduceCard
+      name="orange"
+      description="round and orange"
+      picture="/vite.svg"
+      price={45}
+      qnt={15}
+      tags={["fruit","tasty","round"]}
       />
     </SectionLayout>
     <MyButton />
