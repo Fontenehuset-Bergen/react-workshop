@@ -8,7 +8,7 @@ export function HeaderLayout() {
             <img src="/vite.svg" />
         </span>
         <nav className="flex flex-row gap-4">
-          {navigationLinks.map((link)  => <a href = {link.href}>{link.label}></a>)}
+          {navigationLinks.map((link)  => <a href = {link.href}>{link.label}</a>)}
         </nav>
     </header>
     );
