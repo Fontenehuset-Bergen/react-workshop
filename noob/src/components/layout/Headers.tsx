@@ -3,7 +3,7 @@ import navigationLinks from "../../data/navigationLinks.json"
 export function HeaderLayout() {
     
   return(
-    <header className="fixed flex flex-row justify-around bg-gradient-to-1 from-orange-400 to-purple-500">
+    <header className="fixed w-full flex flex-row justify-around bg-gradient-to-l from-orange-600 to-purple-700">
         <span id="blabla" className="blabla">
             <img src="/vite.svg" />
         </span>
