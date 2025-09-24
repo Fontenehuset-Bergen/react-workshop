@@ -1,4 +1,4 @@
-# Uke 3 - Fetch og hooks
+# Uke 3 - Routing og navigasjonslogikk
 
 
 # Innholdsliste
