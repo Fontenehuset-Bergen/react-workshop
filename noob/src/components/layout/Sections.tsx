@@ -6,5 +6,5 @@ interface SectionLayoutProps {
 }
 
 export function SectionLayout({children}:SectionLayoutProps) {
-    return <section>{children}</section>
+    return <section className="flex flex-gol gap-2">{children}</section>
 }
