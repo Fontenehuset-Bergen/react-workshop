@@ -5,10 +5,11 @@ interface ProduceCardProps {
     description:string
     tags: string[]
     picture: string
+    onSale: boolean
 }
 
 export function ProduceCard(props: ProduceCardProps) {
-    const { name, description, picture, price, qnt, tags } = props;
+    const { name, description, picture, price, qnt, tags, onSale } = props;
 
     return (<div className="flex gap-2 p-2 bg-amber-100 rounded">
         <div>
@@ -23,6 +24,7 @@ export function ProduceCard(props: ProduceCardProps) {
                 {tags.map((tag)=><p className="bg-green-300 p-2 rounded">{tag}</p>)}
                 </span>
         </div>
+        {onSale && <span>Firesale!1</span>}
     </div>
     );
 }

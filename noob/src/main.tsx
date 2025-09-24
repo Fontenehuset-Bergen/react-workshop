@@ -25,6 +25,7 @@ createRoot(document.getElementById('root')!).render(
       price={29}
       qnt={10}
       tags={["fruit","tasty"]}
+      onSale={false}
       />
       <ProduceCard
       name="orange"
@@ -33,6 +34,7 @@ createRoot(document.getElementById('root')!).render(
       price={45}
       qnt={15}
       tags={["fruit","tasty","round"]}
+      onSale={true}
       />
     </SectionLayout>
     <MyButton />
