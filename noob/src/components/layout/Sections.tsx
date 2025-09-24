@@ -1,7 +1,10 @@
-interface SectionLayoutProps (
-    children: string
-)
+import type { ReactNode } from "react"
 
-export function SectionLayout((children):SectionLayoutProps) {
-    return <section>(children)</section>
+
+interface SectionLayoutProps {
+    children: ReactNode;
+}
+
+export function SectionLayout({children}:SectionLayoutProps) {
+    return <section>{children}</section>
 }
