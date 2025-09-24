@@ -132,6 +132,6 @@ Største forskjellen mellom `useState` og `useRef` er hvordan de utløser render
 <table width="100%">
   <tr>
     <td><a href="2_props.md">← Props</a></td>
-    <td align="right"><a href="../week_3/README.md">Neste emne →</a></td>
+    <td align="right"><a href="4_lifecycles.md">Lifssyklus →</a></td>
   </tr>
 </table>
