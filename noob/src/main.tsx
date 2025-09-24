@@ -14,6 +14,7 @@ createRoot(document.getElementById('root')!).render(
    <main>
     <SectionLayout>
       <h1>section header</h1>
+      <p>zippidy doo dah</p>
     </SectionLayout>
     <MyButton />
    </main>
