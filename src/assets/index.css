@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+body {
+    background-color: rgb(155, 154, 154);
+    margin: 0;
+};
+
+#root {
+    background-color: rgb(54, 3, 3);
+    width: 100%;
+    min-height: 100svh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: darkgray;
+    height: 50px;
+};
