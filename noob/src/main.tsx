@@ -2,17 +2,26 @@ import "./index.css";
 
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { MyButton } from "./components/buttons.tsx"
+import { MyButton } from "./components/ui/buttons/buttons.tsx"
 import { HeaderLayout } from './components/layout/Headers.tsx'
 import { SectionLayout } from './components/layout/Sections.tsx'
 import { FooterLayout } from './components/layout/Footer.tsx'
 import './index.css'
-import { ProduceCard } from "./components/ui/cards/ProduceCards.tsx";
+import { ProduceCard } from "./components/ui/cards/ProduceCard.tsx";
+import { UserProfileCard } from "./components/ui/cards/UserProfile.tsx";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <HeaderLayout />
    <main>
+    <UserProfileCard
+      age={29}
+      avatar="/vite.svg"
+      description="Hi, I'm cool!"
+      username="Kristoffer"
+      hobbies={["Coding", "Coffee"]}
+      dateOfBirth={new Date (1986, 4, 3)}
+      />
     <SectionLayout>
       <h1>section header</h1>
       <p>zippidy doo dah</p>
@@ -29,7 +38,7 @@ createRoot(document.getElementById('root')!).render(
       />
       <ProduceCard
       name="orange"
-      description="round and orange"
+      description="round, sour and orange"
       picture="/vite.svg"
       price={45}
       qnt={15}
