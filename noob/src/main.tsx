@@ -15,7 +15,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <HeaderLayout />
    <main>
-    <TodoList />
+    <TodoList initialValue ={["import useState", "Define initial value"]}/>
     <UserProfileCard
       age={29}
       avatar="/vite.svg"

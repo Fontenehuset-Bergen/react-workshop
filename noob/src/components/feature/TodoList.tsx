@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { type ChangeEvent } from "react";
 
-export function TodoList(){
-    const [todoList, setTodoList] = useState<string[]>([])
+interface TodoListProps {
+    initialValue: string[]
+}
+
+export function TodoList(props:TodoListProps){
+    const [todoList, setTodoList] = useState<string[]>(props.initialValue)
     const [inputValue, setInputValue] = useState("")
 
     function handleInput() {
