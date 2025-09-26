@@ -1,23 +1,18 @@
 @import "tailwindcss";
 
-:root {
-    display: flex;
-    flex-direction: column;
+body {
+    margin: 0;
     background-color: aquamarine;
-    text-align: center;
 }
 
-header {
+#root {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    min-height: 20px;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100svh;
 }
 
 main {
+    margin-top: 100px;
     flex: 1;
-}
-
-footer {
-    text-align: center;
 }

@@ -1,3 +1,3 @@
 export function MyButton() {
-    return <button>Navigation</button>
+    return <button>Buy Now!</button>
 }
