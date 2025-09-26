@@ -9,6 +9,9 @@ export function TodoList(props:TodoListProps){
     const [todoList, setTodoList] = useState<string[]>(props.initialValue)
     const [inputValue, setInputValue] = useState("")
 
+    const test = useState(false)
+    console.log(test[0])
+
     function handleInput() {
         if (inputValue.length >3) {
             setTodoList((old) => [...old, inputValue])
