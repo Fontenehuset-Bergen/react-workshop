@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChangeEvent } from "react";
+import { type ChangeEvent } from "react";
 
 export function TodoList(){
     const [todoList, setTodoList] = useState<string[]>([])
