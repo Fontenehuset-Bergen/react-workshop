@@ -7,18 +7,39 @@ import { HeaderLayout } from "./components/layout/Header";
 import { FooterLayout } from "./components/layout/Footer";
 import { SectionLayout } from "./components/layout/Sections";
 import { ProduceCard } from "./components/ui/cards/ProduceCard";
+import { UserProfileCard } from "./components/ui/cards/UserProfile";
+import { Questioneer } from "./components/ui/cards/Questioneer";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <HeaderLayout />
     <main>
+      <Questioneer />
+      <UserProfileCard
+        age={29}
+        avatar="/vite.svg"
+        description="Hi, im cool!"
+        username="Kristoffer"
+        hobbies={["Coding", "coffee"]}
+        dateOfBirth={new Date(2000, 1, 4)}
+        isMember={true}
+      />
+      <UserProfileCard
+        age={32}
+        avatar="/vite.svg"
+        description="Super awesome guest"
+        username="Karoline"
+        hobbies={["Sports", "Relaxing"]}
+        dateOfBirth={new Date(1980, 1, 7)}
+      />
+
       <SectionLayout>
         <h1>section header</h1>
         <p>lorem ipusum</p>
       </SectionLayout>
       <SectionLayout>
         <ProduceCard
-          name="Banan" 
+          name="Banan"
           description="Quite juizy yellow bannana"
           picture="/vite.svg"
           price={29}
@@ -26,7 +47,7 @@ createRoot(document.getElementById("root")!).render(
           tags={["fruit", "tasty"]}
         />
         <ProduceCard
-          name="Orange" 
+          name="Orange"
           description="A sour treat"
           picture="/vite.svg"
           price={90}
