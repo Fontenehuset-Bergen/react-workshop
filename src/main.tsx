@@ -1,27 +1,42 @@
 import "./assets/style/index.css";
 
-import logo from "./assets/vite.svg"
-
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { MyButton } from "./components/ui/buttons/Button";
-import { HeaderLink } from "./components/ui/links/HeaderLink";
+import { HeaderLayout } from "./components/layout/Header";
+import { FooterLayout } from "./components/layout/Footer";
+import { SectionLayout } from "./components/layout/Sections";
+import { ProduceCard } from "./components/ui/cards/ProduceCard";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <header className="flex flex-row justify-around bg-gradient-to-l from-orange-400 to-purple-500">
-      <span id="blalba" className="blabla">
-        <img src={logo} />
-      </span>
-      <nav className="flex flex-row gap-4">
-        <HeaderLink href="#" label="Home" />
-        <HeaderLink href="#" label="About us" />
-        <h1></h1>
-      </nav>
-    </header>
+    <HeaderLayout />
     <main>
+      <SectionLayout>
+        <h1>section header</h1>
+        <p>lorem ipusum</p>
+      </SectionLayout>
+      <SectionLayout>
+        <ProduceCard
+          name="Banan" 
+          description="Quite juizy yellow bannana"
+          picture="/vite.svg"
+          price={29}
+          qnt={10}
+          tags={["fruit", "tasty"]}
+        />
+        <ProduceCard
+          name="Orange" 
+          description="A sour treat"
+          picture="/vite.svg"
+          price={90}
+          qnt={2}
+          tags={["vegtable", "soury", "smelly"]}
+          onSale={true}
+        />
+      </SectionLayout>
       <MyButton />
     </main>
-    <footer></footer>
+    <FooterLayout />
   </StrictMode>
 );

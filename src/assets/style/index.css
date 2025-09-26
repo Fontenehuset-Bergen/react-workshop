@@ -13,17 +13,6 @@ body {
 }
 
 main {
+    margin-top: 100px;
     flex: 1
 }
-
-footer {
-    
-}
-
-h1 {
-
-}
-
-#blabla{}
-
-.blabla{}

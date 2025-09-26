@@ -1,0 +1,12 @@
+[
+    {
+        "label": "Hjem",
+        "href": "/"
+    },{
+        "label": "About",
+        "href": "/"
+    },{
+        "label": "Kontakt oss",
+        "href": "/"
+    }
+]
