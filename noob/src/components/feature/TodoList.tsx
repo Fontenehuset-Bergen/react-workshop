@@ -17,7 +17,6 @@ export function TodoList(){
 
     function removeTodoItem(todo: string) {
         const newTodoList = todoList.filter((existingTodo)=> existingTodo != todo)
-        console.log(newTodoList)
         setTodoList(newTodoList)
     }
 
