@@ -1,3 +1,5 @@
+import { DropdownMenu } from "../menus/Dropdown";
+
 interface UserProfileProps{
     username:string;
     avatar:string;
@@ -28,10 +30,11 @@ export function UserProfileCard(props: UserProfileProps) {
             <p>Hobbies:</p>
              <span className="flex gap-1">
                 {props.hobbies.map((tag) =>
-                <p className="bg-amber-300 p-1"></p>
+                <p className="bg-amber-300 p-1">{tag}</p>
                 )}
              </span>
         </span>
+        <DropdownMenu />
     </div>
     )
 }
