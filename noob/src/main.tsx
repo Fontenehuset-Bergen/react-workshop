@@ -9,13 +9,13 @@ import { FooterLayout } from './components/layout/Footer.tsx'
 import './index.css'
 import { ProduceCard } from "./components/ui/cards/ProduceCard.tsx";
 import { UserProfileCard } from "./components/ui/cards/UserProfile.tsx";
-import { Questionaire } from "./components/ui/cards/Questionaire.tsx";
+import { TodoList } from "./components/feature/TodoList.tsx";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <HeaderLayout />
    <main>
-    <Questionaire />
+    <TodoList />
     <UserProfileCard
       age={29}
       avatar="/vite.svg"
