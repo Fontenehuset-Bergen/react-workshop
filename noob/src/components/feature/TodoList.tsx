@@ -11,6 +11,18 @@ export function TodoList(props:TodoListProps){
 
     const test = useState(false)
     console.log(test[0])
+    const myState = test[0]
+    const setMyState = test[1]
+
+    const myobject = {
+        name: "bla bla bla",
+        age: 29,
+        dob: new Date(2000,1,1)
+    }
+
+    const {age,dob,name} = myobject
+
+    console.log(name, myobject.name)
 
     function handleInput() {
         if (inputValue.length >3) {
