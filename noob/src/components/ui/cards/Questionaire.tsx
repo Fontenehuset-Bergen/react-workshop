@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, type ChangeEvent } from "react";
 
 export function Questionaire(){
     const [responses, setResponses] = useState("");
 
-    function handleInput() {
-        setResponses("Typing...")
+    function handleInput(event: ChangeEvent<HTMLInputElement>) {
+       
+        setResponses( event.target.value)
     }
  
     return (
