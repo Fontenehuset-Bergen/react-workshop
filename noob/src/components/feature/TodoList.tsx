@@ -15,12 +15,17 @@ export function TodoList(){
         setInputValue(event.target.value)
     }
 
+    function removeTodoItem(todo: string) {
+        console.log(todo)
+    }
+
     return (
         <div className = "flex flex-col gap-2 bg-stone-700 text-white">
         <h2 className= "text-2xl">Todo-list</h2>
         {todoList.map((todo) => (
             <span>
                 <p>{todo}</p>
+                <button onClick={() => removeTodoItem(todo)} className="bg-red-600">X</button>
             </span>
         ))}
         <input placeholder="Add a todo item" onChange={handleChange} className="bg-white text-black"/>
