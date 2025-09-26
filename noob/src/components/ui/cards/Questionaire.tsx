@@ -4,9 +4,13 @@ export function Questionaire(){
     const [responses, setResponses] = useState("");
 
     function handleInput(event: ChangeEvent<HTMLInputElement>) {
-       
-        setResponses( event.target.value)
+       if(event.target.value =="4") {
+        setResponses("You guessed correctly")
+       }
+       else {
+        setResponses("Try again");
     }
+}
  
     return (
         <div>
