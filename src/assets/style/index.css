@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    background-color: skyblue;
+    background-color: rgb(207, 207, 207);
 }
 
 #root {
@@ -14,5 +14,5 @@ body {
 
 main {
     margin-top: 100px;
-    flex: 1
+    flex: 1;
 }
