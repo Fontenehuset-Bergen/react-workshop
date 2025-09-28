@@ -1,0 +1,60 @@
+.mainC {
+    display: flex;
+    padding: 10px;
+    margin: 0 auto;
+    width: 400px;
+    height: auto;
+    background-color: rgb(141, 255, 225);
+    border: 2px solid rgb(39, 17, 17);
+    border-radius: 15px;
+    object-fit: cover;
+}
+.flexC {
+    display:flex;
+}
+.imageC {
+    display: flex;
+    padding: 10px;
+    height: 180px;
+    width: auto;
+    object-fit: cover;
+}
+.infolist {
+    display:flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+.h1s {
+    font-size: 35px;
+    font-weight: 700;
+    margin-left: 20px;
+    color:rgb(9, 97, 1);
+    text-align: center;
+}
+.pstyles {
+    color:brown;
+    font-style: italic;
+}
+.age {
+    display: flex;
+    gap: 5px;
+}
+.birthday {
+    display: flex;
+    font-size: 18px;
+    gap: 5px;
+}
+.hobbies{
+    display: flex;
+    gap: 5px;
+}
+.tagsC {
+    display: flex;
+    gap: 5px;
+    
+}
+.tags {
+    padding: 0px 5px 0px 5px;
+    background-color: #ffeded;
+    border-radius: 5px;
+}

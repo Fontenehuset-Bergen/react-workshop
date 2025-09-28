@@ -9,11 +9,21 @@ import { SectionLayout } from "./components/layout/Sections";
 import { ProduceCard } from "./components/ui/cards/ProduceCard";
 import { UserProfileCard } from "./components/ui/cards/UserProfile";
 import { Questioneer } from "./components/ui/cards/Questioneer";
+import { YuriisCard } from "./components/ui/cards/YuriisCard";{}
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <HeaderLayout />
     <main>
+      <YuriisCard
+        age={36}
+        avatar="/vite.svg"
+        description="Hola!"
+        username="Yurii"
+        hobbies={["Coding", "coffee"]}
+        dateOfBirth={new Date(1988, 10, 7)}
+        isMember={true}
+      />
       <Questioneer />
       <UserProfileCard
         age={29}

@@ -5,8 +5,8 @@
     background-color: #ff0000;
     border: 2px solid black;
     border-radius: 10px;
-    transition: all 1s;
+    transition: all ease-in-out 0.4s;
 }
 .mybutton:hover {
-    background-color: #fcb9b9;
+    background-color: #00f7ff;
 }

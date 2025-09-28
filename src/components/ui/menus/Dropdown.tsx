@@ -9,7 +9,7 @@ export function DropdownMenu() {
 
   return (
     <div>
-      <button onClick={handleVisiblity}>Open menu</button>
+      <button onClick={handleVisiblity} className="flex-1 red">Open menu</button>
       {isVisible && (
         <div>
           <button>Edit profile</button>
