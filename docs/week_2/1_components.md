@@ -84,3 +84,11 @@ Her var det en del nye ting som skjedde for mange, hvis kan bryte ned det vi gjo
 - Vi bruker den innebygde [javascript funksjonen .map()](https://www.w3schools.com/jsref/jsref_map.asp) til å itterere over array'en med data vi mottok i props tidligere.
 - Javascript map forventer en "callback function", dette er en funksjon som kan kjøres over hvert element i array'et vi bruker.
 - I eksempelet over så er vår callback function en arrow function `(element, index) => (hva som skal returneres)`,
+
+
+<table width="100%">
+  <tr>
+    <td><a href="README.md">← Tilbake</a></td>
+    <td align="right"><a href="2_props.md">Props →</a></td>
+  </tr>
+</table>

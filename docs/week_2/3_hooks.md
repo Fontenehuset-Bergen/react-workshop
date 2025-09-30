@@ -128,3 +128,10 @@ Største forskjellen mellom `useState` og `useRef` er hvordan de utløser render
 | Samspill med DOM          | Indirekte (via render)                                                    | Direkte (fokusere, måle, spille av video, osv.) via `ref`                               |
 | Performance-notat         | Re-render kan være dyrt: batcher/optimaliser ved behov                    | Ingen re-render: fint for tellere/ID-er/tidsur som ikke skal trigge visuell oppdatering |
 
+
+<table width="100%">
+  <tr>
+    <td><a href="2_props.md">← Props</a></td>
+    <td align="right"><a href="4_lifecycles.md">Lifssyklus →</a></td>
+  </tr>
+</table>

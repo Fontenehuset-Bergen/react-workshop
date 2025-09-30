@@ -98,3 +98,11 @@ function ChildComponent(props: Agenda) {
   );
 }
 ```
+
+
+<table width="100%">
+  <tr>
+    <td><a href="1_components.md">← Komponenter</a></td>
+    <td align="right"><a href="3_hooks.md">Hooks →</a></td>
+  </tr>
+</table>

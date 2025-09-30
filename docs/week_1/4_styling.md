@@ -66,32 +66,6 @@ export function MyButton() {
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Vi har mange muligheter for å implementere styling når vi bruker react.
-- Vanlig css med .css filer spredt rundt
-- Css modules hvis vi ønsker å ha "scooped" styles i komponenter som ikke skal påvirke andre komponenter
-- Css preprocessors f.eks .sass
-- Tailwind for å bruke classes rett i komponenter
-
-## Css
-
-## Tailwind
-
-
 <table width="100%">
   <tr>
     <td><a href="3_react.md">← React</a></td>
