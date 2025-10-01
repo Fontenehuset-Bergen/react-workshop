@@ -7,6 +7,7 @@ import { FooterLayout } from "./components/layout/Footer";
 import { ExampleUseState } from "./components/examples/useState";
 import { ExampleUseRef } from "./components/examples/useRef";
 import { ExampleUseRef2 } from "./components/examples/useRef2";
+import { ExampleUseEffect } from "./components/examples/useEffect";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById("root")!).render(
       <ExampleUseState names={["Ole", "John", "Lars", "Linda", "Mimi"]} />
       <ExampleUseRef/>
       <ExampleUseRef2/>
+      <ExampleUseEffect/>
     </main>
     <FooterLayout />
   </StrictMode>
