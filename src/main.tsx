@@ -2,7 +2,6 @@ import "./asstes/style/index.css";
 
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { MyButton } from "./components/ui/buttons/Button";
 import { HeaderLayout } from "./components/layout/Header";
 import { FooterLayout } from "./components/layout/Footer";
 import { SectionLayout } from "./components/layout/Sections";
