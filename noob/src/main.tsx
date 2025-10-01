@@ -8,12 +8,14 @@ import { FooterLayout } from './components/layout/Footer.tsx'
 import './index.css'
 import { UserProfileCard } from "./components/ui/cards/UserProfile.tsx";
 import { ExampleUserRef2 } from "./components/feature/useRef.tsx"
+import { ExampleUseEffect } from "./components/feature/useEffect.tsx"
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <HeaderLayout />
    <main>
     <ExampleUserRef2 />
+    <ExampleUseEffect />
     <UserProfileCard
       age={29}
       avatar="/vite.svg"
