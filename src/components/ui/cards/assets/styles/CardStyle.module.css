@@ -8,6 +8,10 @@
     border: 2px solid rgb(39, 17, 17);
     border-radius: 15px;
     object-fit: cover;
+    transition: all 0.4 ease-in-out;
+}
+.mainC:hover {
+    transform: scale(0.9);
 }
 .flexC {
     display:flex;
