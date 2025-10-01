@@ -16,3 +16,8 @@ main {
     margin-top: 100px;
     flex: 1;
 }
+
+input {
+    background-color: white;
+    color: black;
+}
