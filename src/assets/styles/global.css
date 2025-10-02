@@ -1,13 +1,28 @@
 @import "tailwindcss";
 
+/* Vi kan bruke globale css variabler i root til å gruppere verdier vi ønsker å gjennbruke */
 :root {
+  --color-background: #232634;
+  --color-text-primary: #c6d0f5;
+}
+
+/* Vi kan bruke @media queries til å påvirke variabler ut i fra brukere sine browser instillinger */
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-background:: #eff1f5;
+    --color-text-primary: #4c4f69;
+  }
+}
+
+/* Vi kan angi standarder for styling i html tag, disse vill påvirke alle andre elementer */
+html {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,21 +30,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-}
-
 body {
   margin: 0;
-  min-width: 100%;
+  min-width: 375px;
   min-height: 100svh;
 }
 
 main {
-  margin-top: 100px;
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1;
+  margin-inline: auto;
+  @apply container gap-6 mt-16 p-2;
 }
 
 a {
