@@ -8,7 +8,7 @@ import {
 
 interface FadeSectionAdvancedProps {
   children: ReactNode;
-  props: ComponentProps<"section">;
+  props?: ComponentProps<"section">;
 }
 
 export function FadeInSectionAdvanced({

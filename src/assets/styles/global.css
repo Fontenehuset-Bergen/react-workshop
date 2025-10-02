@@ -41,7 +41,7 @@ main {
   flex-flow: column nowrap;
   flex: 1;
   margin-inline: auto;
-  @apply container gap-6 lg:gap-12 mt-16 p-2;
+  @apply container gap-12 lg:gap-24 mt-16 p-2;
 }
 
 section {
