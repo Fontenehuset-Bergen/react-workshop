@@ -1,8 +1,9 @@
 #root {
-  width: 100%;
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  gap: 2rem
+  section h2 {
+    transition: padding 0.3s ease-out;
+  }
+  section h2:hover {
+    padding-left: 1rem;
+    border-left: 1px solid var(--color-text-primary);
+  }
 }
