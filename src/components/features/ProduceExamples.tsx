@@ -22,7 +22,7 @@ export function ProduceCardExamples() {
     dateListed: new Date(2025, 1, 3),
   };
   return (
-    <section className="flex flex-col gap-2">
+    <section>
       <h2>Kort komponenter</h2>
       <p>Se vårt store utvalg av frukt og grønt!</p>
       <span className="flex justify-center flex-wrap gap-2">
@@ -31,6 +31,7 @@ export function ProduceCardExamples() {
         <ProduceCard {...produce2} />
         <ProduceCard {...produce2} />
       </span>
+      <hr />
     </section>
   );
 }

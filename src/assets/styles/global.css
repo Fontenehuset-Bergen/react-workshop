@@ -41,7 +41,26 @@ main {
   flex-flow: column nowrap;
   flex: 1;
   margin-inline: auto;
-  @apply container gap-6 mt-16 p-2;
+  @apply container gap-6 lg:gap-12 mt-16 p-2;
+}
+
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  @apply gap-4
+}
+
+/* Text regler */
+h1 {
+  font-size: xx-large;
+}
+
+h2 {
+  font-size: x-large;
+}
+
+h3 {
+  font-size: large;
 }
 
 a {

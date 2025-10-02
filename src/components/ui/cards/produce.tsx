@@ -1,5 +1,5 @@
 import { BadgePercent } from "lucide-react";
-import { Tag } from "@/components/ui/chips/tags"
+import { Tag } from "@/components/ui/chips/tags";
 
 export interface iProduceCard {
   label: string;
@@ -23,7 +23,11 @@ export function ProduceCard({
   return (
     <div className="relative flex items-center w-96 p-2 gap-4 rounded-md bg-slate-200 text-black hover:shadow-lg dark:shadow-purple-500/25 ease-in-out transition-shadow duration-200">
       <span>
-        <img src={imgLink} alt={`An image of ${label}`} className="size-36 mix-blend-multiply object-contain" />
+        <img
+          src={imgLink}
+          alt={`An image of ${label}`}
+          className="size-36 mix-blend-multiply object-contain"
+        />
       </span>
       <div className="flex flex-col gap-1">
         <h3 className="w-full border-b">{label}</h3>
@@ -33,8 +37,8 @@ export function ProduceCard({
           <p className="text-sm">{`${price} kr`}</p>
         </span>
         <span className="flex gap-1 flex-wrap">
-          {tags.map((tag) => (
-            <Tag tag={tag} />
+          {tags.map((tag, index) => (
+            <Tag key={tag + index} tag={tag} />
           ))}
         </span>
         <span className="text-xs italic ml-auto">{`Item listed: ${dateListed.toDateString()}`}</span>
