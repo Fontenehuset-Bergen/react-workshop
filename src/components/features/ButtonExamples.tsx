@@ -10,7 +10,7 @@ export function ButtonExamples() {
         <IconButton icon={<ShoppingCart />} label="kjøp nå!" />
         <IconButton icon={<Camera />} label="min knapp" />
       </span>
-      <hr />
+      
     </section>
   );
 }

@@ -1,4 +1,6 @@
 import { FadeInSection } from "../layout/sections/FadeInSection";
+import { FadeInSectionAdvanced } from "../layout/sections/FadeInSectionAdvanced";
+import { ProduceCardExamples } from "./ProduceExamples";
 
 export function FadeInExample() {
   return (
@@ -37,7 +39,15 @@ export function FadeInExample() {
         ut laudantium illum laborum dolorum, ex saepe? Non voluptate temporibus
         vel adipisci voluptates enim, ab fugiat.
       </p>
-      <hr />
+      
     </FadeInSection>
+  );
+}
+
+export function FadeInExample2() {
+  return (
+    <FadeInSectionAdvanced>
+      <ProduceCardExamples />
+    </FadeInSectionAdvanced>
   );
 }

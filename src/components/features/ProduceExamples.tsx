@@ -31,7 +31,7 @@ export function ProduceCardExamples() {
         <ProduceCard {...produce2} />
         <ProduceCard {...produce2} />
       </span>
-      <hr />
+      
     </section>
   );
 }
