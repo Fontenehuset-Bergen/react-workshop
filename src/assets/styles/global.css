@@ -44,6 +44,10 @@ main {
   @apply container gap-12 lg:gap-24 mt-16 p-2;
 }
 
+footer {
+  @apply mt-24
+}
+
 section {
   display: flex;
   flex-flow: column nowrap;
