@@ -23,7 +23,7 @@ export function ProduceCard({
   return (
     <div className="relative flex items-center w-96 p-2 gap-4 rounded-md bg-slate-200 text-black hover:shadow-lg dark:shadow-purple-500/25 ease-in-out transition-shadow duration-200">
       <span>
-        <img src={imgLink} alt={`An image of ${label}`} className="size-36" />
+        <img src={imgLink} alt={`An image of ${label}`} className="size-36 mix-blend-multiply object-contain" />
       </span>
       <div className="flex flex-col gap-1">
         <h3 className="w-full border-b">{label}</h3>
