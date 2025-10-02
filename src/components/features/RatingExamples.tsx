@@ -1,9 +1,8 @@
-import { FadeInSection } from "../layout/sections/FadeInSection";
 import { RatingStars } from "../ui/rating/Stars";
 
 export function RatingExamples() {
   return (
-    <FadeInSection>
+    <section>
       <h1>Ratings</h1>
       <p>Vi kan lage et komponent som viser star ratings</p>
       <span className="flex justify-around flex-wrap">
@@ -22,6 +21,6 @@ export function RatingExamples() {
           <RatingStars rating={5.5} />
         </div>
       </span>
-    </FadeInSection>
+    </section>
   );
 }
