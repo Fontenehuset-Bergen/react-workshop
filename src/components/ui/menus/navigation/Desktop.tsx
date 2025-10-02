@@ -2,9 +2,9 @@ import { type NavigationData } from "@/types/navigation";
 
 export function NavBarDesktop({ links }: { links: NavigationData[] }) {
   return (
-    <nav>
+    <nav className="flex gap-2">
       {links.map((item) => (
-        <a key={item.label} href={item.href}>
+        <a key={item.label} href={item.href} className="!text-white hover:underline">
           {item.label}
         </a>
       ))}
