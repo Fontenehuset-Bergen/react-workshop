@@ -1,10 +1,12 @@
 import { useState } from "react";
 
-port function ExampleTernary() {
+export function ExampleTernary() {
     const [isVisible, setIsVisible] = useState(false);
 
-    if (isVisible) {
+    const myNumber = 26
 
+    if (isVisible) {
+        //do something
     }
 
 const booleanToString = isVisible ? "visible" : "hidden"
@@ -20,6 +22,6 @@ return (
         my age is {myNumber}
         <p>this component is {booleanToString} {test}</p>
     </div>
-)
+);
 
 }

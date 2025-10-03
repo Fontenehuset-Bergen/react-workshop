@@ -31,8 +31,8 @@ let timeDiff = (stoppwatchTime - timeNow) / 10000
 return (
     <div className="bg-white p-4 w-fit">
         <h1>Stopwatch</h1>
-        <p>{timeDiff.toFixed(3)}</p>
-        <span>
+        <p>{seconds.toFixed(3)}</p>
+        <span className="flex gap-2">
             <button type="button" onClick={handleStart}>Start</button>
             <button type="button" onClick={handleStop}>Stop</button>
             <button type="button" onClick={handleReset}>Reset</button>
