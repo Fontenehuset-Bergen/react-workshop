@@ -1,11 +1,10 @@
-import { ProduceCardExamples } from "@/components/features/ProduceExamples";
 import { ButtonExamples } from "@/components/features/ButtonExamples";
-import "./page.css";
 import { FadeInExample } from "@/components/features/FadeInExample";
-import { RatingExamples } from "@/components/features/RatingExamples";
+import { ProduceCardExamples } from "@/components/features/ProduceExamples";
 import { ProfileExample } from "@/components/features/ProfileExample";
+import { RatingExamples } from "@/components/features/RatingExamples";
 
-export function LandingPage() {
+export default function Home() {
   return (
     <main>
       <ButtonExamples />

@@ -31,6 +31,8 @@ html {
 }
 
 body {
+  display: flex;
+  flex-flow: column nowrap;
   margin: 0;
   min-width: 375px;
   min-height: 100svh;
@@ -41,7 +43,7 @@ main {
   flex-flow: column nowrap;
   flex: 1;
   margin-inline: auto;
-  @apply container gap-12 lg:gap-24 mt-16 p-2;
+  @apply container gap-12 lg:gap-24 pt-16 p-2;
 }
 
 footer {
