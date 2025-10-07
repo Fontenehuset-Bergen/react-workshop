@@ -1,5 +1,4 @@
-
-import {useEffect, useState} from "react"
+import {useEffect, useState, useRef} from "react"
 
 export function ExampleUseEffect() {
     const [width, setWidth] = useState(0);
