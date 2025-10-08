@@ -24,7 +24,21 @@ Etterpå kan vi installere nødvendige developer dependencies
 npm install -D @react-router/dev @types/node tailwindcss @tailwindcss/vite vite-tsconfig-paths
 ```
 
+Vi må også huske å oppdatere `scripts` seksjonen i `package.json` slik at vi kjører de riktige kommandoene. Som dere sikkert ser så har vi byttet ut `vite` kommandoene med `react-router` spesefikke kommandoer. Det er fordi `react-router` tar over ansvaret for å sende riktig informasjon til `vite` og ikke omvendt.
+
+```json
+{
+  "scripts": {
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "start": "react-router-serve ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc"
+  }
+}
+```
+
 > [!note] Her er ferdig utfylt `package.json` du kan sammenligne med.
+
 <details>
 <summary>package.json</summary>
 Hvis du møter på noen problemer kan du bytte ut innholdet i din `package.json` fil med følgende kode. Du kan da lett installere riktige dependencies ved først å slette `node_modules` folderen og så kjøre `npm install`
@@ -71,6 +85,7 @@ Hvis du møter på noen problemer kan du bytte ut innholdet i din `package.json`
   }
 }
 ```
+
 </details>
 
 ## Nødvendige endringer for å ta i bruk routing
@@ -131,6 +146,7 @@ export default defineConfig({
 ```
 
 ### React router config
+
 Vi må også gi noen basis parametere for vår nye router, lag en fil som heter: `react-router.config.ts` og lim inn følgende kode
 
 ```ts
@@ -142,29 +158,23 @@ export default {
 } satisfies Config;
 ```
 
-### Oppdater package scripts
+### Routes oppsett
+For at react router skal fungere må vi også opprette en `routes.ts` som vill inneholde informasjon om ruter vi kommer til å bruke senere, akkurat nå kan vi lage skelettet for denne filen uten å ligge inn noen routes.
+```ts
+import { type RouteConfig, index, route } from "@react-router/dev/routes";
 
-Vi oppdatere `scripts` seksjonen i `package.json` før vi kan starte prosjektet slik at `npm run` bruker de riktige kommandoene
-
-```json
-{
-  "scripts": {
-    "build": "react-router build",
-    "dev": "react-router dev",
-    "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
-  }
-}
+export default [
+  // her kommer alle rutene våre senere
+] satisfies RouteConfig;
 ```
 
 ### Opprett entry-point med root.tsx
+
 Før vi installerte react-router var `index.html` inngangspunktet i appen vår. Det var her inkluderte react funksjonaliteten slik at brukeren kunne se nettsiden vår. React-router fungerer litt annerledes og vi trenger nå å opprette en ny fil som kan ta i mot forespørsler. Begynn med å lage en fil som heter `root.tsx` inni `src` mappen. (`src/root.tsx`)
 
 ```tsx
-import { Outlet } from "react-router";
-
 export default function App() {
-  return <h1>Hello!</h1>
+  return <h1>Hello!</h1>;
 }
 ```
 
@@ -187,7 +197,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 ```
 
 ## Start serveren
+
 Vi skal nå ha et minimalt eksempel klart til å kjøre. Hvis alt har gått riktig kan du starte serveren ved å kjøre følgende kommando
+
 ```console
 npm run dev
 ```

@@ -148,7 +148,9 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
 ```
 
 ## Opprett routes.ts for navigasjon
+
 Det siste steget vi trenger å gjøre er å opprette `src/routes.ts` for å definere de forskjellige siden vi ønsker å bruke, samt hvilke filer som skal benyttes.
+
 ```ts
 import { type RouteConfig, index, route } from "@react-router/dev/routes";
 
@@ -162,7 +164,9 @@ export default [
   route("*", "./not-found.tsx"),
 ] satisfies RouteConfig;
 ```
+
 Vi kan nå lage noen sider vi kan bruke i `src/pages/<rutenavn>/page.tsx`. Her er en liten "om oss" side som vill være tilgjengelig når vi skriver `/contact` i adressefeltet.
+
 ```tsx
 // src/pages/about/page.tsx
 export default function Page() {
@@ -175,6 +179,136 @@ export default function Page() {
 }
 ```
 
+Istedet for å manuelt skrive inn i adressefeltet når vi ønsker å besøke disse undersidene kan vi ligge til linker på siden vår. Hvis du bruker koden fra tidligere uker har du kanskej et ferdig header som inneholder en [navbar komponent](../week_2/1_components.md#iterere-over-data). Fra det eksempelet kan vi mate informasjon om rutene på vår side.
+
+```json
+// Navigasjonsdata
+[
+  {
+    "label": "Hjem",
+    "href": "/"
+  },
+  {
+    "label": "Om oss",
+    "href": "/about"
+  }
+]
+```
+
+Vi kan brukke denne dataen i header komponentet slikt
+
+```tsx
+import { SiteLogo } from "@/componenets/ui/images/SiteLogo.tsx"
+import { NavBar } from "@/componenets/menu/navigation/NavBar.tsx"
+import navigasjonsLinker from "@/data/navigation/links";
+
+export function Header() {
+  return (
+    <header>
+      <SiteLogo>
+      <NavBar links={navigasjonsLinker} />
+    </header>
+  );
+}
+```
+
+På nettsiden vill vi da få servert følgende html
+
+```html
+<header>
+  <img src="/logo.svg" alt="våre side logo" />
+  <nav>
+    <a href="/">Hjem</a>
+    <a href="/about">Om oss</a>
+  </nav>
+</header>
+```
+
+## [Route layouts](https://reactrouter.com/start/framework/routing#layout-routes)
+
+Vi så tidligere på hvordan vi brukte `Layout()` i `root.tsx` for å definere hoved utsendet til nettsiden vår, vi kan bygge videre på denne teknikken i rutene våre hvis vi ønsker at ruten skal ha et spesielt layout. Denne teknikken gjør for eksempel at vi kan ha en rute, f.eks `/faq` som inneholder resultatet fra flere undersider samtidig. Vi kan først begynne med å definere layout filen vår som er ansvarlig for å fordele innholdet på siden. Undersider vill bli satt inn der vi bruker `<Outlet>`
+
+```tsx
+import { Outlet } from "react-router";
+
+export default function SidebarLayout() {
+  return (
+    <main className="flex flex-row gap-12">
+      <aside className="flex flex-col">
+        <h3 className="text-center">Frequently asked questions</h3>
+        <NavLink to="/faq">Index</NavLink>
+        <NavLink to="/faq/react">React</NavLink>
+        <NavLink to="/faq/router">Router</NavLink>
+      </aside>
+      <Outlet />
+    </main>
+  );
+}
+```
+
+Vi kan så lage undersidene vi ønsker å bruke. I mitt eksempel ønsker jeg en side for seksjonene: react og router. Vi kan også ligge til en side som blir vår index når vi besøker /faq
+```tsx
+// src/pages/faq/faqIndex.tsx
+export default function FaqIndex() {
+  return (
+      <section>
+        <h1>faq index page</h1>
+        <p>this page will act as our index page when visiting /faq</p>
+        <p>
+          we can now use the menu on the left to navigate without that section
+          re-rendering
+        </p>
+      </section>
+  );
+}
+
+// src/pages/faq/sections/react.tsx
+export default function ReactPage() {
+  return (
+      <section>
+        <h1>React</h1>
+        <p>this page will display along with the sidebar when visting /faq/react</p>
+      </section>
+  );
+}
+
+// src/pages/faq/sections/router.tsx
+export default function RouterPage() {
+  return (
+      <section>
+        <h1>Router</h1>
+        <p>this page will display along with the sidebar when visting /faq/router</p>
+      </section>
+  );
+}
+```
+
+Til slutt trenger vi bare å bruke `prefix`, `layout`, `index` og `route` i vår `routes.ts` fil
+```ts
+import {
+  type RouteConfig,
+  index,
+  layout,
+  prefix,
+  route,
+} from "@react-router/dev/routes";
+
+export default [
+  // tidligere routes
+  index("pages/home.tsx"),
+  route("about", "pages/about/page.tsx"),
+  route("contact", "pages/contact/page.tsx"),
+
+  // vår nye route
+  ...prefix("faq", [
+    layout("components/layout/sidebar.tsx", [
+      index("pages/faq/faqIndex.tsx"),
+      route("react", "pages/faq/sections/react.tsx"),
+      route("router", "pages/faq/sections/router.tsx"),
+    ]),
+  ]),
+] satisfies RouteConfig;
+```
 
 <table width="100%">
   <tr>
