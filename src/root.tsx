@@ -1,7 +1,9 @@
 import "./assets/styles/index.css"
 import { Links, Meta, Scripts, ScrollRestoration } from "react-router";
+import { HeaderLayout } from "./components/layout/Headers";
+import { FooterLayout } from "./components/layout/Footer";
 
-export function Layout({ children }) {
+export function Layout({ children }: { children: React.ReactNode}) {
   return (
     <html lang="en">
       <head>
@@ -11,9 +13,11 @@ export function Layout({ children }) {
         <Links />
       </head>
       <body>
+        <HeaderLayout />
         {children}
-        <Scripts />
+        <FooterLayout />
         <ScrollRestoration />
+         <Scripts />
       </body>
     </html>
   );
