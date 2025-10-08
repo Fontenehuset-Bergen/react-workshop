@@ -3,6 +3,8 @@
 /* Vi kan bruke globale css variabler i root til å gruppere verdier vi ønsker å gjennbruke */
 :root {
   --color-background: #232634;
+  --color-foreground: #303446;
+
   --color-text-primary: #c6d0f5;
 }
 
@@ -10,8 +12,15 @@
 @media (prefers-color-scheme: light) {
   :root {
     --color-background:: #eff1f5;
+    --color-foreground: #acb0be;
+
     --color-text-primary: #4c4f69;
   }
+}
+
+@theme {
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
 }
 
 /* Vi kan angi standarder for styling i html tag, disse vill påvirke alle andre elementer */

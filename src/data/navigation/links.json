@@ -1,5 +1,6 @@
 [
   { "label": "Hjem", "href": "/" },
+  { "label": "FAQ", "href": "/faq" },
   { "label": "Om oss", "href": "/about" },
   { "label": "Kontakt", "href": "/contact" }
 ]
