@@ -215,6 +215,15 @@ På nettsiden vill vi da få servert følgende html
 </header>
 ```
 
+## Route layouts
+Vi så tidligere på hvordan vi brukte `Layout()` i `root.tsx` for å definere hoved utsendet til nettsiden vår, vi kan bygge videre på denne teknikken i rutene våre hvis vi ønsker at ruten skal ha et spesielt layout. Denne teknikken gjør for eksempel at vi kan ha en rute, f.eks `/faq` som inneholder resultatet fra flere undersider samtidig. Vi kan først begynne med å definere layout filen vår som er ansvarlig for å fordele innholdet på siden.
+
+```tsx
+layout
+```
+
+Vi 
+
 
 <table width="100%">
   <tr>
