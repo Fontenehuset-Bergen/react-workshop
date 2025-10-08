@@ -1,5 +1,5 @@
 import "./assets/styles/index.css"
-import { Links, Meta, Scripts, ScrollRestoration } from "react-router";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 import { HeaderLayout } from "./components/layout/Headers";
 import { FooterLayout } from "./components/layout/Footer";
 
@@ -24,5 +24,5 @@ export function Layout({ children }: { children: React.ReactNode}) {
 }
 
 export default function App() {
-    return <h1>hello world</h1>
+    return <Outlet />
 }
