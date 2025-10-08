@@ -1,15 +1,12 @@
 @import "tailwindcss";
 
 body {
-    margin: 0;
-    background-color: skyblue;
-}
-
-#root {
     display: flex;
     flex-direction: column;
     width: 100%;
     min-height: 100svh;
+    margin: 0;
+    background-color: skyblue;
 }
 
 main {

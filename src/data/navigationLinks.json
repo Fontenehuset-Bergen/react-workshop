@@ -4,9 +4,9 @@
         "href": "/"
     },{
         "label": "About",
-        "href": "/"
+        "href": "/about"
     },{
         "label": "Kontakt oss",
-        "href": "/"
+        "href": "/contact"
     }
 ]
