@@ -174,6 +174,46 @@ export default function Page() {
   );
 }
 ```
+Istedet for å manuelt skrive inn i adressefeltet når vi ønsker å besøke disse undersidene kan vi ligge til linker på siden vår. Hvis du bruker koden fra tidligere uker har du kanskej et ferdig header som inneholder en [navbar komponent](../week_2/1_components.md#iterere-over-data). Fra det eksempelet kan vi mate informasjon om rutene på vår side.
+
+```json
+// Navigasjonsdata
+[
+  {
+    "label": "Hjem",
+    "href": "/"
+  },
+  {
+    "label": "Om oss",
+    "href": "/about"
+  }
+]
+```
+Vi kan brukke denne dataen i header komponentet slikt
+```tsx
+import { SiteLogo } from "@/componenets/ui/images/SiteLogo.tsx"
+import { NavBar } from "@/componenets/menu/navigation/NavBar.tsx"
+import navigasjonsLinker from "@/data/navigation/links";
+
+export function Header() {
+  return (
+    <header>
+      <SiteLogo>
+      <NavBar links={navigasjonsLinker} />
+    </header>
+  );
+}
+```
+På nettsiden vill vi da få servert følgende html
+```html
+<header>
+  <img src="/logo.svg" alt="våre side logo">
+  <nav>
+    <a href="/">Hjem</a>
+    <a href="/about">Om oss</a>
+  </nav>
+</header>
+```
 
 
 <table width="100%">
