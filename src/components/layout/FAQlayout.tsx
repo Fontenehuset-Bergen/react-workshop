@@ -1,14 +1,13 @@
+import { Outlet } from "react-router"
+
 export function FAQLayout() {
     return <div>
-        <div>
-            {
+         <aside>
 
-            }
-        </div>
-        <div>
-            {
-                
-            }
-        </div>
+         </aside>
+        <main>
+            <h1>Answers</h1>
+           <Outlet />
+        </main>
     </div>
 }
