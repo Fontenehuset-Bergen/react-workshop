@@ -91,14 +91,7 @@ Slik vill filen se ut når vi har gjort endringene over
 
 ```tsx
 import "./assets/styles/global.css";
-import {
-  isRouteErrorResponse,
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-} from "react-router";
+import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 import type { Route } from "./+types/root";
 import { Header } from "./components/layout/sections/header";
 import { Footer } from "./components/layout/sections/footer";
