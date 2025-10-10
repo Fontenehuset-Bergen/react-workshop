@@ -7,6 +7,14 @@
         "label":"About",
         "href":"/about"
     },
+     {
+        "label":"Kontakter",
+        "href":"/contacts"
+    },
+     {
+        "label":"FAQ",
+        "href":"/faq"
+    },
     {
         "label":"Kontakt oss",
         "href":"/contact"
