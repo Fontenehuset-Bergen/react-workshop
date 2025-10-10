@@ -16,7 +16,7 @@ export default function ContactPage({ loaderData }: Route.ComponentProps) {
     // Vi kan hente ut feltene vi trenger fra loaderData
     const {firstName, lastName, bio,adress,age,city,phoneNumber,postNumber,userName,} = loaderData
 
-    return <div className="flex flex-col">
+    return <div className="flex-2 flex flex-col bg-white p-2 rounded-md">
         <h1>Contact page</h1>
         <p>{firstName}</p>
         <p>{lastName}</p>

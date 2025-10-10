@@ -3,7 +3,7 @@ import contacts from "@/data/contactData.json";
 
 export default function Layout() {
   return (
-    <main className="flex flex-row gap-4">
+    <main className="flex flex-row gap-4 p-2">
       <aside className="flex flex-col flex-1 gap-2">
         {contacts.map((person) => (
           <NavLink
@@ -35,9 +35,7 @@ export default function Layout() {
           </NavLink>
         ))}
       </aside>
-      <div className="flex-2">
-        <Outlet />
-      </div>
+      <Outlet />
     </main>
   );
 }
