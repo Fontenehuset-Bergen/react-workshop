@@ -1,7 +1,8 @@
 import { Outlet } from "react-router"
 
 export function FAQLayout() {
-    return <div>
+    return (
+    <div>
          <aside>
 
          </aside>
@@ -10,4 +11,5 @@ export function FAQLayout() {
            <Outlet />
         </main>
     </div>
+    )
 }
