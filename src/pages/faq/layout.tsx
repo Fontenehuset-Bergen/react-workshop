@@ -15,8 +15,6 @@ export default function Layout() {
             className={({ isActive }) => (isActive ? "underline" : "")}
           >{href}</NavLink>
         ))}
-        <div className="flex-1 bg-white text-black p-2 rounded-md">
-        </div>
       </aside>
       <div>
         <Outlet />
