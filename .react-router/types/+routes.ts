@@ -25,6 +25,22 @@ type Pages = {
   "/faq/react": {
     params: {};
   };
+  "/faq/router": {
+    params: {};
+  };
+  "/faq/*": {
+    params: {
+      "*": string;
+    };
+  };
+  "/contacts": {
+    params: {};
+  };
+  "/contacts/:userName": {
+    params: {
+      "userName": string;
+    };
+  };
   "/*": {
     params: {
       "*": string;
@@ -35,7 +51,7 @@ type Pages = {
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/contact" | "/about/topic" | "/faq" | "/faq/react" | "/*";
+    page: "/" | "/contact" | "/about/topic" | "/faq" | "/faq/react" | "/faq/router" | "/faq/*" | "/contacts" | "/contacts/:userName" | "/*";
   };
   "pages/home.tsx": {
     id: "pages/home";
@@ -49,6 +65,10 @@ type RouteFiles = {
     id: "pages/about/topic/Page";
     page: "/about/topic";
   };
+  "pages/faq/layout.tsx": {
+    id: "pages/faq/layout";
+    page: "/faq" | "/faq/react" | "/faq/router" | "/faq/*";
+  };
   "pages/faq/Page.tsx": {
     id: "pages/faq/Page";
     page: "/faq";
@@ -56,6 +76,26 @@ type RouteFiles = {
   "pages/faq/answers/react.tsx": {
     id: "pages/faq/answers/react";
     page: "/faq/react";
+  };
+  "pages/faq/answers/router.tsx": {
+    id: "pages/faq/answers/router";
+    page: "/faq/router";
+  };
+  "pages/faq/not-found.tsx": {
+    id: "pages/faq/not-found";
+    page: "/faq/*";
+  };
+  "pages/contacts/layout.tsx": {
+    id: "pages/contacts/layout";
+    page: "/contacts" | "/contacts/:userName";
+  };
+  "pages/contacts/index.tsx": {
+    id: "pages/contacts/index";
+    page: "/contacts";
+  };
+  "pages/contacts/ContactPage.tsx": {
+    id: "pages/contacts/ContactPage";
+    page: "/contacts/:userName";
   };
   "not-found.tsx": {
     id: "not-found";

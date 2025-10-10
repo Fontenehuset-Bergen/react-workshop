@@ -1,19 +1,24 @@
-import { Outlet } from "react-router"
+import { NavLink, Outlet } from "react-router";
 
 export default function FAQLayout() {
-    return 
-    <div>
-        <aside>
-            <h1>Question</h1>
-            <ul>
-                <li>
-                    hva er react?
-                </li>
-            </ul>
-        </aside>
-        <main>
-            <h1>Answers</h1>
-            <Outlet />
-        </main>
-    </div>
+  const links = ["react", "router", "tailwind"];
+
+  return (
+    <main className="flex flex-row gap-4 p-2">
+      <aside className="flex flex-col bg-white text-black p-2 rounded-md">
+        <h1>Question</h1>
+        <nav className="flex flex-col gap-2">
+          <NavLink to="/faq">faq index</NavLink>
+          {links.map((href) => (
+            <NavLink to={`/faq/${href}`} key={href} className={({ isActive }) => (isActive ? "underline" : "")}>
+              {href}
+            </NavLink>
+          ))}
+        </nav>
+      </aside>
+      <div className="flex-1 bg-white text-black p-2 rounded-md">
+        <Outlet />
+      </div>
+    </main>
+  );
 }

@@ -1,0 +1,233 @@
+[
+  {
+    "firstName": "Kari",
+    "lastName": "Nordmann",
+    "age": 31,
+    "userName": "kari-nordmann",
+    "adress": "Fjordveien 12",
+    "postNumber": "0150",
+    "city": "Oslo",
+    "phoneNumber": "+47 915 23 744",
+    "bio": "Vi ble kjent da vi jobbet frivillig på et arrangement i Oslo i 2019. Etterpå holdt vi kontakten gjennom et faglig nettverk og har samarbeidet i flere små prosjekter. Kari er alltid strukturert og positiv, noe som gjorde inntrykk fra første dag."
+  },
+  {
+    "firstName": "Ola",
+    "lastName": "Nilsen",
+    "age": 34,
+    "userName": "ola-nilsen",
+    "adress": "Bryggegata 4",
+    "postNumber": "5003",
+    "city": "Bergen",
+    "phoneNumber": "+47 482 66 901",
+    "bio": "Jeg møtte Ola på et kurs i prosjektledelse på høyskole. Vi endte i samme gruppe og jobbet tett gjennom hele semesteret. Siden den gang har vi delte tips om verktøy og rutiner for smidig arbeid."
+  },
+  {
+    "firstName": "Ingrid",
+    "lastName": "Solheim",
+    "age": 28,
+    "userName": "ingrid-solheim",
+    "adress": "Parkalleen 7",
+    "postNumber": "7012",
+    "city": "Trondheim",
+    "phoneNumber": "+47 471 08 322",
+    "bio": "Vi ble kjent gjennom en felles venn på en hyttetur i Trondelag. Ingrid tok initiativ til felles matlaging og samtalene fortsatte utover kvelden. Etter turen begynte vi å treffes jevnlig for tur og kaffe."
+  },
+  {
+    "firstName": "Marius",
+    "lastName": "Berg",
+    "age": 39,
+    "userName": "marius-berg",
+    "adress": "Skogstien 22",
+    "postNumber": "4006",
+    "city": "Stavanger",
+    "phoneNumber": "+47 928 77 450",
+    "bio": "Marius var mentor for meg i et utviklerprogram på jobb. Han hjalp meg med arkitekturvalg og kodekvalitet. Vi diskuterer fortsatt faglige problemstillinger og deler ressurser når vi kan."
+  },
+  {
+    "firstName": "Sofie",
+    "lastName": "Aas",
+    "age": 27,
+    "userName": "sofie-aas",
+    "adress": "Sjogata 3",
+    "postNumber": "9008",
+    "city": "Tromso",
+    "phoneNumber": "+47 993 12 640",
+    "bio": "Vi traff hverandre pa en konferanse om berekraftig design. Sofie holdt et kort foredrag som inspirerte meg til a endre noen arbeidsvaner. Etter konferansen har vi delt presentasjoner og artikler."
+  },
+  {
+    "firstName": "Henrik",
+    "lastName": "Lund",
+    "age": 42,
+    "userName": "henrik-lund",
+    "adress": "Elvebakken 9",
+    "postNumber": "2815",
+    "city": "Gjovik",
+    "phoneNumber": "+47 970 55 213",
+    "bio": "Henrik var min naermeste kollega i et tidligere prosjekt. Vi stod i flere krevende leveranser sammen og fant en god rytme. Han er rolig under press og lett a samarbeide med."
+  },
+  {
+    "firstName": "Nora",
+    "lastName": "Hansen",
+    "age": 30,
+    "userName": "nora-hansen",
+    "adress": "Torggata 18",
+    "postNumber": "1607",
+    "city": "Fredrikstad",
+    "phoneNumber": "+47 468 33 905",
+    "bio": "Vi mottes i et nettverk for kvinnelige grundere. Nora delte generost av erfaringene sine om kundedialog og produktmarkedsfit. Vi har hatt flere sparringer om strategi siden den gang."
+  },
+  {
+    "firstName": "Jonas",
+    "lastName": "Lie",
+    "age": 33,
+    "userName": "jonas-lie",
+    "adress": "Strandveien 5",
+    "postNumber": "4612",
+    "city": "Kristiansand",
+    "phoneNumber": "+47 404 92 118",
+    "bio": "Jonas og jeg spilte pa samme fotballag i studietiden. Etter studiene holdt vi kontakten via et felles alumni-nettverk. Han er flink til a samle folk til fagkvelder og sosiale treff."
+  },
+  {
+    "firstName": "Emma",
+    "lastName": "Moe",
+    "age": 26,
+    "userName": "emma-moe",
+    "adress": "Haukeveien 11",
+    "postNumber": "2817",
+    "city": "Gjovik",
+    "phoneNumber": "+47 913 44 287",
+    "bio": "Vi ble kjent pa et hackathon der vi endte pa samme lag. Emma tok ansvar for brukertester mens jeg fokuserte pa backend. Vi vant en liten pris og fortsatte a holde kontakten i etterkant."
+  },
+  {
+    "firstName": "Sander",
+    "lastName": "Karlsen",
+    "age": 29,
+    "userName": "sander-karlsen",
+    "adress": "Kirkeveien 27",
+    "postNumber": "3210",
+    "city": "Sandefjord",
+    "phoneNumber": "+47 954 81 066",
+    "bio": "Sander var fadderen min da jeg startet i ny jobb. Han introduserte meg for teamet og delte gode tips om interne verktøy. Vi tar fortsatt en kaffe innimellom og oppdaterer hverandre pa prosjekter."
+  },
+  {
+    "firstName": "Maria",
+    "lastName": "Haugen",
+    "age": 35,
+    "userName": "maria-haugen",
+    "adress": "Solglott 2",
+    "postNumber": "2316",
+    "city": "Hamar",
+    "phoneNumber": "+47 477 19 530",
+    "bio": "Vi jobbet i samme frivillige organisasjon over flere ar. Maria tok ofte initiativ til arrangementer og var alltid til a stole pa. Samarbeidet gjorde at vi ble godt kjent og venner privat."
+  },
+  {
+    "firstName": "Lars",
+    "lastName": "Dahl",
+    "age": 41,
+    "userName": "lars-dahl",
+    "adress": "Asveien 14",
+    "postNumber": "5232",
+    "city": "Paradis",
+    "phoneNumber": "+47 989 30 742",
+    "bio": "Jeg ble kjent med Lars pa et foredrag om datasikkerhet. Etter foredraget ble vi staende og prate lenge om praktiske rutiner. Vi har siden delt sjekklister og verktøy vi bruker i prosjekter."
+  },
+  {
+    "firstName": "Julie",
+    "lastName": "Eriksen",
+    "age": 24,
+    "userName": "julie-eriksen",
+    "adress": "Bakkeveien 6",
+    "postNumber": "3024",
+    "city": "Drammen",
+    "phoneNumber": "+47 467 72 019",
+    "bio": "Julie var praktikant i teamet mitt en sommer. Hun imponerte med nysgjerrighet og stayer-evne, og tok raskt ansvar for en modul vi trengte a forbedre. Vi holder fortsatt kontakt pa LinkedIn."
+  },
+  {
+    "firstName": "Thomas",
+    "lastName": "Myhre",
+    "age": 37,
+    "userName": "thomas-myhre",
+    "adress": "Lokkeveien 10",
+    "postNumber": "9007",
+    "city": "Tromso",
+    "phoneNumber": "+47 952 08 661",
+    "bio": "Vi ble introdusert via en felles kontakt i bransjen. Thomas delte innsikt om skalering av tjenester og overvaking. Vi har samarbeidet pa et par mindre oppdrag med gode resultater."
+  },
+  {
+    "firstName": "Hanna",
+    "lastName": "Jensen",
+    "age": 32,
+    "userName": "hanna-jensen",
+    "adress": "Markveien 8",
+    "postNumber": "0554",
+    "city": "Oslo",
+    "phoneNumber": "+47 901 55 284",
+    "bio": "Hanna og jeg tok samme fag pa universitetet. Vi jobbet sammen i studiegrupper og delte notater. Kontakten har fortsatt gjennom faglige arrangementer og sporadiske kaffemoter."
+  },
+  {
+    "firstName": "Eirik",
+    "lastName": "Andresen",
+    "age": 38,
+    "userName": "eirik-andresen",
+    "adress": "Knausen 1",
+    "postNumber": "7042",
+    "city": "Trondheim",
+    "phoneNumber": "+47 980 66 114",
+    "bio": "Vi mottes pa en meetup for Go-utviklere. Eirik presenterte et rammeverk han jobbet med, og jeg bidro med innspill til dokumentasjon. Etter hvert samarbeidet vi om en open-source fix."
+  },
+  {
+    "firstName": "Thea",
+    "lastName": "Larsen",
+    "age": 25,
+    "userName": "thea-larsen",
+    "adress": "Fjellgata 15",
+    "postNumber": "5522",
+    "city": "Haugesund",
+    "phoneNumber": "+47 934 22 605",
+    "bio": "Thea var med i samme studentorganisasjon som meg. Vi arrangerte fagkvelder sammen og delte ansvaret for kommunikasjon. Hun er driftig og flink til a fa ting til a skje."
+  },
+  {
+    "firstName": "Andreas",
+    "lastName": "Holm",
+    "age": 44,
+    "userName": "andreas-holm",
+    "adress": "Kvernhusveien 19",
+    "postNumber": "2819",
+    "city": "Gjovik",
+    "phoneNumber": "+47 976 11 538",
+    "bio": "Andreas holdt et kurs jeg deltok pa i fjor. Etter kurset tok vi en prat om praktiske anvendelser, og han delte kodeeksempler. Vi har siden utvekslet erfaringer om drift i sky."
+  },
+  {
+    "firstName": "Silje",
+    "lastName": "Bakken",
+    "age": 29,
+    "userName": "silje-bakken",
+    "adress": "Torget 1",
+    "postNumber": "3717",
+    "city": "Skien",
+    "phoneNumber": "+47 486 59 770",
+    "bio": "Vi ble kjent pa en lokal kaffebar gjennom felles venner. Silje inviterte til en bokklubb der vi diskuterte teknologi og samfunn. Etterpa har vi ofte delt anbefalinger og artikler."
+  },
+  {
+    "firstName": "Petter",
+    "lastName": "Johansen",
+    "age": 36,
+    "userName": "petter-johansen",
+    "adress": "Ovre Torggate 20",
+    "postNumber": "2816",
+    "city": "Gjovik",
+    "phoneNumber": "+47 939 47 128",
+    "bio": "Petter og jeg samarbeidet om et apent kildekode-prosjekt. Han tok ansvar for testoppsett mens jeg bygget API-et. Samarbeidet fungerte sa bra at vi senere satte opp nye issues sammen."
+  },
+  {
+    "firstName": "Liv",
+    "lastName": "Andreassen",
+    "age": 33,
+    "userName": "liv-andreassen",
+    "adress": "Hageveien 3",
+    "postNumber": "0570",
+    "city": "Oslo",
+    "phoneNumber": "+47 977 21 660",
+    "bio": "Jeg ble kjent med Liv gjennom en felles Slack-kanal for fagfolk. Hun delte en grundig veileder som losnet en floke i mitt prosjekt. Etter det har vi utvekslet tips jevnlig."
+  }
+]
