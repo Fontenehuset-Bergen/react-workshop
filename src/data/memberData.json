@@ -1,0 +1,40 @@
+[
+  {
+    "userName": "larsegilmil",
+    "firstName": "Lars",
+    "lastName": "Egil",
+    "phoneNumber": 2309199,
+    "bio": "Tja trallala jeg er Lars ja",
+    "address": "Skuteviksjøen 3",
+    "age": 43,
+    "city": "Bear Mountain",
+    "postNumber": 3432,
+    "profilePicture": "/src/pages/members/images/profilebear2.JPG"
+  },
+
+  {
+    "userName": "miamomo",
+    "firstName": "Mia",
+    "lastName": "Moana",
+    "phoneNumber": 879891223,
+    "bio": "Hei og Hopp jeg er en Sopp!",
+    "address": "Nesehornsveien 8",
+    "age": 33,
+    "city": "Otter Lake",
+    "postNumber": 1322,
+    "profilePicture": "/src/pages/members/images/profileotter.jpeg"
+  },
+
+  {
+    "userName": "karriknut",
+    "firstName": "Kari",
+    "lastName": "Knutsen",
+    "phoneNumber": 897455,
+    "bio": "Jeg leter etter Ludviksen?",
+    "address": "Sjøstjernestien 103",
+    "age": 63,
+    "city": "Turtle Bay",
+    "postNumber": 4431,
+    "profilePicture": "/src/pages/members/images/profileturtle.jpeg"
+  }
+]
