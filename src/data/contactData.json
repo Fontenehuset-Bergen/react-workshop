@@ -1,0 +1,16 @@
+[
+    {
+        "username" : "wileyc",
+        "firstname": "wiley",
+        "lastname": "coyote",
+        "phone": 4455666,
+        "bio": "meep meep meep"
+    },
+    {
+        "username" : "mickeym",
+        "firstname": "mickey",
+        "lastname": "mouse",
+        "phone": 123456,
+        "bio": "gee whiz"  
+    }
+]

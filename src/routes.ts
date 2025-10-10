@@ -18,4 +18,11 @@ export default [
     ]),
   ]),
   route("*", "not-found.tsx"),
+  ...prefix("contacts", [
+    layout("", [
+      index("pages/contacts/index.tsx"),
+      route("contacts/:username", "pages/contacts/ContactPage.tsx")
+    ])
+  ]),
+  route("*", "notFound.tsx")
 ] satisfies RouteConfig;

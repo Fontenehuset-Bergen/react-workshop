@@ -33,12 +33,20 @@ type Pages = {
       "*": string;
     };
   };
+  "/contacts": {
+    params: {};
+  };
+  "/contacts/contacts/:username": {
+    params: {
+      "username": string;
+    };
+  };
 };
 
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/contact" | "/about" | "/faq" | "/faq/react" | "/faq/router" | "/*";
+    page: "/" | "/contact" | "/about" | "/faq" | "/faq/react" | "/faq/router" | "/*" | "/contacts" | "/contacts/contacts/:username";
   };
   "pages/home.tsx": {
     id: "pages/home";
@@ -70,6 +78,22 @@ type RouteFiles = {
   };
   "not-found.tsx": {
     id: "not-found";
+    page: "/*";
+  };
+  "": {
+    id: ".";
+    page: "/contacts" | "/contacts/contacts/:username";
+  };
+  "pages/contacts/index.tsx": {
+    id: "pages/contacts/index";
+    page: "/contacts";
+  };
+  "pages/contacts/ContactPage.tsx": {
+    id: "pages/contacts/ContactPage";
+    page: "/contacts/contacts/:username";
+  };
+  "notFound.tsx": {
+    id: "notFound";
     page: "/*";
   };
 };
