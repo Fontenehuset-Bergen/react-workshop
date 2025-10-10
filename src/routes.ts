@@ -17,12 +17,11 @@ export default [
       route("router", "pages/faq/answers/router.tsx")
     ]),
   ]),
-  route("*", "not-found.tsx"),
   ...prefix("contacts", [
-    layout("", [
+    layout("pages/contacts/layout.tsx", [
       index("pages/contacts/index.tsx"),
-      route("contacts/:username", "pages/contacts/ContactPage.tsx")
+      route(":username", "pages/contacts/ContactPage.tsx")
     ])
   ]),
-  route("*", "notFound.tsx")
+  route("*", "not-found.tsx")
 ] satisfies RouteConfig;
