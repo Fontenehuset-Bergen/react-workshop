@@ -19,6 +19,15 @@ type Pages = {
   "/about": {
     params: {};
   };
+  "/faq": {
+    params: {};
+  };
+  "/faq/react": {
+    params: {};
+  };
+  "/test": {
+    params: {};
+  };
   "/*": {
     params: {
       "*": string;
@@ -29,7 +38,7 @@ type Pages = {
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/contact" | "/about" | "/*";
+    page: "/" | "/contact" | "/about" | "/faq" | "/faq/react" | "/test" | "/*";
   };
   "pages/home.tsx": {
     id: "pages/home";
@@ -42,6 +51,18 @@ type RouteFiles = {
   "pages/about/Page.tsx": {
     id: "pages/about/Page";
     page: "/about";
+  };
+  "pages/faq/Page.tsx": {
+    id: "pages/faq/Page";
+    page: "/faq";
+  };
+  "pages/faq/answers/react.tsx": {
+    id: "pages/faq/answers/react";
+    page: "/faq/react";
+  };
+  "pages/faq/test/Page.tsx": {
+    id: "pages/faq/test/Page";
+    page: "/test";
   };
   "not-found.tsx": {
     id: "not-found";
