@@ -1,4 +1,4 @@
-import { Camera, ShoppingCart } from "lucide-react";
+import { Camera, ShoppingCart, FileCheck } from "lucide-react";
 import { IconButton } from "../ui/buttons/iconButton";
 
 export function ButtonExamples() {
@@ -8,7 +8,7 @@ export function ButtonExamples() {
       <span className="flex gap-2 flex-wrap">
         <IconButton icon={<Camera />} label="min knapp" />
         <IconButton icon={<ShoppingCart />} label="kjøp nå!" />
-        <IconButton icon={<Camera />} label="min knapp" />
+        <IconButton icon={<FileCheck/>} label="handleliste" />
       </span>
       
     </section>

@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { ProfileCard, type Profile } from "../ui/cards/Profile";
+//import { text } from "stream/consumers";
 
 export function ProfileExample() {
   const [profile, setProfile] = useState<Profile>({
     age: 0,
     avatar: "",
     description: "",
-    hobbies: ["React", "Vite"],
+    hobbies: [],
     name: "",
   });
 
@@ -37,6 +38,18 @@ export function ProfileExample() {
               onChange={(e) =>
                 setProfile((prev) => ({ ...prev, age: Number(e.target.value) }))
               }
+              className="w-full p-1 bg-white border-black text-black rounded"
+            />
+          </label>
+           <label>
+            <p>Hobbies</p>
+            <input
+              type="text"
+              placeholder="What is your hobbies"
+              min={0}
+              max={200}
+              onChange={(e) => setProfile((prev) => ({...prev, hobbies: e.target.value.split(",")}))}
+           
               className="w-full p-1 bg-white border-black text-black rounded"
             />
           </label>
