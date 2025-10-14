@@ -2,6 +2,14 @@ import type { Route } from "./+types/contactPage";
 import { isRouteErrorResponse, useRouteError } from "react-router";
 import contacts from "@/data/contacts/details.json";
 
+/*
+ * Loader er ansvarlig for å hente inn data og gjøre dette tilgjengelig for funksjonen 
+ * som har default export, dvs; ContactPage. Typen "Route" blir generert av react router automatisk, 
+ * vi må bare huske å importere den og bruke typen Route.LoaderArgs i funksjonen
+ * 
+ * Jeg har i tillegg lagt inn Responses som gjør at vi møter på 404 side hvis vi søker 
+ * etter kontakter som ikke eksisterer.
+ */
 export async function loader({ params }: Route.LoaderArgs) {
   // Gjør param om til et nummer vi kan bruke
   const index = Math.abs(Number(params.id));
@@ -22,6 +30,13 @@ export async function loader({ params }: Route.LoaderArgs) {
   return contacts.at(index);
 }
 
+
+/* 
+ * For å kunne bruke data vi hentet i loader() så må vi bruke følgende samme type som i loader,
+ * men istedet for Route.LoaderArgs så bruker vi Route.ComponentProps.
+ * Sammen med typescript vill du da få intellisence/autocomplete på props, du kan teste
+ * dette ved å holde musen over loaderData i din kode for å se props object keys
+ */
 export default function ContactPage({ loaderData }: Route.ComponentProps) {
   const { name, adress, phone } = loaderData!;
   return (
