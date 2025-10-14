@@ -22,6 +22,12 @@ export default [
       route("router", "pages/faq/sections/router.tsx"),
     ]),
   ]),
+  ...prefix("contacts", [
+    layout("pages/contacts/contactLayout.tsx", [
+      index("pages/contacts/contactIndex.tsx"),
+      route("details/:id", "pages/contacts/contactPage.tsx"),
+    ]),
+  ]),
   route("/.well-known/appspecific/com.chrome.devtools.json", "debug-null.tsx"),
   route("*", "./not-found.tsx"),
 ] satisfies RouteConfig;
