@@ -1,5 +1,5 @@
 # Navigasjonslogikk
-
+Dette emnet har blitt utsatt, vi vill komme tilbake til navigasjonslogikk senere.
 
 <table width="100%">
   <tr>
