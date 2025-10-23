@@ -28,6 +28,12 @@ export default [
       route("details/:id", "pages/contacts/contactPage.tsx"),
     ]),
   ]),
+  ...prefix("pokedex", [
+    layout("pages/pokedex/PokedexLayout.tsx", [
+      index("pages/pokedex/PokedexPage.tsx"),
+      route(":name", "pages/pokedex/name/PokemonPage.tsx"),
+    ]),
+  ]),
   route("/.well-known/appspecific/com.chrome.devtools.json", "debug-null.tsx"),
   route("*", "./not-found.tsx"),
 ] satisfies RouteConfig;

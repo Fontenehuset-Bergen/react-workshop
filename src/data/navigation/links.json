@@ -1,7 +1,6 @@
 [
   { "label": "Hjem", "href": "/" },
-  { "label": "FAQ", "href": "/faq" },
-  { "label": "Adressebok", "href": "/contacts" },
+  { "label": "Pokedex", "href": "/pokedex" },
   { "label": "Om oss", "href": "/about" },
   { "label": "Kontakt", "href": "/contact" }
 ]
