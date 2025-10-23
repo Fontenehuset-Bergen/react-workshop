@@ -4,11 +4,14 @@ import { useLoaderData } from "react-router";
 import { useEffect, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
-export async function loader({ params }: Route.LoaderArgs) {
+export async function loader({ params, request }: Route.LoaderArgs) {
   console.log(`fetching ${params.name}...`);
   const response = await fetch(
     `https://pokeapi.co/api/v2/pokemon/${params.name}`,
-    { cache: "force-cache" }
+    {
+      cache: "force-cache",
+      signal: request.signal,
+    }
   );
 
   // Handle responses where we can't get our pokemon

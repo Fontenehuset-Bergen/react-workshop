@@ -1,11 +1,15 @@
 import type { Pokedex } from "@/types/pokemon";
 import { NavLink, Outlet, useLoaderData } from "react-router";
+import type { Route } from "./+types/PokedexLayout";
 
-export async function loader() {
+export async function loader({ request }: Route.LoaderArgs) {
   console.log("fetching pokedex");
   const response = await fetch(
     "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0",
-    { cache: "force-cache" }
+    {
+      cache: "force-cache",
+      signal: request.signal,
+    }
   );
 
   if (!response.ok) {
