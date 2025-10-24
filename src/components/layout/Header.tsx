@@ -1,4 +1,4 @@
-import navigationLinks from "../data/navigationLinks.json"
+import navigationLinks from "@/data/navigationLinks.json"
 
 export function HeaderLayout() {
 
