@@ -1,7 +1,7 @@
 import "./assets/style/global.css"
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
-import { HeaderLayout } from "./components/layout/Header";
 import { Footer } from "./components/layout/sections/footer";
+import { Header } from "./components/layout/sections/header";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -13,7 +13,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <HeaderLayout />
+        <Header />
         {children}
         <Footer/>
         <ScrollRestoration />
