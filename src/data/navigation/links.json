@@ -1,5 +1,6 @@
 [
     { "label": "Home", "href": "/"},
+    { "label": "Pokedex", "href": "/pokedex"},
     { "label": "About Us", "href": "/about"},
     { "label": "Contact Us", "href": "/contact"}
 ]
