@@ -13,8 +13,21 @@ import {
 
 export default [
   index("pages/home.tsx"),
-  route("about", "pages/about/page.tsx"),
+  // route("about", "pages/about/page.tsx"),
+
   route("contact", "pages/contact/page.tsx"),
+    ...prefix("about",
+    [
+      layout("components/layout/aboutSidebar.tsx",
+        [
+          index("pages/about/page.tsx"),
+          route("story", "pages/about/sections/story.tsx"),
+          route("work", "pages/about/sections/work.tsx"),
+        ]
+      )
+    ]
+
+  ),
   ...prefix("faq", [
     layout("components/layout/sidebar.tsx", [
       index("pages/faq/faqIndex.tsx"),
