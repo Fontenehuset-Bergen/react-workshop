@@ -1,9 +1,7 @@
-"use strict"
-
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client'
-import App from './src/pages/Home'
-import './src/assets/styles/index.css'
+import App from './pages/Home'
+import './assets/styles/index.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
