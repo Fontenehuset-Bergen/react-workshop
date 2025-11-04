@@ -1,75 +1,61 @@
-# React + TypeScript + Vite
+# Workshop i front-end rammeverket React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Velkommen! Dette repositoriet brukes i en nybegynnervennlig workshop i regi av Fontenehuset Bergen. Vi fokuserer på React med Vite på klientsiden, og lærer å bygge komponenter, forstå state, og bruke hooks gjennom korte øvelser og en liten eksempelapp.
 
-Currently, two official plugins are available:
+## Innholdsfortegnelse
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> Lenker blir oppdatert etter hvert som dokumentasjon blir lagt til underveis.
 
-## React Compiler
+- Hva er et front-end rammeverk?
+- Kom i gang med React og Vite
+- JSX og komponenter
+- State og hendelser
+- Lister og betinget visning
+- Skjemaer og enkel validering
+- Hooks og lett gjenbruk av logikk
+- Oppgaver og løsningsforslag
+- Gruppeprosjekt og vurderingskriterier
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Velg arbeidsmåte: StackBlitz eller lokalt
 
-Note: This will impact Vite dev & build performances.
+### A. StackBlitz (nettleser)
 
-## Expanding the ESLint configuration
+1. Gå til https://stackblitz.com og logg inn.
+2. Koble GitHub-kontoen din under **Account** om du vil importere repoet direkte.
+3. Velg **New Project → Import GitHub**, og pek til dette repositoriet.
+4. StackBlitz installerer ofte automatisk. Hvis ikke, åpne terminalen i StackBlitz og kjør:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```console
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```console
+npm run dev
 ```
+
+5. Forhåndsvisningen åpnes i eget panel i nettleseren.
+
+### B. Lokal IDE
+
+1. Installer https://nodejs.org/en/download og bruk foretrukket IDE, for eksempel https://code.visualstudio.com/
+2. Sitt opp [git](https://git-scm.com/) til kunne clone repo
+3. Klon dette repositoriet:
+
+```console
+git clone https://github.com/Fontenehuset-Bergen/react-workshop
+```
+
+4. Åpne mappen i VS Code.
+5. Installer avhengigheter:
+
+```console
+npm install
+```
+
+6. Start utviklingsserver:
+
+```console
+npm run dev
+```
+
+Vite starter en utviklingsserver og viser en lokal adresse i terminalen. Åpne denne i nettleseren for å se appen.
