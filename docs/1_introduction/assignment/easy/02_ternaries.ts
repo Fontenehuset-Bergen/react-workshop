@@ -37,6 +37,7 @@ export function countLabel(n: number): string {
 /** -------------------------- Self-check ---------------------------- 
  *  Kjør følgende kommando for å se om koden din kjørte
  *  npx tsx docs/1_introduction/assignment/easy/02_ternaries.ts
+ *  ------------------------------------------------------------------
 */
 
 console.log(`Answer: ${displayName('Ada', null, 'ada123')}\t\t\tExpected: Ada`);

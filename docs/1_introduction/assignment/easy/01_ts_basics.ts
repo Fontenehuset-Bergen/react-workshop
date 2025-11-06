@@ -2,10 +2,8 @@
  * EASY 1: TypeScript grunnlag – variabler & typer (uten interfaces/types)
  * 
  * Instruks: Fyll inn KORREKT type der det står /* TODO type *\
- * Målet er at fila kompilerer uten feil, og at self-check gir riktig output.
  * 
- * for å kjøre filen kan du lime inn følgende kode i terminalen:
- * npx ts-node docs/1_introduction/assignment/easy/01_ts_basics.ts
+ * Når alle type errors er vekke er du ferdig
  */
 
 // 1) Primitive typer
