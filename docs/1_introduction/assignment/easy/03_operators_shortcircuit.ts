@@ -16,38 +16,45 @@ export function showIf(cond: unknown, text: string): string {
   return '';
 }
 
-// 3) Korrekt fallback for tall der 0 er gyldig verdi
+// 3) Korrekt fallback som returnerer et tall, hvis tallet ikke er en positiv integer returner 0
 export function fallbackZero(n: number | null | undefined): number {
   // TODO: bruk ??
   return 0;
 }
 
-// 4) Streng sammenligning (strict equality)
-export function isExactZero(n: number): boolean {
+// 4) Streng sammenligning (strict equality), pass på typen!
+export function isExactZero(n: number|string): boolean {
   // TODO: bruk ===
   return false;
 }
 
-// 5) Clamp: sørg for at tallet er i [min, max]
-export function clamp(n: number, min: number, max: number): number {
+// 5) sørg for at tallet er innenfor min og max
+export function isInRange(n: number, min: number, max: number): boolean {
   // TODO: bruk Math.min/Math.max eller sammenligninger
-  return n;
+  return false;
 }
 
-// ---------------- Self-check ----------------
-console.log(safeTitle('', 'Untitled'));     // ''
-console.log(safeTitle(0, 'Untitled'));      // '0'
-console.log(safeTitle(undefined, 'X'));     // 'X'
+/** -------------------------- Self-check ---------------------------- 
+ *  Kjør følgende kommando for å se om koden din kjørte
+ *  npx tsx docs/1_introduction/assignment/easy/03_operators_shortcircuit.ts
+ *  ------------------------------------------------------------------
+*/
 
-console.log(showIf(true, 'Hei'));           // 'Hei'
-console.log(showIf(0, 'Hei'));              // ''
+console.log(`Answer: ${safeTitle('', 'Untitled')}\t\t\tExpected: `);
+console.log(`Answer: ${safeTitle(0, 'Untitled')}\t\t\tExpected: 0`);
+console.log(`Answer: ${safeTitle(undefined, 'X')}\t\t\tExpected: X`);
 
-console.log(fallbackZero(undefined));       // 0
-console.log(fallbackZero(0));               // 0
+console.log(`Answer: ${showIf(true, 'Hei')}\t\t\tExpected: Hei`);
+console.log(`Answer: ${showIf(0, 'Hei')}\t\t\tExpected: `);
 
-console.log(isExactZero(0));                // true
-console.log(isExactZero(1));                // false
+console.log(`Answer: ${fallbackZero(undefined)}\t\t\tExpected: 0`);
+console.log(`Answer: ${fallbackZero(10)}\t\t\tExpected: 10`);
+console.log(`Answer: ${fallbackZero(null)}\t\t\tExpected: 0`);
 
-console.log(clamp(10, 0, 5));               // 5
-console.log(clamp(-2, 0, 5));               // 0
-console.log(clamp(3, 0, 5));                // 3
+console.log(`Answer: ${isExactZero(0)}\t\t\tExpected: true`);
+console.log(`Answer: ${isExactZero(1)}\t\t\tExpected: false`);
+console.log(`Answer: ${isExactZero("0")}\t\t\tExpected: false`);
+
+console.log(`Answer: ${isInRange(3, 0, 5)}\t\t\tExpected: true`);
+console.log(`Answer: ${isInRange(-2, 0, 5)}\t\t\tExpected: false`);
+console.log(`Answer: ${isInRange(10, 0, 5)}\t\t\tExpected: false`);

@@ -16,8 +16,11 @@ export const evenOdd = (n: number): 'even' | 'odd' => {
 };
 
 
+/** -------------------------- Self-check ---------------------------- 
+ *  Kjør følgende kommando for å se om koden din kjørte
+ *  npx tsx docs/1_introduction/assignment/easy/04_functions_arrows.ts
+ *  ------------------------------------------------------------------
+*/
 
-
-// ---------------- Self-check ----------------
-console.log(add(2, 3)); // 5 
-console.log(evenOdd(2), evenOdd(3)); // "even" "odd"
+console.log(`Answer: ${add(2, 3)}\t\t\tExpected: 5`);
+console.log(`Answer: ${evenOdd(2), evenOdd(3)}\t\t\tExpected: even odd`);
