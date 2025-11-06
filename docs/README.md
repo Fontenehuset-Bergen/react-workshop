@@ -11,9 +11,9 @@ Du kan bruke innholdslisten under til å navigere når du besøker prosjektet p�
 - [Introduksjon](./1_introduction/README.md)
   - [Javascript recap](./1_introduction/1_javascript.md)
   - [Typescript introduksjon](./1_introduction/2_typescript.md)
-  - Verktøyene vi bruker
-  - Grunnleggende React
-  - React developer tools
+  - [Verktøyene vi bruker](./1_introduction/3_toolchain.md)
+  - [Grunnleggende React](./1_introduction/4_react_fundaments.md)
+  - [React developer tools](./1_introduction/5_react_developer_tools.md)
 - Komponenter
 - Hooks & states
 - Effects
