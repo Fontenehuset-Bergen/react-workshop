@@ -34,20 +34,24 @@ export function countLabel(n: number): string {
   return '';
 }
 
-// ---------------- Self-check ----------------
-console.log(displayName('Ada', null, 'ada123'));  // "Ada "
-console.log(displayName(undefined, undefined, 'linus')); // "linus"
-console.log(displayName(undefined, undefined, undefined)); // "Ukjent"
+/** -------------------------- Self-check ---------------------------- 
+ *  Kjør følgende kommando for å se om koden din kjørte
+ *  npx tsx docs/1_introduction/assignment/easy/02_ternaries.ts
+*/
 
-console.log(grade(95)); // "A"
-console.log(grade(81)); // "B"
-console.log(grade(74)); // "C"
-console.log(grade(12)); // "F"
+console.log(`Answer: ${displayName('Ada', null, 'ada123')}\t\t\tExpected: Ada`);
+console.log(`Answer: ${displayName(undefined, undefined, 'linus')}\t\t\tExpected: linux`);
+console.log(`Answer: ${displayName(undefined, undefined, undefined)}\t\t\tExpected: undefiend`);
 
-console.log(badge(true, true));   // "Admin Pro"
-console.log(badge(true, false));  // "Admin"
-console.log(badge(false, true));  // "Pro"
-console.log(badge(false, false)); // "Member"
+console.log(`Answer: ${grade(95)}\t\t\tExpected: A`);
+console.log(`Answer: ${grade(81)}\t\t\tExpected: B`);
+console.log(`Answer: ${grade(74)}\t\t\tExpected: C`);
+console.log(`Answer: ${grade(12)}\t\t\tExpected: F`);
 
-console.log(countLabel(1)); // "1 item"
-console.log(countLabel(3)); // "3 items"
+console.log(`Answer: ${badge(true, true)}\t\t\tExpected: Admin Pro`);
+console.log(`Answer: ${badge(true, false)}\t\t\tExpected: Admin`);
+console.log(`Answer: ${badge(false, true)}\t\t\tExpected: Pro`);
+console.log(`Answer: ${badge(false, false)}\t\t\tExpected: Member`);
+
+console.log(`Answer: ${countLabel(1)}\t\t\tExpected: 1 item`);
+console.log(`Answer: ${countLabel(3)}\t\t\tExpected: 3 items`);
