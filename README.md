@@ -14,7 +14,7 @@ Velkommen! Dette repositoriet brukes i en nybegynnervennlig workshop i regi av F
     - States
     - Effects
 - Oppgaver
-  - Uke 1: Intro
+  - Uke 1: [Intro](./docs/1_introduction/assignment/README.md)
   - Uke 2: Komponenter
   - Uke 3: States
   - Uke 4: Effects
