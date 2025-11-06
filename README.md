@@ -9,7 +9,7 @@ Velkommen! Dette repositoriet brukes i en nybegynnervennlig workshop i regi av F
 
 - [Terminologi](./docs/1_introduction/terminology.md)
 - [Dokumentasjon](./docs/README.md)
-    - [Introduksjon](./1_introduction/README.md)
+    - [Introduksjon](./docs/1_introduction/README.md)
     - Komponenter
     - States
     - Effects
