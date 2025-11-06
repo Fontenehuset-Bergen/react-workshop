@@ -2,21 +2,27 @@
 
 Velkommen! Dette repositoriet brukes i en nybegynnervennlig workshop i regi av Fontenehuset Bergen. Vi fokuserer på React med Vite på klientsiden, og lærer å bygge komponenter, forstå state, og bruke hooks gjennom korte øvelser og en liten eksempelapp.
 
-## Innholdsfortegnelse
+## Innhold
 
+> [!NOTE]
 > Lenker blir oppdatert etter hvert som dokumentasjon blir lagt til underveis.
 
-- Hva er et front-end rammeverk?
-- Kom i gang med React og Vite
-- JSX og komponenter
-- State og hendelser
-- Lister og betinget visning
-- Skjemaer og enkel validering
-- Hooks og lett gjenbruk av logikk
-- Oppgaver og løsningsforslag
-- Gruppeprosjekt og vurderingskriterier
+- [Terminologi](./docs/1_introduction/terminology.md)
+- [Dokumentasjon](./docs/README.md)
+    - [Introduksjon](./1_introduction/README.md)
+    - Komponenter
+    - States
+    - Effects
+- Oppgaver
+  - Uke 1: Intro
+  - Uke 2: Komponenter
+  - Uke 3: States
+  - Uke 4: Effects
+- Gruppeprosjekt
+- [Velg arbeidsmetode](#velg-arbeidsmåte-stackblitz-eller-lokalt)
 
 ## Velg arbeidsmåte: StackBlitz eller lokalt
+Vi kommer til å bruke Stackblitz som en del av undervisning, men for de som er interessert i å prøve seg på lokal utvikling med programmer installert på din egen maskin anbefaler jeg å prøve dette. Vi kan være til hjelp hvis du møter på noen problemer underveis, men dette vill skje utenom undervisning.
 
 ### A. StackBlitz (nettleser)
 

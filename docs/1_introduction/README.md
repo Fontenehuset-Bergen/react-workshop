@@ -12,7 +12,7 @@ Denne uken er satt av til en grunndig forberedelse i flere emner for å gjøre d
 
 ### Oppgaver
 
-Du kan finne oppgavene for denne uken [her](./assignment.md)
+Du kan finne oppgavene for denne uken her
 
 ---
 
