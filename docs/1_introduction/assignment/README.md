@@ -4,10 +4,10 @@ Her er oppgavene for introduksjon til React, med vilje har jeg valgt at oppgaven
 ## Innholdsliste
 - Easy
     1. [typescript basics](./easy/01_ts_basics.ts)
-    2. wip
-    3. wip
-    4. wip
-    5. wip
+    2. [ternaries](./easy/02_ternaries.ts)
+    3. [operators](./easy/03_operators_shortcircuit.ts)
+    4. [arrow/function](./easy/04_functions_arrows.ts)
+    5. [destructuring](./easy/05_destructuring.ts)
 - medium
     6. wip
     7. wip
