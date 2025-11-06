@@ -3,21 +3,23 @@ Her er oppgavene for introduksjon til React, med vilje har jeg valgt at oppgaven
 
 ## Innholdsliste
 - Easy
-    1. operators
-    2. template litterals
-    3. destructuring
-    4. array prototypes
+    1. [typescript basics](./easy/01_ts_basics.ts)
+    2. wip
+    3. wip
+    4. wip
+    5. wip
 - medium
-    5. immutability
-    6. spread
-    7. operators 2
-    8. funksjoner
-    9. import export
-    10. async
+    6. wip
+    7. wip
+    8. wip
+    9. wip
+    10. wip
 - Hard
-    11. unngå mutasjon
-    12. de-dulisering
-    13.
+    11. wip
+    12. wip
+    13. wip
+    14. wip
+    15. wip
 
 ## Bonus oppgave
 Som en del av innlevingen har du allerede lastet ned dette repoet lokalt eller så bruker du stackblitz, nå ønsker jeg at du skal prøve å implementere løsningene i `src/pages/Home.tsx` filen slik at du kan se resultatet ditt på nettsiden. 
