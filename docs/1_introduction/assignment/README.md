@@ -8,18 +8,16 @@ Her er oppgavene for introduksjon til React, med vilje har jeg valgt at oppgaven
     3. [operators](./easy/03_operators_shortcircuit.ts)
     4. [arrow/function](./easy/04_functions_arrows.ts)
     5. [destructuring](./easy/05_destructuring.ts)
-- medium
-    6. wip
-    7. wip
-    8. wip
-    9. wip
-    10. wip
+- medium (mer web relatert)
+    6. [typescript medium](./medium/06_types_interfaces.ts)
+    7. [array prototypes](./medium/07_array_map_sort.ts)
+    8. [async](./medium/08_async_basics.ts)
+    9. [parsing](./medium/09_parsing.ts)
 - Hard
+    10. wip
     11. wip
     12. wip
     13. wip
-    14. wip
-    15. wip
 
 ## Bonus oppgave
 Som en del av innlevingen har du allerede lastet ned dette repoet lokalt eller så bruker du stackblitz, nå ønsker jeg at du skal prøve å implementere løsningene i `src/pages/Home.tsx` filen slik at du kan se resultatet ditt på nettsiden. 
