@@ -1,4 +1,6 @@
 # Recap av nødvendig javascript kunnskaper
+Før vi kan begynne med React er det en stor fordel hvis vi forstår noen viktige konsepter i javascript. 
+
 ## immutable vs mutable
 React må behandle verdier som immutable for at rendering skal skje, hvis du muterer verdier blir sikke siden alltid re-rendret
 
