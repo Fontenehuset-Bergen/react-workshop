@@ -20,7 +20,7 @@ Du kan bruke innholdslisten under til å navigere når du besøker prosjektet p�
 
 ## Oppgaver
 
-- uke 1: [Javascript recap](./1_introduction/assignment.md)
+- uke 1: Javascript recap
 - uke 2: Komponenter
 - uke 3: Tilstander
 - uke 4: Effekter
