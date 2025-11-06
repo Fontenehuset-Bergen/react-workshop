@@ -248,22 +248,79 @@ function Button({
 
 ## Asyncron kode
 
-hva er async kode?
-hva er et promise
-hva betyr nøkkelordene async og await
-kjapt om abortcontroller
+> [!NOTE]
+> mdn har en veldig god artikkel på akkurat dette [emnet](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS) som jeg anbefaler å lese siden det er ganske omfattende.
 
-## Feil håndtering og fallbacks
 
-hvordan kan vi skrive logikken vår til å håndtere feil og feilmeldinger
-hvordan kan vi bruke fallback verdier
+
+I javascript har vi konseptet syncron eller asyncron kode, det vi snakker om her er rekkefølgen på når koden din blir utført. Normalt kjører javascript linje for linje nedover koden og declarerer variabler og kjører funksjoner, men med asyncron kode så kan vi si til javascript at vi ønsker at funksjoner skal kunne bli kjørt på et senere tidspunkt. Vi bruker nøkkelordene async og await når vi skal jobbe med asyncron kode.
+
+Dere er kanskje vandt til å jobbe med `.then` hvis dere har vært bortpå fetch tidligere
+
+```ts
+// Hvis jeg kaller en funksjon som tar lang tid å utføre så venter javascript med å fortsette til funksjonen er utført
+const data = funksjonSomTarTid();
+
+// Gammel metode
+const data = fetch('/api').then(r => r.json()).then(data => { /* ... */ }).catch(err => { /* ... */ });
+
+// Hvis vi bruker en asyncron funksjon så kan javascript gjøre andre ting mens funksjonen jobber, her må vi avente med nøkkelordet await
+const res = await fetch('/api')
+const data = res.ok ? res.json() : {}
+```
+
+Når vi opppretter funksjoner som skal være asyncron er det viktig at vi bruker nøkkelordet `async`
+
+```ts
+// For å opprette asyncron funksjon må vi bruke nøkkelordet async
+async function asyncFunksjonSomTarTid() {
+  const res = await fetch("www.example.com/data");
+  if (!res.ok) throw new Error(res.statusText);
+  return res.json();
+}
+
+// Vi må bruke nøkkelordet await når vi skal hente ut brukbar data, ellers vill du få tilbake et Promise
+const data = await asyncFunksjonSomTarTid()
+```
+Så, hva er et Promise? Et [Promise](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises) representerer et fremtidig resultat med tre tilstander:
+- pending    → venter
+- fulfilled  → OK (returnerer data)
+- rejected   → feilet (returnerer feilmeldingen)
+
+Vi bruker `await` til å hente ut den endelige tilstanden
 
 ## Javascript moduler
+I React og andre store prosjekter er det nødvendig å dele opp koden vår i mindre filer ("moduler"), hver fil kan eksportere ting (gjøre dem "offentlige") og andre filer kan importere dem for å bruke dem.
+Det er to forskjellige metoder for å opnå dette, [CommonJS eller ES-Modules](https://www.w3schools.com/nodejs/nodejs_modules_esm.asp). Vi kommer bare til å forholde oss til ES-Modules metoden i React siden den er mer moderne og støtter asyncron bedre. Her bruker vi nøkkelordene `import` og `export`
 
-commonjs vs es-modules
-hvordan importerer og eksporterer vi kode mellom filer
+### Export/Import
+Vi har to hoved måter å eksportere data / funksjoner i filene våre.
+```tsx
+// src/components/Button.jsx
+export default function Button({ children, ...props }) {
+  return <button {...props}>{children}</button>;
+}
 
-- try catch
-- asyncron (promise await etc)
-- import (dependencies/libraries) commonjs/ecma
-- array prototypes (map, sort, filter, etc)
+// src/App.jsx
+import Button from './components/Button.jsx'; // navnet "Button" kan du velge fritt siden det er en default export
+```
+eller
+```tsx
+// src/components/Button.jsx
+export function Button({ children, ...props }) {
+  return <button {...props}>{children}</button>;
+}
+
+// src/App.jsx
+import { Button } from './components/Button.jsx'; // navnet "Button" er satt
+```
+Dette er litt etter smak og behag, hvis filen din bare har et komponent du skal bruke så kan du velge å sitte default på en funksjon, husk at en fil kun kan ha en enkelt default export!
+Som regel bruker jeg bare vanlig export i nesten alle komponenter
+
+### Dependencies
+Vi bruker også denne funksjonaliteten hele tiden når vi skal hente inn funksjoner og data fra rammeverkene vi bruker, her vill du se at import pathen er annerledes siden filene vi henter fra ligger i en mappe som heter `node_modules`
+Når vi skal bruke funksjonalitet fra React så trenger vi bare å skrive "react" i import pathen
+```ts
+import { useState } from 'react'
+```
+Filene for React ligger tilgjengelig i `node_modules/react` etter vi har installert det
