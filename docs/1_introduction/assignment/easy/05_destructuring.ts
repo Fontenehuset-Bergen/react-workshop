@@ -28,12 +28,6 @@ export function pickIdAndRest(item: { id: number; [k: string]: unknown }) {
   return { id, rest };
 }
 
-// 4) Destructuring i map-callback
-export function namesList(users: Array<{ id: number; name: string }>): string[] {
-  // TODO: bruk ({ name }) i map for å hente navnene
-  return [];
-}
-
 // ---------------- Self-check ----------------
 console.log(userSummary({})); // "Ukjent @ Ukjent by"
 console.log(userSummary({ name: 'Ada', address: { city: 'Bergen' } })); // "Ada @ Bergen"
@@ -42,5 +36,3 @@ console.log(firstAndLast([1, 2, 3])); // [1, 3]
 console.log(firstAndLast<string>([])); // [undefined, undefined]
 
 console.log(pickIdAndRest({ id: 7, a: 1, b: 2 })); // { id:7, rest:{ a:1, b:2 } }
-
-console.log(namesList([{ id: 1, name: 'Ada' }, { id: 2, name: 'Linus' }])); // ["Ada","Linus"]

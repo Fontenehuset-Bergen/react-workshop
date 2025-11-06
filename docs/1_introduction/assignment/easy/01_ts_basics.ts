@@ -3,13 +3,16 @@
  * 
  * Instruks: Fyll inn KORREKT type der det står /* TODO type *\
  * Målet er at fila kompilerer uten feil, og at self-check gir riktig output.
+ * 
+ * for å kjøre filen kan du lime inn følgende kode i terminalen:
+ * npx ts-node docs/1_introduction/assignment/easy/01_ts_basics.ts
  */
 
 // 1) Primitive typer
-let age: /* TODO type */ = 27;
-const name: /* TODO type */ = 'Ada';
-let isMember: /* TODO type */ = false;
-let scoreText: /* TODO type */ = `score:${age}`;
+const age: /* TODO type */ = 27;
+const myName: /* TODO type */ = 'Ada';
+const isMember: /* TODO type */ = false;
+const scoreText: /* TODO type */ = `score:${age}`;
 
 // 2) Null/undefined-bevissthet
 let maybeCount: /* TODO type */ = undefined;     
