@@ -25,7 +25,9 @@ export function grade(score: number): 'A' | 'B' | 'C' | 'F' {
 // 3) Badge: "Admin Pro", "Admin", "Pro", "Member"
 export function badge(isAdmin: boolean, isPro: boolean): string {
   // TODO: kombiner flere ternaries/strings
-  return '';
+
+  // return isAdmin ? isPro ?  "Admin Pro" : "Pro" : "Admin" : "Member"
+  return  `${isAdmin ? isPro ? "Admin Pro" : "Admin" : isPro ?  "Pro" : "Member" }`;
 }
 
 // 4) Tekst for antall (1 => "1 item", ellers "N items")
