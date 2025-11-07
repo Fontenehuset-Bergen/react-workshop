@@ -12,7 +12,7 @@ export function displayName(
   username?: string | null
 ): string {
   // TODO: bruk nested ternary + template literal
-  return '';
+  return `${ first || last ?  (first ? first + (last ? last : "") : last)  : username ? username : "Ukjent" }`;
 }
 
 // 2) Karakter basert på poeng
