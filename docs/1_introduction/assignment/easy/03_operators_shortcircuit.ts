@@ -6,8 +6,12 @@
 
 // 1) Nullish fallback – behold '' og 0 som gyldige verdier
 export function safeTitle(input: string | number | null | undefined, fallback: string): string {
+
   // TODO: bruk ??
-  return '';
+  input = typeof(input) == "number" ? input.toString() : input;
+
+  // return input !== null && input !== undefined ? input : fallback;
+  return  input ?? fallback ;
 }
 
 // 2) Vis tekst om cond er "truthy" – ellers tom streng

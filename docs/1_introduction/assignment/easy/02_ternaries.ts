@@ -19,7 +19,7 @@ export function displayName(
 // 90+ = "A", 80+ = "B", 70+ = "C", ellers "F"
 export function grade(score: number): 'A' | 'B' | 'C' | 'F' {
   // TODO: ternary-kjede
-  return 'F';
+  return score >= 90 ? "A" : score >= 80 ? "B" : score >= 70 ? "C" : "F" ;
 }
 
 // 3) Badge: "Admin Pro", "Admin", "Pro", "Member"
@@ -33,7 +33,7 @@ export function badge(isAdmin: boolean, isPro: boolean): string {
 // 4) Tekst for antall (1 => "1 item", ellers "N items")
 export function countLabel(n: number): string {
   // TODO: ternary for plural
-  return '';
+  return n === 1 ? "1 item " : `${n} items`;
 }
 
 /** -------------------------- Self-check ---------------------------- 
