@@ -8,10 +8,11 @@
 export function safeTitle(input: string | number | null | undefined, fallback: string): string {
 
   // TODO: bruk ??
-  input = typeof(input) == "number" ? input.toString() : input;
+  // input = typeof(input) == "number" ? input.toString() : input;
 
-  // return input !== null && input !== undefined ? input : fallback;
-  return  input ?? fallback ;
+  return (input !== null && input !== undefined) ? (typeof(input) == "number" ? input.toString() : input): fallback;
+
+  // return  input ?? fallback ;
 }
 
 // 2) Vis tekst om cond er "truthy" – ellers tom streng
