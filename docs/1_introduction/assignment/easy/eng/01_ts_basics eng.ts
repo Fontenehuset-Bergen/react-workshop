@@ -7,7 +7,7 @@
 */
 
 // 1) Primitive types
-const age: number = 27;
+const age: number = 27; // This was fine until I moved it to a new folder now it gives an error.
 const myName: string = 'Ada';
 const isMember: boolean = false;
 const scoreText: string = `score:${age}`;

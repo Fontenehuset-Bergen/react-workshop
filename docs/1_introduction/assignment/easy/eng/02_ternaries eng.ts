@@ -1,0 +1,58 @@
+/**
+* EASY 2: Ternaries – combine multiple variables with conditions
+*
+* Instructions: Implement the functions with ? : (ternary).
+* Avoid if/else – the goal is to show that you master the expression form.
+*/
+
+// 1) Choose display name: first+last if at least one exists, otherwise username, otherwise "Unknown".
+export function displayName(
+  first?: string | null,
+  last?: string | null,
+  username?: string | null
+  ): string {
+  // TODO: use nested ternary + template literal
+  return '';
+  }
+  
+  // 2) Grade based on points
+  // 90+ = "A", 80+ = "B", 70+ = "C", otherwise "F"
+  export function grade(score: number): 'A' | 'B' | 'C' | 'F' {
+  // TODO: ternary chain
+  return 'F';
+  }
+  
+  // 3) Badge: "Admin Pro", "Admin", "Pro", "Member"
+  export function badge(isAdmin: boolean, isPro: boolean): string {
+  // TODO: combine multiple ternaries/strings
+  return '';
+  }
+  
+  // 4) Text for number (1 => "1 item", otherwise "N items")
+  export function countLabel(n: number): string {
+  // TODO: ternary for plural
+  return '';
+  }
+  
+  /** -------------------------- Self-check ----------------------------
+  * Run the following command to see if your code ran
+  * npx tsx docs/1_introduction/assignment/easy/02_ternaries.ts
+  * ------------------------------------------------------------------
+  */
+  
+  console.log(`Answer: ${displayName('Ada', null, 'ada123')}\t\t\tExpected: Ada`);
+  console.log(`Answer: ${displayName(undefined, undefined, 'linus')}\t\t\tExpected: linux`);
+  console.log(`Answer: ${displayName(undefined, undefined, undefined)}\t\t\tExpected: undefiend`);
+  
+  console.log(`Answer: ${grade(95)}\t\t\tExpected: A`);
+  console.log(`Answer: ${grade(81)}\t\t\tExpected: B`);
+  console.log(`Answer: ${grade(74)}\t\t\tExpected: C`);
+  console.log(`Answer: ${grade(12)}\t\t\tExpected: F`);
+  
+  console.log(`Answer: ${badge(true, true)}\t\t\tExpected: Admin Pro`);
+  console.log(`Answer: ${badge(true, false)}\t\t\tExpected: Admin`);
+  console.log(`Answer: ${badge(false, true)}\t\t\tExpected: Pro`);
+  console.log(`Answer: ${badge(false, false)}\t\t\tExpected: Member`);
+  
+  console.log(`Answer: ${countLabel(1)}\t\t\tExpected: 1 item`);
+  console.log(`Answer: ${countLabel(3)}\t\t\tExpected: 3 items`);
