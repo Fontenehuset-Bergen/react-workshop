@@ -21,21 +21,21 @@ const pointsA: /* TODO type */ = [10, 20, 30];
 const pointsB: /* TODO type */ = [5, 15];   
 
 // 4) Enkle funksjoner (angi parameter- og returtyper)
-function add(a: /* TODO type */, b: /* TODO type */): /* TODO type */ {
+function add(a: number, b: number ): number {
   return a + b;
 }
 
-const toUpper = (s: /* TODO type */): /* TODO type */ => s.toUpperCase();
+const toUpper = (s: string): string => s.toUpperCase();
 
 // 5) Valgfri parameter med default-verdi
-function greet(who: /* TODO type */ = 'venn'): /* TODO type */ {
+function greet(who: string = 'venn'): string {
   return `Hei, ${who}`;
 }
 
 // 6) Rest-parametere
-function sumAll(...nums: /* TODO type */): /* TODO type */ {
+function sumAll(...nums: Array<number>): number {
   return nums.reduce((acc, n) => acc + n, 0);
 }
 
 // 7) Små sannhetsverdier
-const isAdult: /* TODO type */ = age >= 18;
+const isAdult: boolean = age >= 18;

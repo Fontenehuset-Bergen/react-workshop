@@ -12,8 +12,40 @@ export function displayName(
   username?: string | null
 ): string {
   // TODO: bruk nested ternary + template literal
-  return `${ first || last ?  (first ? first + (last ? last : "") : last)  : username ? username : "Ukjent" }`;
+
+  
+  let result : string = "";
+  
+  if(first != null || last != null)
+  { // or you can write if(first || last)
+    if(first) result += first; 
+    if(last) result += last;
+  }
+  else if(username) result = username;
+       else result = "Ukjent";
+
+  return result;
+/*
+  A tenary askes a question (an if statement), if it checks out , you have one outcome, if not,  another, separated by a ":"
+  like this - is this true (expression) ? yes, choose me : no, I'm the one you want
+  but you could have a tenary as the first (or second or both) outcome. The result of that tenary would be the answer to one of the first ones (or second one) .
+  Like this : (is this true (expression) ? (yes, but I don't have the answer - let me check) (epression ? ok, i chooce option1 : ok, i choose option 2) : no, I'm the one you want (same as before);
+  so the first outcome is the result of the second tenary (in parentes), but the last one is in this example the same. I put a parentes on the second tenary to show that
+  the answer is the answer to the first option in the first tenary, but that  is not nessesary.
+
+  But you can have another tenary as the result of the first answer or last(or both) answers  of the second tenary and another tenary as the second answer of the main/start tenary. This is when it gets really messy.
+  
+  is this true (epression) : ((yes, but I dont know) expression ? ((ok, i also have two options) expression ? first answer: last answer) : ok, i chooce option 2 (same as before) ): ((I have options too) expression ? myoption1 : myoption2 ) ; 
+
+  You can look at it this way : You have one main tenary - the rest are sub tenaries that, in the end , would be the two answers to the main tenary.
+
+
+*/
+  return `${ first || last ?  (first ? first + (last ? last : "") : last)  : ( username ? username : "Ukjent") }`;
 }
+
+
+
 
 // 2) Karakter basert på poeng
 // 90+ = "A", 80+ = "B", 70+ = "C", ellers "F"
