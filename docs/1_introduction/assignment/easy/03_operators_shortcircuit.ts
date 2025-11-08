@@ -41,7 +41,8 @@ export function fallbackZero(n: number | null | undefined): number {
 // 4) Streng sammenligning (strict equality), pass på typen!
 export function isExactZero(n: number|string): boolean {
   // TODO: bruk ===
-  return false;
+  return (n === 0 || n === "0") ? true : false;
+  // return false;
 }
 
 // 5) sørg for at tallet er innenfor min og max
