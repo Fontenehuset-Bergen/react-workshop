@@ -7,18 +7,18 @@
  */
 
 // 1) Primitive typer
-const age: /* TODO type */ = 27;
-const myName: /* TODO type */ = 'Ada';
-const isMember: /* TODO type */ = false;
-const scoreText: /* TODO type */ = `score:${age}`;
+const age: number = 27;
+const myName: string = 'Ada';
+const isMember: boolean = false;
+const scoreText: string = `score:${age}`;
 
 // 2) Null/undefined-bevissthet
-let maybeCount: /* TODO type */ = undefined;     
-let maybeNote: /* TODO type */ = null;          
+let maybeCount: number | undefined = undefined;     
+let maybeNote: string | null = null;          
 
 // 3) Arrays (to syntakser som betyr det samme)
-const pointsA: /* TODO type */ = [10, 20, 30];  
-const pointsB: /* TODO type */ = [5, 15];   
+const pointsA: Array<number> = [10, 20, 30];  
+const pointsB: number[] = [5, 15];   
 
 // 4) Enkle funksjoner (angi parameter- og returtyper)
 function add(a: number, b: number ): number {

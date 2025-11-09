@@ -48,8 +48,8 @@ export function isExactZero(n: number|string): boolean {
 // 5) sørg for at tallet er innenfor min og max
 export function isInRange(n: number, min: number, max: number): boolean {
   // TODO: bruk Math.min/Math.max eller sammenligninger
-  return false;
-}
+  return Math.min(min) && Math.max(max) ? true : false;
+} 
 
 /** -------------------------- Self-check ---------------------------- 
  *  Kjør følgende kommando for å se om koden din kjørte

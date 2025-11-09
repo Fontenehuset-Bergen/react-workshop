@@ -24,7 +24,7 @@ let names: string[] = ['Ada', 'Linus'];
 let nums: Array<number> = [1, 2, 3];  // alternativ syntaks
 
 type Person = {
-  id: number;
+  id: number;ok
   name: string;
   email?: string;   // ? = valgfelt
   readonly role: 'user' | 'admin'; // kan ikke endres etterpå

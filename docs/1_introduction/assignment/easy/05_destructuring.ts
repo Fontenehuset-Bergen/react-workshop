@@ -6,12 +6,16 @@
 
 // 1) Object-destructuring med defaults og alias
 type User = { name?: string; address?: { city?: string } };
-export function userSummary(u: User): string {
-  // TODO:
+export function userSummary(u: User): string 
+{
+
+  
   // - hent name med default "Ukjent"
   // - hent city fra address med default "Ukjent by"
   // - bruk sikre defaults på mellomledd (={} / ?? {})
-  return '';
+  return  ` ${u.name ? u.name : "Ukjent"} @ ${u.address ? u.address.city ? u.address.city : "Ukjent by" : ""} `;
+    
+  // TODO:
 }
 
 // 2) Array-destructuring: hent ut brukernavnet
