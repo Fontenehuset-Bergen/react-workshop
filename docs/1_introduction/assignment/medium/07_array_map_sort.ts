@@ -7,26 +7,30 @@
  */
 
 // 1) doubleAll: returner ny liste med alle tall * 2
-export function doubleAll(nums: number[]): number[] {
-  
+export function doubleAll(nums: number[]): number[] 
+{
+    // spør hvorfor dette ikke funker
   // const newArray : Array<number> =  [...nums];
   // newArray.forEach(item: => { item = item*2;}); 
  
-  const newArray : Array<number> = nums.map((item : number) => item * 2);
+  // nums.map((item : number) => item * 2);
 
-  return newArray;
+  return nums.map((item : number) => item * 2);
 }
 
 // 2) trimAll: trim whitespace på hvert navn
-export function trimAll(names: string[]): string[] {
+export function trimAll(names: string[]): string[] 
+{
   // TODO: map
-  return [];
-}
+ 
+  return names.map((item : string) => { item.trim(); });
 
-// 3) sortedNumbersAsc: returner SORTERT KOPI stigende (ikke mutér input!)
+}// 3) sortedNumbersAsc: returner SORTERT KOPI stigende (ikke mutér input!)
 export function sortedNumbersAsc(nums: number[]): number[] {
   // TODO: [...nums].sort((a,b)=>a-b)
-  return [];
+
+  const newArray = nums.map((a, b) => {}).sort((a, b) => a-b);
+  return 0;
 }
 
 // 4) sortedNumbersDesc: returner sortert kopi synkende
