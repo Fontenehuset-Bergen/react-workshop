@@ -25,7 +25,7 @@ export const add = (a: number, b : number) : number =>
 // };
 
 export function evenOdd(n : number) : string {
-  return n % 2 ? "odd" : "even";
+  return n % 2 === 0 ? "even" : "odd";
 }
 
 /** -------------------------- Self-check ---------------------------- 
@@ -35,4 +35,5 @@ export function evenOdd(n : number) : string {
 */
 
 console.log(`Answer: ${add(2, 3)}\t\t\tExpected: 5`);
-console.log(`Answer: ${evenOdd(2)} ${evenOdd(3)}\t\t\tExpected: even odd`);  // modified this
+// console.log(`Answer: ${evenOdd(2)} ${evenOdd(3)}\t\t\tExpected: even odd`);  // modified this
+console.log(`Answer: ${evenOdd(2)} ${evenOdd(7)}\t\t\tExpected: even odd`);  // modified this

@@ -8,8 +8,13 @@
 
 // 1) doubleAll: returner ny liste med alle tall * 2
 export function doubleAll(nums: number[]): number[] {
-  // TODO: map
-  return [];
+  
+  // const newArray : Array<number> =  [...nums];
+  // newArray.forEach(item: => { item = item*2;}); 
+ 
+  const newArray : Array<number> = nums.map((item : number) => item * 2);
+
+  return newArray;
 }
 
 // 2) trimAll: trim whitespace på hvert navn
@@ -51,7 +56,7 @@ export function sortUsersByAge(users: User[]): User[] {
 
 /** -------------------------- Self-check ----------------------------
  *  Kjør følgende kommando for å se om koden din kjørte
- *  npx tsx tasks/js-recap/medium/01_array_map_sort.ts
+ *   npx tsx docs/1_introduction/assignment/medium/07_array_map_sort.ts  
  *  ------------------------------------------------------------------
 */
 const nums = [3, 1, 2];

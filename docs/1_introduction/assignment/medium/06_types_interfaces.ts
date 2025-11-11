@@ -5,7 +5,14 @@
  */
 
 // 1) Lag en interface som passer for både person1 og person2 (tips: bruk valgfrie felter med ? der det trengs)
-interface Person {}
+interface Person 
+{
+  name : string,
+  hobbies : Array<string>,
+  joined : Date,
+  age? : Number,
+  isAdmin?: boolean
+}
 
 const person1: Person = {
   name: "Åge",
@@ -22,17 +29,20 @@ const person2: Person = {
 
 // 2) Bruk interfaces inni interfaces
 interface Address {
-
+  city : string
 }
 
 interface User {
-  
+
+    id : Number,
+    name : string,
+    address? : Address
 }
 
 const u1: User = { id: 1, name: "Ada" };
 const u2: User = { id: 2, name: "Linus", address: { city: "Bergen" } };
 
 // 3) Lag en type hvor status kun kan være: idle, laoding, success eller error
-type Status = ""
+type Status = "idle" | "loading" | "success";
 
-const webpageStatus: Status = ""
+const webpageStatus: Status = "idle";

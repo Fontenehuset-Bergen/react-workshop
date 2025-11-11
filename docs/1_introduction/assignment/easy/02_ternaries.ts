@@ -27,9 +27,8 @@ export function displayName(  first?: string | null,  last?: string | null,  use
 
   return `${ first || last ?  (first ? first + (last ? last : "") : last)  : ( username ? username : "Ukjent") }`;
 }
-
-
-
+ 
+ 
 
 // 2) Karakter basert på poeng
 // 90+ = "A", 80+ = "B", 70+ = "C", ellers "F"

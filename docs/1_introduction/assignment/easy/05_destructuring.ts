@@ -4,32 +4,47 @@
  * Instruks: Bruk destructuring med fornuftige defaults. Unngå runtime-feil når felt mangler.
  */
 
+import { stringify } from "querystring";
+
 // 1) Object-destructuring med defaults og alias
 type User = { name?: string; address?: { city?: string } };
 export function userSummary(u: User): string 
 {
+   const name = u.name ?? "Ukjent";
+   const city = u.address ? u.address.city ?? "Ukjent by" : "Ukjent by";
+   
+   // herfra gjør jeg det på gamle måten
 
-  
+  //  if(u.address != undefined && u.address.city != undefined) 
+  //   u.name += ` @ ${u.address.city} ` 
+  // else u.name += " @ Ukjent by";
+  return `${name} @ ${city}`; 
+
   // - hent name med default "Ukjent"
   // - hent city fra address med default "Ukjent by"
   // - bruk sikre defaults på mellomledd (={} / ?? {})
-  return  ` ${u.name ? u.name : "Ukjent"} @ ${u.address ? u.address.city ? u.address.city : "Ukjent by" : ""} `;
+  // return { u.name ? u.name : "Ukjent" + "@"} + { u.address ? u.address.city ? u.address.city : "Ukjent by" : "" ;
     
   // TODO:
 }
 
 // 2) Array-destructuring: hent ut brukernavnet
 export function getUsername(user: [string, string, string]): string {
-  // TODO
-  return "";
+  // notat : vi må ned i console.log for å få vite oppsettet av array - gjør jeg dette rett ?
+  // return user[1];
+  const [id, userName, link] = user;
+  return userName;
 }
 
 // 3) Destructuring i parameter + rest
 export function pickIdAndRest(item: { id: number; [k: string]: unknown }) {
-  // TODO: plukk ut id, legg resten i 'rest'
-  const id = 0;
-  const rest = {};
-  return { id, rest };
+ // TODO: plukk ut id, legg resten i 'rest'
+
+  const spread : item = { id, ...rest}
+
+  const  rest  = {...item};
+  
+  return { spread};
 }
 
 /** -------------------------- Self-check ---------------------------- 
