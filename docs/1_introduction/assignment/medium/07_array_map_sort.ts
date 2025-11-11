@@ -21,10 +21,10 @@ export function doubleAll(nums: number[]): number[]
 // 2) trimAll: trim whitespace på hvert navn
 export function trimAll(names: string[]): string[] 
 {
-  // TODO: map
+  // TODO: 
  
   return names.map((item : string) => { item.trim(); });
-
+  
 }// 3) sortedNumbersAsc: returner SORTERT KOPI stigende (ikke mutér input!)
 export function sortedNumbersAsc(nums: number[]): number[] {
   // TODO: [...nums].sort((a,b)=>a-b)
