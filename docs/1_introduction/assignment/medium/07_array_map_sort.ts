@@ -9,13 +9,13 @@
 // 1) doubleAll: returner ny liste med alle tall * 2
 export function doubleAll(nums: number[]): number[] 
 {
-    // spør hvorfor dette ikke funker
+  //  spør hvorfor dette ikke funker
   // const newArray : Array<number> =  [...nums];
-  // newArray.forEach(item: => { item = item*2;}); 
+  // newArray.forEach(item => { item = item*2;}); 
  
-  // nums.map((item : number) => item * 2);
 
   return nums.map((item : number) => item * 2);
+
 }
 
 // 2) trimAll: trim whitespace på hvert navn
@@ -27,22 +27,24 @@ export function trimAll(names: string[]): string[]
   
 }// 3) sortedNumbersAsc: returner SORTERT KOPI stigende (ikke mutér input!)
 export function sortedNumbersAsc(nums: number[]): number[] {
-  // TODO: [...nums].sort((a,b)=>a-b)
+  // TODO: [...nums].sort((a,b)=>a-b
+  // ok, her ser det ut som Kristoffer faktisk har skrevet svaret i oppgaven.
+  // etter mye om og men fant jeg ut at dette var det riktige, selv  om man skulle tro at man skulle gjøre noe annet :-)
 
-  const newArray = nums.map((a, b) => {}).sort((a, b) => a-b);
-  return 0;
+  return [...nums].sort((a, b) => a-b);
 }
 
 // 4) sortedNumbersDesc: returner sortert kopi synkende
 export function sortedNumbersDesc(nums: number[]): number[] {
   // TODO
-  return [];
+  return [...nums].sort((a, b) => b - a)
 }
 
 // 5) case-insensitive sort på strenger (kopi)
 export function sortedNamesCaseInsensitive(names: string[]): string[] {
+  
   // TODO:
-  return [];
+  return [...names].sort((a, b) =>{ return a.toLowerCase().localeCompare(b.toLowerCase()); });
 }
 
 // 6) sorter objekter på 'name' (A→Å) som kopi
