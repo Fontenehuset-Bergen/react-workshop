@@ -13,13 +13,20 @@ export function safeTitle(input: string | number | null | undefined, fallback: s
   // 2) Show text if cond is "truthy" – otherwise empty string
   export function showIf(cond: unknown, text: string): string {
   // TODO: use &&
-  return '';
+  return cond? text: "";
   }
   
   // 3) Correct fallback that returns a number, if the number is not a positive integer return 0
+
+// Nullish coalescing: ??(fall back only at null/undefined)
+
   export function fallbackZero(n: number | null | undefined): number {
   // TODO: use ??
-  return 0;
+
+  // n = name of a variable that can only be a number or null/undefined
+  // fallbackZero = a function that returns a number
+  return n ?? 0;
+  // return n >= 0? n: 0;
   }
   
   // 4) Strict equality, be careful with the type!
