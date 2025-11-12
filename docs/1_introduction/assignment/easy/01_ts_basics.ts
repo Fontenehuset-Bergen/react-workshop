@@ -38,4 +38,4 @@ function sumAll(...nums: number[]): number {
 }
 
 // 7) Små sannhetsverdier
-const isAdult: /* TODO type */ = age >= 18;
+const isAdult: boolean = age >= 18;
