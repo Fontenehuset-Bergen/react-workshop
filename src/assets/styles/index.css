@@ -59,12 +59,15 @@ button:focus-visible {
 }
 .donaldImage {
   width: 100px;
+  border-radius: 50%;
 }
 
 .trumpModeSettings {
   gap: 10px;
   align-items: center;
   font-size : 40px;
+  color: darkred;
+
 }
 
 @media (prefers-color-scheme: light) {
