@@ -54,8 +54,17 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.flex {
+  display: flex;
+}
 .donaldImage {
-  widht: 100px;
+  width: 100px;
+}
+
+.trumpModeSettings {
+  gap: 10px;
+  align-items: center;
+  font-size : 40px;
 }
 
 @media (prefers-color-scheme: light) {

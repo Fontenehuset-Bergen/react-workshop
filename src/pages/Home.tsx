@@ -21,10 +21,10 @@ function App() {
         </button>
          {politiciansLieCount >= 100 &&
   
-          <p>
-         
+          <p className="flex trumpModeSettings">
+              <img className="donaldImage" src={donaldImage}/>         
             Warning : Entering Trump mode
-              <img className="donaldImage" src={donaldImage}/>
+
           </p>
         }
       </div>
