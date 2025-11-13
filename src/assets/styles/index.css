@@ -54,6 +54,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.donaldImage {
+  widht: 100px;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -66,3 +70,4 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+

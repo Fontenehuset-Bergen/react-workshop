@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { HomepageHero } from '../components/feature/Hero'
 import '../assets/styles/example.css'
+import donaldImage from "../assets/images/donaldtrump.jpg";
 // import { badge} from "../../docs/1_introduction/assignment/easy/02_ternaries";
 import * as operators from "../../docs/1_introduction/assignment/easy/03_operators_shortcircuit";
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [politiciansLieCount , daliyRegistration] = useState(0)
   // console.log( badge(true, false) );
 
 
@@ -14,18 +15,24 @@ function App() {
     <>
       <HomepageHero />
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <h3>Politicians lies  : { politiciansLieCount}</h3>
+        <button onClick={() => daliyRegistration((politiciansLieCount) => politiciansLieCount + 6)}>
+           Register complaint 
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+         {politiciansLieCount >= 100 &&
+  
+          <p>
+         
+            Warning : Entering Trump mode
+              <img className="donaldImage" src={donaldImage}/>
+          </p>
+        }
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
     </>
   )
-}
+} 
 
 export default App
