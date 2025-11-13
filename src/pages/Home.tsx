@@ -1,4 +1,5 @@
-import { useState } from 'react'
+// import Blink from 'react';
+import { useState, Blink } from 'react'
 import { HomepageHero } from '../components/feature/Hero'
 import '../assets/styles/example.css'
 import donaldImage from "../assets/images/donaldtrump.jpg";
@@ -20,12 +21,12 @@ function App() {
            Register complaint 
         </button>
          {politiciansLieCount >= 100 &&
-  
-          <p className="flex trumpModeSettings">
-              <img className="donaldImage" src={donaldImage}/>         
-            Warning : Entering Trump mode
-
+            <div className="flex">  
+            <img className="donaldImage" src={donaldImage}/>     
+            <p className="flex trumpModeSettings" > 
+             Warning! Entering Trump mode
           </p>
+          </div>
         }
       </div>
       <p className="read-the-docs">
