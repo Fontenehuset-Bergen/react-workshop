@@ -14,6 +14,10 @@ export function add(a: number, b: number): number {
   // tip: you can check if a number is divisible by 2 with n % 2 === 0
   return 'even';
   };
+
+  export function evenOdd(n: number): string {
+    return n % 2 === 0? "Even": "Odd";
+  }
   
   /** -------------------------- Self-check ----------------------------
   * Run the following command to see if your code ran

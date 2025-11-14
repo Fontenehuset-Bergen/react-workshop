@@ -45,13 +45,25 @@ export function safeTitle(input: string | number | null | undefined, fallback: s
   // return false;
   // AmI supposed to remove this?
 
-  return n === 0? true: false;
+  return n === 0 || n === "0"? true: false;
   // is n the same value and data type as the number 0? if yes, then return TRUE. otherwise, return FALSE
   }
   
   // 5) make sure the number is within min and max
-  export function isInRange(n: number, min: number, max: number): boolean {
+  export function isInRange(n: number, minimumNumber: number, maximumNumber: number): boolean {
   // TODO: use Math.min/Math.max or comparisons
+  // Math.__ does calculations - is an object - math functions
+
+  // Make n: is a number within max(number) and min(number)
+    // Return a true or false
+  
+  return n >= Math.min(minimumNumber, maximumNumber) && n <= Math.max(maximumNumber, minimumNumber)? true: false;
+  // Math.min will assign whichever value is lowest to be the min value and use that as min
+  
+  
+  // Math.min(minimumNumber)
+  // Math.min is a method - a function within an object. Like a nested function. Function that does something internally, isolated to the object is is inside of
+
   return false;
   }
   
