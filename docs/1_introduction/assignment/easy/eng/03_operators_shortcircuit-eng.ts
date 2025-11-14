@@ -32,7 +32,11 @@ export function safeTitle(input: string | number | null | undefined, fallback: s
   // 4) Strict equality, be careful with the type!
   export function isExactZero(n: number|string): boolean {
   // TODO: use ===
-  return false;
+  // return false;
+  // AmI supposed to remove this?
+
+  return n === 0? true: false;
+  // is n the same value and data type as the number 0? if yes, then return TRUE. otherwise, return FALSE
   }
   
   // 5) make sure the number is within min and max
