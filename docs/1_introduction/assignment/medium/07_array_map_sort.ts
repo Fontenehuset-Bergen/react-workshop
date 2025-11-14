@@ -50,8 +50,8 @@ export function sortedNamesCaseInsensitive(names: string[]): string[] {
 // 6) sorter objekter på 'name' (A→Å) som kopi
 type User = { id: number; name: string; age: number };
 export function sortUsersByName(users: User[]): User[] {
-  // Tips: bruk localeCompare på name
-  return [];
+
+    return [...users].sort((a, b) => a.localCompaer(name)  // Tips: bruk localeCompare på n
 }
 
 // 7) sorter objekter på 'age' (lav→høy) som kopi
