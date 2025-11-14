@@ -51,13 +51,13 @@ export function sortedNamesCaseInsensitive(names: string[]): string[] {
 type User = { id: number; name: string; age: number };
 export function sortUsersByName(users: User[]): User[] {
 
-    return [...users].sort((a, b) => a.localCompaer(name)  // Tips: bruk localeCompare på n
+    return [...users].sort((a, b) => a.name.localeCompare(b.name));  // Tips: bruk localeCompare på n
 }
 
 // 7) sorter objekter på 'age' (lav→høy) som kopi
 export function sortUsersByAge(users: User[]): User[] {
   // TODO: numerisk sortering
-  return [];
+  return [...users].sort((a, b) => a.age - b.age);
 }
 
 /** -------------------------- Self-check ----------------------------
@@ -83,5 +83,6 @@ const users: User[] = [
   { id: 3, name: 'Grace', age: 45 },
 ];
 console.log(`Answer: ${JSON.stringify(sortUsersByName(users).map(u => u.name))}\tExpected: ["ada","Grace","Linus"]`);
-console.log(`Answer: ${JSON.stringify(sortUsersByAge(users).map(u => u.age))}\t\tExpected: [36,45,50]`);
 console.log(`Answer: ${JSON.stringify(users.map(u => u.name))}\t\tExpected: ["Linus","ada","Grace"]`);
+console.log(`Answer: ${JSON.stringify(sortUsersByAge(users).map(u => u.age))}\t\tExpected: [36,45,50]`);
+
