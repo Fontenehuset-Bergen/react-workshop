@@ -18,15 +18,25 @@ export function safeTitle(input: string | number | null | undefined, fallback: s
   
   // 3) Correct fallback that returns a number, if the number is not a positive integer return 0
 
+  // Integer: Number that is not a decimal number. Whole number. 1 2 3 4 5...... Not 1.3 5.6 etc ( Negative or Positive )
 // Nullish coalescing: ??(fall back only at null/undefined)
 
-  export function fallbackZero(n: number | null | undefined): number {
-  // TODO: use ??
+// **** NULLISH COALESCEING = thing of it like "null switching" - Switch null/undefined to an accreptable value/data type
 
-  // n = name of a variable that can only be a number or null/undefined
-  // fallbackZero = a function that returns a number
-  return n ?? 0;
-  // return n >= 0? n: 0;
+  export function fallbackZero(n: number | null | undefined): number {
+    // Null/Undefined means something doesn't exist
+
+    // TODO: use ??
+    // ?? = Switch. Switches to the thing defined after it. Example: ?? 0 = Switches the value to 0. ONLY if the thing before it is null or undefined. For example: n = n ?? 0 - If n is null or undefined, it switches it to zero.
+    // n = 6 ?? 0 - Nothing happens, because 6 is not null/undefined. n = 6
+
+    // n = name of a variable that can only be a number or null/undefined
+    // fallbackZero = a function that returns a number
+
+    // if n is null/undefined use 0 instead
+    // n = n ?? 0;
+    // if n exists, it becomes n, if it is undefined it becomes 0
+  return (n = n ?? 0) < 0? 0: n;
   }
   
   // 4) Strict equality, be careful with the type!
