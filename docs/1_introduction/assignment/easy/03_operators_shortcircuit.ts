@@ -55,22 +55,6 @@ export function isInRange(n: number, min: number, max: number): boolean {
   // the Math.min function returns the lowest value of (min, max )
   return n >= Math.min(min, max)  &&  n <= Math.max(min, max) ? true : false;
 } 
-const myObject = 
-{
-   user : "Erin" ,
-   adress : "234",
-
-   switchUser : function(newUser : string | null) : number
-   {    
-      if(newUser == null) return 0;
-      this.user = newUser;
-      return 1;
-   }
-};
-
-if(myObject.switchUser("Harald") == )
-  console.log("swtiching users went fine");
-else console.log("it didn't go that well. User is still Erin");
 
 /** -------------------------- Self-check ---------------------------- 
  *  Kjør følgende kommando for å se om koden din kjørte

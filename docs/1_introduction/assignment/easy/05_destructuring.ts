@@ -40,14 +40,17 @@ export function getUsername(user: [string, string, string]): string {
 export function pickIdAndRest(item: { id: number; [k: string]: unknown }) {
  // TODO: plukk ut id, legg resten i 'rest'
 
+ const id = item.id;
+  const rest = { ...item, id: undefined };
+  return { id, rest };
+//   const id = item.id;
+//   item.id = undefined;
 
-  const id = item.id;
-
-//   const  rest  = {item.id = undefined , ...item};
+// //   const  rest  = {item.id = undefined , ...item};
   
-//   return { rest};
+// //   return { rest};
 
-  return id;
+//   return id;
 }
 
 /** -------------------------- Self-check ---------------------------- 

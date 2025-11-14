@@ -24,9 +24,12 @@ export const add = (a: number, b : number) : number =>
 //   return 'even';
 // };
 
-export function evenOdd(n : number) : string {
+export function evenOdd(n : number) : "even" | "odd" {
   return n % 2 === 0 ? "even" : "odd";
+  // return n % 2 ? "odd" : "even";
+
 }
+
 
 /** -------------------------- Self-check ---------------------------- 
  *  Kjør følgende kommando for å se om koden din kjørte
