@@ -1,5 +1,5 @@
 // import Blink from 'react';
-import { useState, Blink } from 'react'
+import { useState} from 'react'
 import { HomepageHero } from '../components/feature/Hero'
 import '../assets/styles/example.css'
 import donaldImage from "../assets/images/donaldtrump.jpg";
@@ -14,19 +14,23 @@ function App() {
 
   return (
     <>
-      <HomepageHero />
+      <HomepageHero /> 
       <div className="card">
         <h3>Politicians lies  : { politiciansLieCount}</h3>
         <button onClick={() => daliyRegistration((politiciansLieCount) => politiciansLieCount + 6)}>
            Register complaint 
         </button>
          {politiciansLieCount >= 100 &&
-            <div className="flex">  
+            <div className="flex donaldDiv">  
             <img className="donaldImage" src={donaldImage}/>     
-            <p className="flex trumpModeSettings" > 
+            <p className="flex trumpModeSettings"> 
              Warning! Entering Trump mode
           </p>
           </div>
+        }
+        {politiciansLieCount > 150 &&
+          <p className='putinEnters'>Putin enters</p>
+          
         }
       </div>
       <p className="read-the-docs">

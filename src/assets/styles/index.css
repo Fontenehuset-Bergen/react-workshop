@@ -60,6 +60,7 @@ button:focus-visible {
 .donaldImage {
   width: 100px;
   border-radius: 50%;
+   animation : rotate 2s linear infinite;
 }
 
 .trumpModeSettings {
@@ -67,8 +68,43 @@ button:focus-visible {
   align-items: center;
   font-size : 40px;
   color: darkred;
+  animation : blink 1s infinite;
 
 }
+
+.donaldDiv {
+  align-items: center;
+  gap: 30px;
+    
+}
+
+.putinEnters {
+  font-size: 20px;
+  color:pink;
+  animation: slideInBottom 1.5s ease-in;
+  
+}
+
+@keyframes slideInBottom {
+  0% { transform: translateY(500px);}
+  80% { transform: translateY(-8 0px);}
+  100% { transform: translateY(0)}
+}
+
+@keyframes rotate {
+0% { transform: rotate(0);}
+100% { transform: rotate(360deg);}
+
+}
+
+@keyframes blink{
+    0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+
 
 @media (prefers-color-scheme: light) {
   :root {

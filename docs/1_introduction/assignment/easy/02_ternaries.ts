@@ -52,6 +52,22 @@ export function countLabel(n: number): string {
   
 }
 
+function Add(a : number, b: number) : number 
+{
+   return a + b;
+}
+
+function Add(numbers : number[])
+{
+  
+}
+
+
+const final : number = Add(Add(7, 9), Add(2, 3));
+console.log(final);
+
+
+
 /** -------------------------- Self-check ---------------------------- 
  *  Kjør følgende kommando for å se om koden din kjørte
  *  npx tsx docs/1_introduction/assignment/easy/02_ternaries.ts

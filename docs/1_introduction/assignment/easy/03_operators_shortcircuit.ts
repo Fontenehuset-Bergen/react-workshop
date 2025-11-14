@@ -8,11 +8,11 @@
 export function safeTitle(input: string | number | null | undefined, fallback: string): string {
 
   // TODO: bruk ??
-  // input = typeof(input) == "number" ? input.toString() : input;
+   //input = typeof(input) == "number" ? input.toString() : input;
 
   return (input !== null && input !== undefined) ? (typeof(input) == "number" ? input.toString() : input): fallback;
 
-  // return  input ?? fallback ;
+  //return  input ?? fallback ;
 }
 
 // 2) Vis tekst om cond er "truthy" – ellers tom streng
@@ -37,6 +37,29 @@ export function fallbackZero(n: number | null | undefined): number {
   // return  n (n ?? 0)
 
 }
+
+function switchTo(originalNumber : number | undefined | null, switchingTo : number) : number
+{
+   if(originalNumber == null || originalNumber == undefined) return switchingTo;
+   else return originalNumber;
+}
+
+// const n : number | undefined |null = undefined;
+let n : number | undefined | null = undefined;
+n = switchTo(n, 0);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // 4) Streng sammenligning (strict equality), pass på typen!
 export function isExactZero(n: number|string): boolean {
