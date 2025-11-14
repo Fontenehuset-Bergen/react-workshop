@@ -10,10 +10,10 @@ export function add(a: number, b: number): number {
   }
   
   // 2) Rewrite this arrow function into a regular function and fix the logic so that it returns the correct answer
-  export const evenOdd = (n: number): 'even' | 'odd' => {
-  // tip: you can check if a number is divisible by 2 with n % 2 === 0
-  return 'even';
-  };
+  // export const evenOdd = (n: number): 'even' | 'odd' => {
+  // // tip: you can check if a number is divisible by 2 with n % 2 === 0
+  // return 'even';
+  // };
 
   export function evenOdd(n: number): string {
     return n % 2 === 0? "Even": "Odd";
@@ -26,4 +26,4 @@ export function add(a: number, b: number): number {
   */
   
   console.log(`Answer: ${add(2, 3)}\t\t\tExpected: 5`);
-  console.log(`Answer: ${evenOdd(2), evenOdd(3)}\t\t\tExpected: even odd`);
+  console.log(`Answer: ${evenOdd(2)}, ${evenOdd(3)}\t\t\tExpected: even odd`);
