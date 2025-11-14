@@ -23,12 +23,16 @@ export function showIf(cond: unknown, text: string): string {
 }
 
 // 3) Korrekt fallback som returnerer et tall, hvis tallet ikke er en positiv integer returner 0
-export function fallbackZero(n: number | null | undefined): number {
+// Correct fallback that returns a number, if the number is not a positiv integer, return 0
+
+
+
+export function fallbackZero(n: number | undefined | null): number
+{
   // TODO: bruk ??
   // n = n ?? 0;
   return (n = n ?? 0) < 0 ? 0 : n;
-
-    // n = n ?? 0;
+  // n = n ?? 0;
   // return n !== null && n !== undefined ? n : 0;
   // return n ?? 0;
 
@@ -37,29 +41,6 @@ export function fallbackZero(n: number | null | undefined): number {
   // return  n (n ?? 0)
 
 }
-
-function switchTo(originalNumber : number | undefined | null, switchingTo : number) : number
-{
-   if(originalNumber == null || originalNumber == undefined) return switchingTo;
-   else return originalNumber;
-}
-
-// const n : number | undefined |null = undefined;
-let n : number | undefined | null = undefined;
-n = switchTo(n, 0);
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // 4) Streng sammenligning (strict equality), pass på typen!
 export function isExactZero(n: number|string): boolean {
@@ -71,8 +52,25 @@ export function isExactZero(n: number|string): boolean {
 // 5) sørg for at tallet er innenfor min og max
 export function isInRange(n: number, min: number, max: number): boolean {
   // TODO: bruk Math.min/Math.max eller sammenligninger
-  return Math.min(min) && Math.max(max) ? true : false;
+  // the Math.min function returns the lowest value of (min, max )
+  return n >= Math.min(min, max)  &&  n <= Math.max(min, max) ? true : false;
 } 
+const myObject = 
+{
+   user : "Erin" ,
+   adress : "234",
+
+   switchUser : function(newUser : string | null) : number
+   {    
+      if(newUser == null) return 0;
+      this.user = newUser;
+      return 1;
+   }
+};
+
+if(myObject.switchUser("Harald") == )
+  console.log("swtiching users went fine");
+else console.log("it didn't go that well. User is still Erin");
 
 /** -------------------------- Self-check ---------------------------- 
  *  Kjør følgende kommando for å se om koden din kjørte
