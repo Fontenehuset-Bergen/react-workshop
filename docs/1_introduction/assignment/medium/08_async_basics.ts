@@ -5,11 +5,23 @@
 
 // 1) sleep(ms): promise som fullfører etter ms
 export const sleep = (ms: number) => new Promise<void>(r => setTimeout(r, ms));
+// r = resolve
 
 // 2) fetchValue(label, ms): vent ms og returner label
 export async function fetchValue(label: string, ms: number): Promise<string> {
   // TODO: bruk sleep, returner label etterpå
-  return '';
+
+    // return  new Promise<string>( resolve => setTimeout( ()=> {resolve(label); }, ms)); 
+
+  return new Promise<string>( function(resolve) 
+  { 
+     setTimeout( () => { resolve(label);}, ms);
+
+  }); 
+
+    // sleep(ms);   return label;
+    // return new Promise<string>((resolve) => {setTimeout(() => { resolve(label);}, ms)} );
+ 
 }
 
 // 3) seqAB: hent "A"(300ms) og deretter "B"(300ms) SEKVENSIELT (ca. 600ms)
@@ -38,7 +50,7 @@ export async function safeRun(task: () => Promise<string>): Promise<string> {
 
 /** -------------------------- Self-check ----------------------------
  *  Kjør følgende kommando for å se om koden din kjørte
- *  npx tsx tasks/js-recap/medium/02_async_basics.ts
+ *  npx tsx sx docs/1_introduction/assignment/medium/02_async_basics.ts
  *  ------------------------------------------------------------------
 */
 (async () => {
