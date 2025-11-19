@@ -5,8 +5,19 @@
 */
 
 // 1) Rewrite the functions so that it becomes an arrow function
-export function add(a: number, b: number): number {
-  return a+b;
+// export function add(a: number, b: number): number {
+//   return a+b;
+//   }
+
+  /*
+  const functionName = () => {
+  // Function body
+  return result;
+};
+*/
+
+  const add = (a: number, b: number) => {
+    return a + b;
   }
   
   // 2) Rewrite this arrow function into a regular function and fix the logic so that it returns the correct answer
