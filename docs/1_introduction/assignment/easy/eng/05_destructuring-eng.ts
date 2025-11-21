@@ -11,13 +11,29 @@ export function userSummary(u: User): string {
 // - get name with default "Unknown"
 // - get city from address with default "Unknown city"
 // - use safe defaults on intermediate links (={} / ?? {})
-return '';
+
+//   return `${first || last? ((first? first + " ": "") + (last? last: "")): username? username: "Unknown"}`;
+// From Assignment 02
+// Read this as: return first name or last name
+// does last name exist?
+// if last name exists, then
+// check for first name, if it exists use that and a " " empty space, otherwise use "" null
+// check for last name, if it exists use that, if it does not exist then use "" null
+// after checking for first and last name, if those are not found then check for username
+// if username is found, use that, otherwise use the string "Unknown"
+
+const userName = u name: "Unknown";
+
+
 }
 
 // 2) Array-destructuring: get the username
 export function getUsername(user: [string, string, string]): string {
 // TODO
-return "";
+
+const [a, b, c] = user;
+
+return `${user}`;
 }
 
 // 3) Destructuring in parameter + rest
