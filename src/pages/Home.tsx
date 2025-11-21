@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { HomepageHero } from '../components/feature/Hero'
 import '../assets/styles/example.css'
+import {Kakemann} from '../components/feature/Kakemann'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +21,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <Kakemann/>
     </>
   )
 }
