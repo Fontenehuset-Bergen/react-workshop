@@ -23,8 +23,6 @@ export function userSummary(u: User): string {
 // if username is found, use that, otherwise use the string "Unknown"
 
 const userName = u name: "Unknown";
-
-
 }
 
 // 2) Array-destructuring: get the username
