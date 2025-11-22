@@ -1,26 +1,22 @@
-import { useState } from 'react'
-import { HomepageHero } from '../components/feature/Hero'
-import '../assets/styles/example.css'
+import { HomepageHero } from "../components/feature/Hero";
+import "../assets/styles/example.css";
+import JuleBakstGalleri from "../components/JuleBakstGalleri";
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <HomepageHero />
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    return (
+        <>
+            <HomepageHero />
+            <div className='card'>
+                <p>
+                    Endre og legg til i <code>src/App.tsx</code> legg til din
+                    egen komponent og se resultatet!
+                </p>
+            </div>
+            <div className='app-wrapper'>
+                <JuleBakstGalleri />
+            </div>
+        </>
+    );
 }
 
-export default App
+export default App;
