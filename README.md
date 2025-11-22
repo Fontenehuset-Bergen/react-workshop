@@ -32,8 +32,10 @@ npm run dev
 
 ### 3. Lag ny branch
 
+Vi viste flere ulike alternativer for å opprette nye branches i går. Kjører du komando, så står komando under, eventuelt bruker vi stackblitz/vs code for å opprette ny bransh from...
+
 ```sh
-git checkout -b feature/julebakst-galleri, eller lag dette ved å åpne opp branchmenyen og create new branch from...
+git checkout -b feature/julebakst-galleri
 ```
 
 ---
