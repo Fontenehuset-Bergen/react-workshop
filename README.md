@@ -1,67 +1,97 @@
-# Workshop i front-end rammeverket React
+# Fontenehuset -- Julebakst Galleri 🎄🍪
 
-Velkommen! Dette repositoriet brukes i en nybegynnervennlig workshop i regi av Fontenehuset Bergen. Vi fokuserer på React med Vite på klientsiden, og lærer å bygge komponenter, forstå state, og bruke hooks gjennom korte øvelser og en liten eksempelapp.
+Velkommen til et lite, koselig React + Vite + TypeScript-prosjekt der
+målet er å utforske grunnleggende komponenter, enkel TypeScript-bruk og
+litt styling -- pakket inn i ekte julebakst-stemning.
 
-## Innhold
+## Hva du lærer her
 
-> [!NOTE]
-> Lenker blir oppdatert etter hvert som dokumentasjon blir lagt til underveis.
+-   Lage egne React-komponenter
+-   Jobbe med TypeScript-typer
+-   Lage og bruke enkle funksjoner
+-   Bruke arrays og `.map`
+-   Legge til bilder i et Vite-prosjekt
+-   Litt CSS for å få et penere uttrykk
+-   Jobbe i egen branch og pushe til GitHub
 
-- [Terminologi](./docs/1_introduction/terminology.md)
-- [Dokumentasjon](./docs/README.md)
-    - [Introduksjon](./docs/1_introduction/README.md)
-    - Komponenter
-    - States
-    - Effects
-- Oppgaver
-  - Uke 1: [Intro](./docs/1_introduction/assignment/README.md)
-  - Uke 2: Komponenter
-  - Uke 3: States
-  - Uke 4: Effects
-- Gruppeprosjekt
-- [Velg arbeidsmetode](#velg-arbeidsmåte-stackblitz-eller-lokalt)
+---
 
-## Velg arbeidsmåte: StackBlitz eller lokalt
-Vi kommer til å bruke Stackblitz som en del av undervisning, men for de som er interessert i å prøve seg på lokal utvikling med programmer installert på din egen maskin anbefaler jeg å prøve dette. Vi kan være til hjelp hvis du møter på noen problemer underveis, men dette vill skje utenom undervisning.
+## Kom i gang
 
-### A. StackBlitz (nettleser)
+### 1. Installer avhengigheter
 
-1. Gå til https://stackblitz.com og logg inn.
-2. Koble GitHub-kontoen din under **Account** om du vil importere repoet direkte.
-3. Velg **New Project → Import GitHub**, og pek til dette repositoriet.
-4. StackBlitz installerer ofte automatisk. Hvis ikke, åpne terminalen i StackBlitz og kjør:
-
-```console
+```sh
 npm install
 ```
 
-```console
+### 2. Start prosjektet
+
+```sh
 npm run dev
 ```
 
-5. Forhåndsvisningen åpnes i eget panel i nettleseren.
+### 3. Lag ny branch
 
-### B. Lokal IDE
-
-1. Installer https://nodejs.org/en/download og bruk foretrukket IDE, for eksempel https://code.visualstudio.com/
-2. Sitt opp [git](https://git-scm.com/) til kunne clone repo
-3. Klon dette repositoriet:
-
-```console
-git clone https://github.com/Fontenehuset-Bergen/react-workshop
+```sh
+git checkout -b feature/julebakst-galleri, eller lag dette ved å åpne opp branchmenyen og create new branch from...
 ```
 
-4. Åpne mappen i VS Code.
-5. Installer avhengigheter:
+---
 
-```console
-npm install
+## Oppgave: Lag et julebakst-galleri
+
+Hovedoppgavene:
+
+1.  Lag en ny komponent: `JuleBakstGalleri.tsx`
+2.  Lag en TypeScript-type for julebakst
+3.  Lag en array med julekaker (kakemann, pepperkake, krumkake osv.)
+4.  Vis dem i et grid
+5.  Legg inn bilder i `public/images`
+6.  Lag noen små TS-funksjoner som:
+    -   `formatBakingTime`
+    -   `difficultyEmoji`
+7.  Koble komponenten inn i `App.tsx`
+8.  Legg til enkel styling
+
+---
+
+## Forslag til mappestruktur
+
+    src/
+      components/
+        JuleBakstGalleri.tsx
+      App.tsx
+      main.tsx
+    public/
+      images/
+        kakemann.jpg
+        pepperkaker.jpg
+        krumkaker.jpg
+
+---
+
+## Bonus-oppgave
+
+-   Legg til flere typer bakverk
+-   Lag en funksjon som teller hvor mange kaker som er "lett"
+-   Legg til felt som opprinnelsesland, tradisjon eller årstall
+-   Lag en egen komponent for tittel
+
+---
+
+## Git og GitHub
+
+Når du er ferdig:
+Push endringene til din egen branch, dette gjør du via "knappen" på venstre side som heter Source Control eller du kjører old school og bruker komandolinjen og kjører komandoer under
+
+```sh
+git add .
+git commit -m "Laget julebakst-galleri"
+git push -u origin feature/julebakst-galleri
 ```
 
-6. Start utviklingsserver:
+---
 
-```console
-npm run dev
-```
+## ⭐ Og der er plutselig din branch med dine favoritt julekaker oppe på github, og lever sine beste dager i "https://github.com/Fontenehuset-Bergen/react-workshop"!
 
-Vite starter en utviklingsserver og viser en lokal adresse i terminalen. Åpne denne i nettleseren for å se appen.
+Håper dokkar får det gøy med denne oppgaven -- vi går selvfølgelig gjennom dette sammen neste gang!
