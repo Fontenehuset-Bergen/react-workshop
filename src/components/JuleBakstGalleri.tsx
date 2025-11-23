@@ -5,14 +5,24 @@ function JuleBakstGalleri(){
     // When making an array- 
     // const nameOfVariable: (type of datagoes here, in this case string)[] - [] tells it the variable will be an array
     // A basic array of just cookie names:
-    const cookieTypes: string[] = ['Gingerbread', 'Sugar Cookie', 'Linzer Cookie', 'Checkerboard Sablés','Snowball Cookies', 'Pizzelle'];
+    // const cookieTypes: string[] = ['Gingerbread', 'Sugar Cookie', 'Linzer Cookie', 'Checkerboard Sablés','Snowball Cookies', 'Pizzelle'];
+
+
+
+
+    type xmasCookies = {
+        name: string,
+        score: number,
+        flavor: "Spices" | "Sweet" | "Bland" | "Mild Sweet";
+    }
 
     // An array made up objects that have a little more info on each cookie
-    const christmasCookies: any[] = [ 
+    const cookiesData: xmasCookies[] = [ 
         {name: 'Gingerbread', score: 4, flavor: 'Spices'},
         {name: 'Sugar Cookie', score: 5, flavor: 'Sweet'},
         {name: 'Snowball Cookies', score: 3, flavor: 'Bland'},
-        {name: 'Pizzelle', score: 4, flavor: 'Mild Sweet'}
+        {name: 'Pizzelle', score: 4, flavor: 'Mild Sweet'},
+        {name: 'Chocolate Chip', score: 5, flavor: 'Sweet'}
     ];
 
 
@@ -25,7 +35,6 @@ function JuleBakstGalleri(){
             
             {/* I think things you make in the function then get referenced here to make them appear on the website? */}
 
-            <cookieTypes />
         </div>
     );
 }
