@@ -1,3 +1,7 @@
 export function Hero() {
-    return <></>;
+    return (
+        <>
+            <section id="hero"></section>
+        </>
+    );
 }
