@@ -3,7 +3,7 @@ import React from "react";
 
 import pekkerkakeImg from "./../../../public/images/pepperkake.jpg" ;
 import kakemannImg from "./../../../public/images/kakemann.jpg";
-import kromkakeImg from "./../../,,/public/images/kromkake.jpg";
+import kromkakeImg from "./../../../public/images/kromkake.jpg"
 import grandmasImg from "./../../../public/images/grandmas.jpg";
  
  export type cookingTime = {
@@ -26,21 +26,27 @@ export const julekaker : christmasCookie[] =
     
     { name : "pepperkake", time : { hours : 1, minutes : 32} , toughness : "medium", oneOfTheSeven : true, imageFile : pekkerkakeImg},
     { name : "kakemann" , time : { hours : 0, minutes : 42 }, toughness : "hard", oneOfTheSeven : false, imageFile : kakemannImg},
-    { name : "grandmas", time : { hours : 3, minutes : 1 }, toughness : "unetable", oneOfTheSeven : false, imageFile : kromkakeImg} ,
-    { name : "krumkake", time : { hours : 1, minutes: 22}, toughness :"soft", oneOfTheSeven: true, imageFile :  grandmasImg },
+    { name : "grandmas", time : { hours : 3, minutes : 1 }, toughness : "unetable", oneOfTheSeven : false, imageFile : grandmasImg} ,
+    { name : "krumkake", time : { hours : 1, minutes: 22}, toughness :"soft", oneOfTheSeven: true, imageFile :  kromkakeImg },
 ];
 
+// ikke brukt ennå
+
+function getTimeString(timeToCook : cookingTime ) : string 
+{
+    return `${timeToCook.hours} time og ${timeToCook.minutes} minutter` ;
+}
 
 
-export function ChristmasCookieCard( { name, time, toughness, oneOfTheSeven, imageFile} : christmasCoockies)
+export function ChristmasCookieCard( { name, time, toughness, oneOfTheSeven, imageFile} : christmasCookie)
 {
     // const isSevenText : string = oneOfTheSeven ? "yes" : "no";
 
     return(
         <>
             <div className="cookieCard">
-                <img src={imageFile}/>
-                <p>Cookie name :{name}</p>
+                <img className="cookieImage" src={imageFile}/>
+                <p>Cookie name : {name}</p>
                 <p>Time to make : {time.hours} : {time.minutes} </p>
                 <p>Hardness :  {toughness}</p>
                 <p>One of the seven : {oneOfTheSeven ? "yes" : "no"}</p>
@@ -50,22 +56,18 @@ export function ChristmasCookieCard( { name, time, toughness, oneOfTheSeven, ima
     );
 }
 
-function getTimeString(timeToCook : cookingTime ) : string 
-{
-    return `${hours} time og ${minutes} minutter` ;
-}
 
 
-export function ChristmasCookieList( cookies  : christmasCookie[])
+export function ChristmasCookieList({ cookies} : { cookies  : christmasCookie[]})
 {
     return(
         <>
             <div className="cookieDiv">
                 {cookies.map((currentCookie) =>
                     {
-                        <ChristmasCookieCard name={currentCookie.name} time={getTimeString(currentCookie.time)} toughness={currentCookie.toughness} oneOfTheSeven={currentCookie.oneOfTheSeven} imageFile={currentCookie.imageFile}/>
+                       return <ChristmasCookieCard name={currentCookie.name} time={currentCookie.time} toughness={currentCookie.toughness} oneOfTheSeven={currentCookie.oneOfTheSeven} imageFile={currentCookie.imageFile}/>
 
-                    });
+                    })
                 }
             </div>
           </>
