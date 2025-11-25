@@ -1,7 +1,8 @@
 import React from "react";
+
 // import { christmasCookie }  from "./julekakerdata";
 
-import pekkerkakeImg from "./../../.../images/pepperkake.jpg" ;
+import pekkerkakeImg from "./../../../public/images/pepperkake.jpg" ;
 import kakemannImg from "./../../../public/images/kakemann.jpg";
 import kromkakeImg from "./../../../public/images/kromkake.jpg"
 import grandmasImg from "./../../../public/images/grandmas.jpg";
@@ -46,14 +47,14 @@ export function ChristmasCookieCard({id, name, time, toughness, oneOfTheSeven, i
     // har ikke lyst a bruke id her, trenger ikke å vise nummer
 
     return(
-        <> 
-            <div className="cookieCard grid">
+        <>  
+  
+            <div className="cookieCard">
                 <img className="cookieImage" src={imageFile}/>
                 <p>Cookie name : {name}</p>
                 <p>Time to make : {time.hours} : {time.minutes} </p>
                 <p>Hardness :  {toughness}</p>
                 <p>One of the seven : {oneOfTheSeven ? "yes" : "no"}</p>
-                {/* <p>One of the seven : {isSevenText} </p> */}
             </div>
             </>
     );
@@ -65,7 +66,8 @@ export function ChristmasCookieList({ cookies} : { cookies  : christmasCookie[]}
 {
     return(
         <>
-            <div className="cookieDiv">
+            
+            <div className="cookieDiv grid">
                 {cookies.map((currentCookie) =>
                     {
                    

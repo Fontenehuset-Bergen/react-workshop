@@ -1,8 +1,18 @@
+@import "./root.css";
+
 body {
   background-color: black;
+
+
 }
 
+.backgroundImage {
 
+  background-image: var(--defaultBackgroundImage);
+  background-size: cover;
+  filter:blur(5px) brightness(38%);
+
+}
 
 .cookieImage {
   height: 200px;
@@ -14,7 +24,7 @@ body {
 }
 
 .cookieDiv {
-  grid-template-columns: 
+  grid-template-columns: 500px 500px;
   font-size: 15px;
   color: white;
 
