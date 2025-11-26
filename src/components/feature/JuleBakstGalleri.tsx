@@ -36,7 +36,7 @@ export const julekaker : christmasCookie[] =
 
 function getTimeString(timeToCook : cookingTime ) : string 
 {
-    return `${timeToCook.hours} time og ${timeToCook.minutes} minutter` ;
+    return `${timeToCook.hours ? timeToCook.hours + " hours and" : ""}  ${timeToCook.minutes} minutes` ;
 }
 
 
@@ -51,10 +51,10 @@ export function ChristmasCookieCard({id, name, time, toughness, oneOfTheSeven, i
   
             <div className="cookieCard">
                 <img className="cookieImage" src={imageFile}/>
-                <p>Cookie name : {name}</p>
-                <p>Time to make : {time.hours} : {time.minutes} </p>
-                <p>Hardness :  {toughness}</p>
-                <p>One of the seven : {oneOfTheSeven ? "yes" : "no"}</p>
+                <p className="categoryText">Cookie name :</p> <span className="cookieInfoText">{name}</span>
+                <p className="categoryText">Time to make :</p>  <span className="cookieInfoText">{getTimeString(time)}</span>
+                <p className="categoryText">Hardness : </p><span className="cookieInfoText"> {toughness}</span>
+                <p className="categoryText">One of the seven :</p> <span className="cookieInfoText"> {oneOfTheSeven ? "yes" : "no"}</span>
             </div>
             </>
     );
