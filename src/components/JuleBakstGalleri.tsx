@@ -1,11 +1,11 @@
 // Her er eksepler på TypeScript typer, altså vi definerer at dette er tekst, nummer, bools osv osv
 type JuleBakst = {
-    id: number;
-    name: string;
-    description: string;
-    imageUrl: string;
-    difficulty: "lett" | "middels" | "avansert";
-    bakingTimeMinutes: number;
+    id: number,
+    name: string,
+    description: string,
+    imageUrl: string,
+    difficulty:"lett" | "middels" | "avansert",
+    bakingTimeMinutes: number,
 };
 
 // Her lager vi listen, arrayet, med objekter som følger JuleBakst-typen. Her kan vi selvfølgelig legge til så mange juekaker vi ønsker. Vi ser også at TypeScript hjelper oss å passe på at vi følger strukturen vi definerte i JuleBakst-typen.
@@ -46,6 +46,14 @@ const juleBakstListe: JuleBakst[] = [
         difficulty: "middels",
         bakingTimeMinutes: 30,
     },
+    {
+        id:5,
+        name: "Goro",
+        description: "Digge firkantede kaker",
+        imageUrl: "/images/veps.jpg",
+        difficulty: "avansert",
+        bakingTimeMinutes: 180,
+    }
 ];
 
 // Her ser du helt enkle hjelpe-funksjoner (ren TypeScript)
@@ -61,7 +69,7 @@ function formatBakingTime(minutes: number): string {
 function difficultyEmoji(difficulty: JuleBakst["difficulty"]): string {
     if (difficulty === "lett") return "🎅";
     if (difficulty === "middels") return "🧑‍🍳";
-    return "👨‍🍳";
+    return "👨🤘";
 }
 
 // Her er selve React-komponenten
