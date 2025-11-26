@@ -52,6 +52,7 @@ export function ChristmasCookieCard({id, name, time, toughness, difficulty,  one
 
     // har ikke lyst a bruke id her, trenger ikke å vise nummer
 
+    
     return(
         <>  
   
