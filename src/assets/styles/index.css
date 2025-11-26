@@ -40,7 +40,9 @@ p {
    justify-content: center;
    border-radius: 15px;
    -webkit-box-shadow: 11px 8px 16px 1px rgba(0,0,0,0.86); 
-box-shadow: 11px 8px 16px 1px rgba(0,0,0,0.86);
+  box-shadow: 11px 8px 16px 1px rgba(0,0,0,0.86);
+  width : 300px;
+
 }
 
 .cookieImage {
@@ -67,6 +69,7 @@ box-shadow: 11px 8px 16px 1px rgba(0,0,0,0.86);
 
 .categoryText {
   color: lightskyblue;
+  
 }
 
 .cookieInfoText {

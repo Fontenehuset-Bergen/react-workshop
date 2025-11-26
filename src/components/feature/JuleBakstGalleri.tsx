@@ -3,7 +3,7 @@ import React from "react";
 
 import pekkerkakeImg from "/images/pepperkake.jpg" ;
 import kakemannImg from "/images/kakemann.jpg";
-import kromkakeImg from "/images/kromkake.jpg"
+import kromkakeImg from "/images/kromkake.png"
 import grandmasImg from "/images/grandmas.jpg";
  
  export type cookingTime = {
@@ -68,8 +68,11 @@ export function ChristmasCookieList({ cookies} : { cookies  : christmasCookie[]}
             <div className="cookieDiv grid">
                 {cookies.map((currentCookie) =>
                     {
-                   
+                        let delay  = 0;
+                        const delayInc = 200;
+
                        return <ChristmasCookieCard key={currentCookie.id} id={currentCookie.id} name={currentCookie.name} time={currentCookie.time} toughness={currentCookie.toughness} oneOfTheSeven={currentCookie.oneOfTheSeven} imageFile={currentCookie.imageFile}/>
+                
 
                     })
                 }
