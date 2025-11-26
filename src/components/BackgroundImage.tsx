@@ -1,4 +1,4 @@
-import "./../../assets/styles/animations.css";
+import "./../assets/styles/animations.css";
 import React from "react";
 
 export let currentAlbum = 0;
@@ -11,21 +11,19 @@ interface options
     animDuration : string
 }
 
-
 export const animType = {
   RotateIn : 0,
   FadeIn : 1,
   ScaleIn : 2
 } as const;
 
-function setCSSVariable(variable : string, newValue : string)
+export function setCSSVariable(variable : string, newValue : string)
 {
        document.documentElement.style.setProperty(variable, newValue);
 }
 
 export default function BackgroundImage({cssClassName, imageFile, animNumber, animDuration} : options)
-{
-    
+{    
     let animCSSClass : string = cssClassName;  
  
     switch(animNumber)

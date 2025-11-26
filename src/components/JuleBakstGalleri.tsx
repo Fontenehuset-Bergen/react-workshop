@@ -5,6 +5,7 @@ import pekkerkakeImg from "/images/pepperkake.jpg" ;
 import kakemannImg from "/images/kakemann.jpg";
 import kromkakeImg from "/images/kromkake.png"
 import grandmasImg from "/images/grandmas.jpg";
+import { setCSSVariable } from "./backgroundImage";
  
  export type cookingTime = {
     minutes : number,
@@ -55,11 +56,10 @@ export function ChristmasCookieCard({id, name, time, toughness, difficulty,  one
     
     return(
         <>  
-          
             <div className="cookieCard">
                 <img className="cookieImage" src={imageFile}/>
                 <p className="categoryText">Cookie name : <span className="cookieInfoText">{name}</span></p>
-                <p className="categoryText">Time to make :<span className="cookieInfoText">{getTimeString(time)}</span></p>  
+                <p className="categoryText">Time to make : <span className="cookieInfoText">{getTimeString(time)}</span></p>  
                 <p className="categoryText">Hardness : <span className="cookieInfoText"> {toughness}</span></p>
                 <p className="categoryText">Difficulty : <span className="cookieInfoText"> {difficulty}<span>{ getDifficultyEmoji(difficulty)}</span> </span>  </p>
                 <p className="categoryText">One of the seven : <span className="cookieInfoText"> {oneOfTheSeven ? "yes" : "no"}</span></p>
@@ -71,11 +71,11 @@ export function ChristmasCookieCard({id, name, time, toughness, difficulty,  one
 
 
 export function ChristmasCookieList({ cookies} : { cookies  : christmasCookie[]})
-{
+{       
     return(
-        <>
+         <>   
               <h1> My Christmas Cookie List</h1>
-            <div className="cookieDiv grid">
+              <div className="cookieDiv grid">
                 {cookies.map((currentCookie) =>
                     {
                       return <ChristmasCookieCard key={currentCookie.id} id={currentCookie.id} name={currentCookie.name} time={currentCookie.time} toughness={currentCookie.toughness} difficulty={currentCookie.difficulty} oneOfTheSeven={currentCookie.oneOfTheSeven} imageFile={currentCookie.imageFile}/>
