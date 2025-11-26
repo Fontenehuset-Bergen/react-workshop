@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import { HomepageHero } from '../components/feature/Hero'
+import { HomepageHero } from '../components/feature/Hero.tsx'
 import '../assets/styles/example.css'
-import { ChristmasCookieList, julekaker } from "./../components/feature/JuleBakstGalleri"
+import { ChristmasCookieList, julekaker } from "../components/feature/JuleBakstGalleri.tsx"
 
 import  defaultBackground  from  "/images/background.jpg"
-import BackgroundImage, { animType } from "./../components/feature/backgroundImage.tsx";
+import BackgroundImage, { animType } from "../components/feature/backgroundImage.tsx";
  
 // import { julekaker } from "./JuleBakstGalleri"
  
