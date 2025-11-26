@@ -1,5 +1,5 @@
 import React from "react";
-import { christmasCookie }  from "./julekakerdata.tsx";
+import  {christmasCookie } from "./julekakerdata.tsx";
 
 
 // import { christmasCookie }  from "./julekakerdata";
