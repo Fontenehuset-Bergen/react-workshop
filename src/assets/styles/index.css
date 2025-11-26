@@ -41,6 +41,8 @@ h1 {
   filter:blur(3px) brightness(58%);
   z-index: -1;
   
+  
+  
 }
 
 .cookieCard {
@@ -57,6 +59,7 @@ h1 {
   transition: scale 0.5s ease-in-out;
   animation: flipIn 1.5s ease-in-out forwards;
   animation-delay: var(--defaultAnimDelay);
+   
 }
 
 @keyframes flipIn {
@@ -72,8 +75,8 @@ h1 {
   height:100px;
   border-radius: 50%;
   margin-bottom: 10px;
-  transition: transform 0.8 s ease-in-out;
-  transform: rotateZS(0deg);
+  transition: transform 0.8s ease-in-out;
+  transform: rotateZ(0deg);
 }
 
 .cookieImage:hover{
@@ -91,7 +94,8 @@ h1 {
   font-size: 15px;
   color: white;
   row-gap: 40px;
-  
+   perspective: 800px; 
+
 
 }
 

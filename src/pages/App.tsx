@@ -1,9 +1,9 @@
 // import { useState } from 'react'
-import { ChristmasCookieList, julekaker } from "../components/JuleBakstGalleri.tsx"
-
 import  defaultBackground  from  "/images/background.jpg"
-import BackgroundImage, { animType } from "../components/backgroundImage.tsx";
- 
+import { BackgroundImage, animType } from "./../components/BackgroundImage.tsx"
+import { julekaker } from "../components/julekakerdata.tsx";
+import { ChristmasCookieList } from "../components/JuleBakstGalleri.tsx";
+
 // import { julekaker } from "./JuleBakstGalleri"
  
 function App() {

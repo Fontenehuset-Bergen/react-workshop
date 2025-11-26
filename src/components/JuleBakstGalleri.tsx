@@ -1,38 +1,9 @@
 import React from "react";
 // import  {christmasCookie } from "./julekakerdata.tsx";
 
-import pekkerkakeImg from "/images/pepperkake.jpg" ;
-import kakemannImg from "/images/kakemann.jpg";
-import kromkakeImg from "/images/kromkake.png"
-import grandmasImg from "/images/grandmas.jpg";
+
+import type { christmasCookie , cookingTime} from "../assets/types/christmasCookie";
 import { setCSSVariable } from "./backgroundImage";
- 
- export type cookingTime = {
-    minutes : number,
-    hours : number
-}
-
-export interface christmasCookie 
-{
-
-    id : number,
-    name : string,
-    time : cookingTime,
-    toughness : "soft" | "medium" | "hard" | "unetable",
-    difficulty : "easy" | "medium" | "hard",
-    oneOfTheSeven : boolean,
-    imageFile : string
-    
-}
-
-export const julekaker : christmasCookie[] = 
-[
-    
-    { id:  1, name : "Pepperkake", time : { hours : 1, minutes : 32} , toughness : "medium", difficulty : "easy", oneOfTheSeven : true, imageFile : pekkerkakeImg},
-    { id : 2, name : "Kakemann" , time : { hours : 0, minutes : 42 }, toughness : "hard", difficulty : "hard", oneOfTheSeven : false, imageFile : kakemannImg},
-    { id : 3, name : "Grandmas", time : { hours : 3, minutes : 1 }, toughness : "unetable", difficulty: "medium", oneOfTheSeven : false, imageFile : grandmasImg} ,
-    { id : 4 ,name : "Krumkake", time : { hours : 1, minutes: 22}, toughness :"soft", difficulty : "easy", oneOfTheSeven: true, imageFile :  kromkakeImg },
-];
 
 
 function getTimeString(timeToCook : cookingTime ) : string 
@@ -47,16 +18,12 @@ function getDifficultyEmoji(difficulty :christmasCookie["difficulty"]) : string
     return "🙁";
 }
 
-export function ChristmasCookieCard({id, name, time, toughness, difficulty,  oneOfTheSeven, imageFile} : christmasCookie)
+export function ChristmasCookieCard({ name, time, toughness, difficulty,  oneOfTheSeven, imageFile} : christmasCookie)
 {
-    // const isSevenText : string = oneOfTheSeven ? "yes" : "no";
-
     // har ikke lyst a bruke id her, trenger ikke å vise nummer
-   
-    
+  
     return(
-        <>  
-            <div className="cookieCard">
+        <>   <div className="cookieCard">
                 <img className="cookieImage" src={imageFile}/>
                 <p className="categoryText">Cookie name : <span className="cookieInfoText">{name}</span></p>
                 <p className="categoryText">Time to make : <span className="cookieInfoText">{getTimeString(time)}</span></p>  
@@ -68,13 +35,10 @@ export function ChristmasCookieCard({id, name, time, toughness, difficulty,  one
     );
 }
 
-
-
 export function ChristmasCookieList({ cookies} : { cookies  : christmasCookie[]})
 {       
     return(
-         <>   
-              <h1> My Christmas Cookie List</h1>
+         <>   <h1> My Christmas Cookie List</h1>
               <div className="cookieDiv grid">
                 {cookies.map((currentCookie) =>
                     {
