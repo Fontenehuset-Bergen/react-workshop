@@ -39,7 +39,7 @@ function getTimeString(timeToCook : cookingTime ) : string
     return `${timeToCook.hours ? timeToCook.hours + " hours and" : ""}  ${timeToCook.minutes} minutes` ;
 }
 
-function getDifficultyEmoji({difficulty} : christmasCookie)
+function getDifficultyEmoji({difficulty} : christmasCookie) : string
 {
     if(difficulty === "easy") return "😀";
     if(difficulty === "medium") return "😳";
@@ -60,7 +60,7 @@ export function ChristmasCookieCard({id, name, time, toughness, difficulty,  one
                 <p className="categoryText">Cookie name : <span className="cookieInfoText">{name}</span></p>
                 <p className="categoryText">Time to make :<span className="cookieInfoText">{getTimeString(time)}</span></p>  
                 <p className="categoryText">Hardness : <span className="cookieInfoText"> {toughness}</span></p>
-                <p className="categoryText">Difficulty : <span className="cookieInfoText"> {difficulty} <p>{ getDifficultyEmoji(difficulty);  }</p></span> </p>
+                <p className="categoryText">Difficulty : <span className="cookieInfoText"> {difficulty} <p> { getDifficultyEmoji(difficulty)} </p></span> </p>
                 <p className="categoryText">One of the seven : <span className="cookieInfoText"> {oneOfTheSeven ? "yes" : "no"}</span></p>
             </div>
             </>
