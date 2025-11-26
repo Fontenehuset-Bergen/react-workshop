@@ -1,36 +1,27 @@
 import React from "react";
+import { christmasCookie }  from "./julekakerdata.tsx";
+
 
 // import { christmasCookie }  from "./julekakerdata";
 
-import pekkerkakeImg from "./../../../public/images/pepperkake.jpg" ;
-import kakemannImg from "./../../../public/images/kakemann.jpg";
-import kromkakeImg from "./../../../public/images/kromkake.jpg"
-import grandmasImg from "./../../../public/images/grandmas.jpg";
+
  
- export type cookingTime = {
-    minutes : number,
-    hours : number
-}
+//  export type cookingTime = {
+//     minutes : number,
+//     hours : number
+// }
 
-export interface christmasCookie {
+// export interface christmasCookie {
 
-    id : number,
-    name : string,
-    time : cookingTime,
-    toughness : "soft" | "medium" | "hard" | "unetable",
-    oneOfTheSeven : boolean,
-    imageFile : string
+//     id : number,
+//     name : string,
+//     time : cookingTime,
+//     toughness : "soft" | "medium" | "hard" | "unetable",
+//     oneOfTheSeven : boolean,
+//     imageFile : string
     
-}
+// }
 
-export const julekaker : christmasCookie[] = 
-[
-    
-    { id:  1, name : "pepperkake", time : { hours : 1, minutes : 32} , toughness : "medium", oneOfTheSeven : true, imageFile : pekkerkakeImg},
-    { id : 2, name : "kakemann" , time : { hours : 0, minutes : 42 }, toughness : "hard", oneOfTheSeven : false, imageFile : kakemannImg},
-    { id : 3, name : "grandmas", time : { hours : 3, minutes : 1 }, toughness : "unetable", oneOfTheSeven : false, imageFile : grandmasImg} ,
-    { id : 4 ,name : "krumkake", time : { hours : 1, minutes: 22}, toughness :"soft", oneOfTheSeven: true, imageFile :  kromkakeImg },
-];
 
 // ikke brukt ennå
 
@@ -51,10 +42,10 @@ export function ChristmasCookieCard({id, name, time, toughness, oneOfTheSeven, i
   
             <div className="cookieCard">
                 <img className="cookieImage" src={imageFile}/>
-                <p className="categoryText">Cookie name :</p> <span className="cookieInfoText">{name}</span>
-                <p className="categoryText">Time to make :</p>  <span className="cookieInfoText">{getTimeString(time)}</span>
-                <p className="categoryText">Hardness : </p><span className="cookieInfoText"> {toughness}</span>
-                <p className="categoryText">One of the seven :</p> <span className="cookieInfoText"> {oneOfTheSeven ? "yes" : "no"}</span>
+                <p className="categoryText">Cookie name : <span className="cookieInfoText">{name}</span></p>
+                <p className="categoryText">Time to make :<span className="cookieInfoText">{getTimeString(time)}</span></p>  
+                <p className="categoryText">Hardness : <span className="cookieInfoText"> {toughness}</span></p>
+                <p className="categoryText">One of the seven : <span className="cookieInfoText"> {oneOfTheSeven ? "yes" : "no"}</span></p>
             </div>
             </>
     );

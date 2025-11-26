@@ -10,6 +10,10 @@ body {
 
 }
 
+p {
+  margin: 3px;
+}
+
 .backgroundImage {
 
   background-image:url("/public/images/background.jpg");
