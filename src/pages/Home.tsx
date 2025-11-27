@@ -1,6 +1,7 @@
 import { HomepageHero } from "../components/feature/Hero";
 import "../assets/styles/example.css";
 import JuleBakstGalleri from "../components/JuleBakstGalleri";
+// import Julebrus from "../components/Julebrus";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
             </div>
             <div className='app-wrapper'>
                 <JuleBakstGalleri />
+                {/* <Julebrus /> */}
             </div>
         </>
     );
