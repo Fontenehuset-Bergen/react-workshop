@@ -1,3 +1,5 @@
+import { TbCookieMan, TbAbacus } from "react-icons/tb";
+
 // Her er eksempler på TypeScript typer, altså vi definerer at dette er tekst, nummer, bools osv osv
 type JuleBakst = {
     id: number;
@@ -130,7 +132,37 @@ export default function JuleBakstGalleri() {
             <p className='julebakst-intro'>
                 Her er noen klassiske julekaker. Hvilken hadde du valgt først?
             </p>
+            <TbCookieMan size={48} />
+            <TbAbacus size={88} />
 
+            <div className='julebakst-grid'>
+                {allJuleBakst.map((bakst) => (
+                    <article key={bakst.id} className='julebakst-card'>
+                        <img
+                            src={bakst.imageUrl}
+                            alt={bakst.name}
+                            className='julebakst-image'
+                        />
+
+                        <h2>
+                            {bakst.name} {difficultyEmoji(bakst.difficulty)}
+                        </h2>
+
+                        <p className='julebakst-description'>
+                            {bakst.description}
+                        </p>
+
+                        <p className='julebakst-meta'>
+                            Vanskelighetsgrad:{" "}
+                            <strong>{difficultyLabel(bakst.difficulty)}</strong>
+                        </p>
+
+                        <p className='julebakst-meta'>
+                            {formatBakingTime(bakst.bakingTimeMinutes)}
+                        </p>
+                    </article>
+                ))}
+            </div>
             <div className='julebakst-grid'>
                 {allJuleBakst.map((bakst) => (
                     <article key={bakst.id} className='julebakst-card'>
