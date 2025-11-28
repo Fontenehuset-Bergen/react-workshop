@@ -1,4 +1,5 @@
 import React from "react";
+import * as icons from "react-icons/hi2";
 // import  {christmasCookie } from "./julekakerdata.tsx";
 
 import type { christmasCookie , cookingTime} from "../assets/types/christmasCookie";
@@ -15,7 +16,8 @@ function getDifficultyEmoji(difficulty :christmasCookie["difficulty"]) : string
     if(difficulty === "easy") return "😀";
     if(difficulty === "medium") return "😳";
     return "🙁";
-}
+    
+}npm 
 
 export function ChristmasCookieCard({ name, time, toughness, difficulty,  oneOfTheSeven, imageFile} : christmasCookie)
 {
@@ -29,6 +31,7 @@ export function ChristmasCookieCard({ name, time, toughness, difficulty,  oneOfT
                 <p className="categoryText">Hardness : <span className="cookieInfoText"> {toughness}</span></p>
                 <p className="categoryText">Difficulty : <span className="cookieInfoText"> {difficulty}<span>{ getDifficultyEmoji(difficulty)}</span> </span>  </p>
                 <p className="categoryText">One of the seven : <span className="cookieInfoText"> {oneOfTheSeven ? "yes" : "no"}</span></p>
+                <icons.HiAcademicCap/>
             </div>
             </>
     );
