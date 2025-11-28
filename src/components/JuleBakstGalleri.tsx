@@ -4,7 +4,7 @@ type JuleBakst = {
     name: string;
     description: string;
     imageUrl: string;
-    difficulty: 1 | 2 | 3;
+    difficulty: "lett" | "middels" | "avansert";
     bakingTimeMinutes: number;
 };
 
@@ -43,58 +43,10 @@ const juleBakstListe: JuleBakst[] = [
         description:
             "Mine favoritt-julekaker! Sprø, søte og med deilig smak av kanel og smør.",
         imageUrl: "/images/brunpinn.jpg",
-        difficulty: 2,
+        difficulty: "lett",
         bakingTimeMinutes: 30,
     },
-    {
-        id: 2,
-        description: "Lussekaatter er digg i julen",
-        name: "Lussekatter",
-        imageUrl: "/images/lussekatt.jpg",
-        difficulty: 1,
-        bakingTimeMinutes: 70,
-    },
-    {
-        id: 8,
-        description: "Goro",
-        bakingTimeMinutes: 80,
-        name: "Goro",
-        imageUrl: "/images/goro.jpg",
-        difficulty: 3,
-    },
 ];
-
-const juleBakstKompisListe: JuleBakst[] = [
-    {
-        id: 1,
-        name: "Kransekake",
-        description:
-            "En klassisk kake som ofte serveres ved spesielle anledninger i Norge, inkludert julen.",
-        imageUrl: "/images/kransekake.jpg",
-        difficulty: 3,
-        bakingTimeMinutes: 120,
-    },
-    {
-        id: 2,
-        name: "Sandkaker",
-        description:
-            "Små, delikate kaker laget i små former, ofte fylt med mandelfyll.",
-        imageUrl: "/images/sandkaker.jpg",
-        difficulty: 2,
-        bakingTimeMinutes: 60,
-    },
-    {
-        id: 3,
-        name: "Delfiakake",
-        description:
-            "En rik og kremet kake laget med sjokolade og Delfiafett, ofte pyntet med nøtter og tørket frukt.",
-        imageUrl: "/images/delfiakake.jpg",
-        difficulty: 2,
-        bakingTimeMinutes: 90,
-    },
-];
-
-const allJuleBakst = [...juleBakstListe, ...juleBakstKompisListe];
 
 // Her ser du helt enkle hjelpe-funksjoner (ren TypeScript)
 
@@ -107,8 +59,8 @@ function formatBakingTime(minutes: number): string {
 
 // Gir en emoji basert på vanskelighetsgrad
 function difficultyEmoji(difficulty: JuleBakst["difficulty"]): string {
-    if (difficulty === 1) return "🎅";
-    if (difficulty === 2) return "🧑‍🍳";
+    if (difficulty === "lett") return "🎅";
+    if (difficulty === "middels") return "🧑‍🍳";
     return "👨‍🍳";
 }
 
