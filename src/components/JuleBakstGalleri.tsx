@@ -1,9 +1,8 @@
 import React from "react";
 // import  {christmasCookie } from "./julekakerdata.tsx";
 
-
 import type { christmasCookie , cookingTime} from "../assets/types/christmasCookie";
-import { setCSSVariable } from "./backgroundImage";
+
 
 
 function getTimeString(timeToCook : cookingTime ) : string 
