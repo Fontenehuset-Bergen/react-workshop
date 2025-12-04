@@ -28,6 +28,7 @@ I denne oppgaven skal du lage et komponent som kan motta props, du skal også se
 
 - Komponentet skal motta følgende data: `productName`, `price`, `description`, `inStock` og `imageUrl`.
 - Hvert kort skal ligne på hvordan det ser ut i dette [bildet](./images/image.png)
+- Bruk [condiotional rendering](https://react.dev/learn/conditional-rendering) til å kontrollere styles hvis `inStock` er false.
 - Bruk komponentet til å lage to forskjellige produkter (du kan finne bilder i `public/products` mappen)
 
 ## Medium
@@ -49,6 +50,7 @@ import products from "../data/products.json";
 - Bruk dette komponentet i `src/pages/Home.tsx`
 
 #### wip
+
 
 ## Hard
 
