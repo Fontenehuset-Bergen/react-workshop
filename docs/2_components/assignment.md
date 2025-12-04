@@ -47,19 +47,60 @@ import products from "../data/products.json";
 
 - I det nye komponentet bruker du .map til å iterere over data for å vise innholdet, husk å send riktige props og ligg til [keys](https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key)
 - Når du har gjort dette vill du se en liste med 10 forskjellige produkt kort.
-- Bruk dette komponentet i `src/pages/Home.tsx`
+- Legg til dette komponentet i `src/pages/Home.tsx`
 
-#### wip
+#### Childrens
 
+I React bruker vi ikke bare props for å sitte data dynamisk, vi kan også sende komponenter som [children](https://react.dev/reference/react/Children) for å vise dem inni andre komponenter. I denne oppgaven skal dere lage en `<section>` som kan ta imot andre komponenter og vise inni seg.
+
+- Lag et komponent som heter `StyledSection` som kan ta i mot følgende props: `title`, `text`, `background` og `children` med følgende types: `title: string, text: string, background: "light"|"dark", children: ReactNode`
+- Legg til styling slik at seksjonen blir en flex-box med vertikalt layout. Du kan ligge `{children}` inn i en `<div>` tag og endre styling hvis du ønsker det.
+- Bruk den nye seksjonen til å lage en identisk versjon av forrige oppgave og kall den `ProductListAlternative`, denne versjonen skal ligge under orginalen i `src/pages/Home.tsx` slik at begge er synlig på nettsiden. Koden vill ligne på dette
+
+```jsx
+import StyledSection from "..."
+
+export function ProductListAlternative(...) {
+    return (
+        <StyledSection title="" text="">
+            ...
+        </StyledSection>
+    )
+}
+```
 
 ## Hard
+I disse oppgavene går vi litt utover hva vi har lært i undervisning og dere må mest sannsynlig lese litt på [react docs](https://react.dev/) eller google litt for å finne svar. 
 
-#### wip
+#### Todo liste.
+Lag et todo komponent hvor du kan ligge til eller fjerne innhold. Du kan f.eks bruke [useState](https://react.dev/reference/react/useState) til å lagre en array av objekter og så lage en funksjon som fjerner eller ligger til innhold.
+```tsx
+interface Todo {
+    text: string
+    isDone: boolean
+}
 
-#### wip
+export function TodoList() {
+    const [todos, setTodos] = useState<Todo[]>([{text: "handle brød", isDone: false}])
 
-## Bonus
+    ...
+}
+```
 
-#### wip
+- Bruk en `<button>` for å markere en todo som ferdig
+- Bruk `<input>` for å ligge til flere todos ved å skrive inn.
 
-#### wip
+#### 
+
+## Bonus (valgfritt)
+Disse oppgavene er veldig krevende og dere må mest sannsynlig finne informasjon på egenhånd eller spørre om hjelp.
+
+#### Søkbare lister
+
+Bruk produkt listen vi allerede har til å lage et nytt komponent hvor du kan søke i innhold etter produkt navn. Her trenger dere å bruke følgende ukjente metoder
+- `useRef` for å følge med på et input felt
+- `.filter` for å søke etter produkter
+
+#### Gjør todo persistant
+
+Bruk localstorage til å lagre todo-listen din slik at den ikke blir tilbakestilt når du refresher siden.
