@@ -1,0 +1,20 @@
+.footer-style {
+    width: 100%; 
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-link-box {
+    display: flex; 
+    flex-direction: column; 
+    margin-left: 40px;
+}
+
+.footer-text-box {
+    display: flex; 
+    flex-direction: column; 
+    width: 250px; 
+    margin-right: 40px;
+}
