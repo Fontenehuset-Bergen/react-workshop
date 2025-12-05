@@ -4,13 +4,19 @@ import '../assets/styles/example.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [person, updatePerson] = useState({
+    name: "Grete",
+    age: 36
+  })
+
+  console.log(person, updatePerson)
 
   return (
     <>
       <HomepageHero />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+          banana count is {count}
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
