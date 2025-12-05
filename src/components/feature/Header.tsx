@@ -5,8 +5,8 @@ export function Header()
     return(
     <>
         <header className="defaultHeader flex">
-           <Logo fileUrl="src/assets/icons/maidsafe.png" cssClass="logoDefault"/>
-            <MenuIcon fileUrl="src/assets/icons/more.png" cssClass="menuDefaultIcon"/>
+           <Logo fileUrl="src/assets/icons/maidsafe.png" cssIconClass="logoDefault"/>
+           <MenuIcon fileUrl="src/assets/icons/more.png" cssIconClass="menuDefaultIcon" cssButtonClass="buttonnHeader"/>
         </header>
     
     </>);
@@ -17,23 +17,27 @@ export function Header()
 interface IconOptions
 {
     fileUrl : string,
-    cssClass? : string
+    cssIconClass? : string
 };
 
-function Logo({ fileUrl, cssClass} : IconOptions)
+interface ButtonOptions extends IconOptions
+{
+    cssButtonClass : string
+}
+function Logo({ fileUrl, cssIconClass} : IconOptions)
 {
     return(
-        <img className="cssClass" src={fileUrl}/>
+        <img className={cssIconClass} src={fileUrl}/>
 
     );
 }
 
-function MenuIcon({ fileUrl , cssClass} : IconOptions)
+function MenuIcon({ fileUrl , cssIconClass, cssButtonClass} : ButtonOptions)
 {
     return(
         <>
-            <button className={cssClass}> 
-                <Logo fileUrl={fileUrl}/>
+            <button className={cssButtonClass}> 
+                <Logo fileUrl={fileUrl} cssIconClass={cssIconClass}/>
             </button>
         </>
     );

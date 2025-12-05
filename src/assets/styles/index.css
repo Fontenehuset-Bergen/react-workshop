@@ -1,4 +1,5 @@
 @import "./header.css";
+@import "./Footer.css";
 
 *{
   box-sizing: border-box;
@@ -20,6 +21,7 @@
 }
 
 a {
+  font-size : 25px;
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
@@ -30,10 +32,12 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+
+ 
+}
+
+p {
+  font-size: 25px;
 }
 
 h1 {

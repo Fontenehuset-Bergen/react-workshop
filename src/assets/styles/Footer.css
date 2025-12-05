@@ -1,0 +1,32 @@
+:root{
+
+    --defaultFooterBackground: rgba(221, 221, 221, 1);
+}
+
+.grid {
+    display: grid;
+}
+
+footer {
+    background-color: var(--defaultFooterBackground);
+    padding: 30px 40px;
+}
+
+.quoteText {
+    text-align: left;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+
+.defaultFooter {
+    width: 100%;
+    grid-template-columns: 30% 30%;
+    justify-items:center;
+    align-items: center;
+    column-gap: 40%;
+}
+
+.linksDiv {
+    flex-direction: column;
+}

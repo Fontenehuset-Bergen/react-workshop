@@ -1,7 +1,11 @@
-import { Header } from "./header"
+import { Header } from "./Header"
 
-export function HeroPage {
-  <>
-    <Header/>
-  </>
+export function HeroPage ()
+{
+  return( 
+     <>
+  
+     </>
+  );
+
 }
