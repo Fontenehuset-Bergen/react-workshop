@@ -1,75 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: 'millenia-font';
+    src: local('millenia-font'), url('/fonts/millenia-font/MilleniaPersonalUse-w1OB8.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    font-family: 'Averia Sans Libre', sans-serif;
+    font-weight: 300;
+    font-style: normal;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+    color-scheme: light dark;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+    /* Darkmode */
+    --bg-dark: oklch(0.1 0.025 264);
+    --bg: oklch(0.15 0.025 264);
+    --bg-light: oklch(0.2 0.025 264);
+    --text: oklch(0.96 0.05 264);
+    --text-muted: oklch(0.76 0.05 264);
+    --highlight: oklch(0.5 0.05 264);
+    --border: oklch(0.4 0.05 264);
+    --border-muted: oklch(0.3 0.05 264);
+    --primary: oklch(0.76 0.1 264);
+    --secondary: oklch(0.76 0.1 84);
+    --danger: oklch(0.7 0.05 30);
+    --warning: oklch(0.7 0.05 100);
+    --success: oklch(0.7 0.05 160);
+    --info: oklch(0.7 0.05 260);
+
+    color: var(--text-muted);
+    background-color: var(--bg-dark);
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
 }
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#root > * {
+    padding: 0 2rem;
+}
+
+header {
+    background-color: var(--bg);
+    border-bottom: 1px solid var(--border);
+    border-color: var(--border-muted);
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    margin: 2rem 0;
+    flex-grow: 1;
+}
+
+footer {
+    height: auto;
+    background-color: var(--bg);
+    border-top: 1px solid var(--border-muted);
+    display: flex;
+    justify-content: space-around;
+}
+
+footer > * {
+    padding: 2rem;
+}
+
+section {
+    min-height: 50vh;
+}
+
+a {
+    font-weight: 500;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary);
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'millenia-font', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+    word-spacing: 0.3em;
+    border-bottom: 4px dashed var(--text);
+    border-top-left-radius: 2.2rem;
+    border-bottom-left-radius: 3.3rem;
+    border-bottom-right-radius: 0.5rem;
+    color: var(--text);
+    width: max-content;
+    margin: 1.5rem 0;
+    padding: 1rem 2rem;
+    background: linear-gradient(270deg, var(--bg-dark), var(--bg-light) 70%);
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.icon {
+    filter: brightness(50%) sepia() hue-rotate(190deg);
+}
+
+.button {
+    padding: 0.6rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--primary);
+    color: var(--bg-dark);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: var(--bg-dark);
+    background-color: var(--secondary);
+}
+
+.socials {
+    display: flex;
+    gap: 0.5rem;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-dark: oklch(0.92 0.025 264);
+        --bg: oklch(0.96 0.025 264);
+        --bg-light: oklch(1 0.025 264);
+        --text: oklch(26.044% 0.10317 267.674);
+        --text-muted: oklch(0.4 0.05 264);
+        --highlight: oklch(1 0.05 264);
+        --border: oklch(0.6 0.05 264);
+        --border-muted: oklch(0.7 0.05 264);
+        --primary: oklch(0.4 0.1 264);
+        --secondary: oklch(0.4 0.1 84);
+        --danger: oklch(0.5 0.05 30);
+        --warning: oklch(0.5 0.05 100);
+        --success: oklch(0.5 0.05 160);
+        --info: oklch(0.5 0.05 260);
+    }
+
+    .icon {
+        filter: brightness(30%) sepia() hue-rotate(190deg);
+    }
 }
