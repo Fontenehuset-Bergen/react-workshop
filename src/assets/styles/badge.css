@@ -1,0 +1,21 @@
+.badge {
+  border: 1px solid;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background-color: purple;
+}
+
+.badge-warning {
+  border-color: red;
+  background-color: #ff000030;
+}
+
+.badge-info {
+  border-color: orange;
+  background-color: #ffa50030;
+}
+
+.badge-success {
+  border-color: green;
+  background-color: #00800030;
+}
