@@ -1,3 +1,6 @@
+
+// warning type 3 options
+
 type Warning = "success" | "warning" | "info";
 
 

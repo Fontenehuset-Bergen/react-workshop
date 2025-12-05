@@ -7,5 +7,5 @@ interface LinkButton
 
 export function LinkButton({text, href, cssClass} : LinkButton)
 {
-    return(<a className={`defaultLinkButton ${cssClass}`} href={href}>{text}</a>);
+    return(<a className={`defaultLinkButton ${cssClass}`} href={href} target="_blank">{text} </a>);
 }

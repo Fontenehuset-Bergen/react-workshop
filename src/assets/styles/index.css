@@ -1,8 +1,10 @@
-@import "./header.css";
+@import "./Header.css";
 @import "./Footer.css";
+@import './ui.css';
 
 *{
   box-sizing: border-box;
+  cursor: auto;
 }
 
 :root {
@@ -25,9 +27,11 @@ a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
+
 }
 a:hover {
   color: #535bf2;
+
 }
 
 body {
@@ -55,9 +59,11 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+
 }
 button:hover {
   border-color: #646cff;
+
 }
 button:focus,
 button:focus-visible {

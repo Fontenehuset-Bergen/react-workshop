@@ -9,3 +9,8 @@
     padding: 10px 20px;
     background-color: azure;
 }
+
+.defaultBadge {
+    padding: 10px 20px;
+    background-color: red;
+}

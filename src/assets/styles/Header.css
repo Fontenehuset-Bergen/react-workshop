@@ -1,8 +1,6 @@
 :root
 {
-    --primaryHeaderBackgroundColor : rgba(50, 50, 50, 1);
-    
-
+    --primaryHeaderBackgroundColor : rgb(232, 216, 216);
 }
 .flex {
     display: flex;
@@ -21,13 +19,16 @@ header {
 
 }
 
-.logoDefault, .menuDefaultIcon {
-    
-    height: 50px;
+ .menuDefaultIcon {
+     height: 50px;
 }
+ 
+
+ .logoDefault {
+    height: 60px;
+ }
 
 .buttonHeader {
     padding: 10px 20px;
-    background-color: lightskyblue;
+    background-color:#BAD3F0;
 }
-

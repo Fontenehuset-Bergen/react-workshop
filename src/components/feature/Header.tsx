@@ -6,7 +6,7 @@ export function Header()
     <>
         <header className="defaultHeader flex">
            <Logo fileUrl="src/assets/icons/maidsafe.png" cssIconClass="logoDefault"/>
-           <MenuIcon fileUrl="src/assets/icons/more.png" cssIconClass="menuDefaultIcon" cssButtonClass="buttonnHeader"/>
+           <MenuIcon fileUrl="src/assets/icons/more.png" cssIconClass="menuDefaultIcon" cssButtonClass="buttonHeader"/>
         </header>
     
     </>);
