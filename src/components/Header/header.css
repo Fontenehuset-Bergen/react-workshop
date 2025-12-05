@@ -1,0 +1,17 @@
+/* HEADER LAYOUT / STYLE */
+
+.header {
+    justify-content: space-between;
+    align-items: center;
+
+    height: auto;
+    width: 100vw;
+
+    background-color: #2a282e;
+}
+
+.headericon {
+    max-height: 90px;
+    height: 50px;
+}
+

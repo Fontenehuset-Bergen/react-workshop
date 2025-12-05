@@ -1,0 +1,43 @@
+/* FOOTER LAYOUT / STYLE */
+
+.footer {
+    justify-content: space-between;
+    align-items: center;
+
+    height: auto;
+    width: 100vw;
+
+    position: absolute;
+    bottom: 0;
+
+    background-color: #2a282e;
+}
+
+/* LEFT CONTENT */
+
+.fcontentLeft {
+    font-size: 2rem;
+    font-weight: bold;
+
+    text-shadow: 0px 2px 0px #c637b3;
+}
+
+.footerimg {
+    height: 100px;
+}
+
+/* RIGHT CONTENT */
+
+.fcontentRight {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    text-shadow: 0px 2px 0px #279f9d;
+}
+
+

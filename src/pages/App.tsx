@@ -4,7 +4,7 @@ import '../assets/styles/example.css'
 function App() {
 
   return (
-    <main>
+    <main className="maincontentbox">
       <HomepageHero />
     </main>
   )
