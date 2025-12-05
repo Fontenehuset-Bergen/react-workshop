@@ -5,6 +5,14 @@ import './assets/styles/index.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <body>
+      
+    <header></header>
+    </body>
     <App />
+    <main>
+
+    <footer></footer>
+    </main>
   </StrictMode>,
 )
