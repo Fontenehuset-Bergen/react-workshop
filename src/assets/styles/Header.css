@@ -1,0 +1,21 @@
+:root
+{
+    --primaryHeaderBackgroundColor : rgba(50, 50, 50, 1);
+
+}
+
+header {
+    background-color: var(--primaryHeaderBackgroundColor);
+}
+
+.defaultlHeader {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.logoDefault, .menuDefaultIcon {
+    
+    height: 32px;
+}
+
