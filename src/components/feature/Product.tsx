@@ -16,20 +16,22 @@ export function DisplayProduct({productName, price, description, inStock, imageU
     return(
         <>
             <article className="productCardDiv flex">
-               <img className="productImg" src={imageUrl} alt="product image"/>
+              <div className="productImageTextWrapper flex">
+                 <img className="productImg" src={imageUrl} alt="product image"/>
                <div className="productInfoWrapper flex">
                  <h3 className="productName">{productName}</h3>
                  <p className="productDescription">{description}</p>
                  <p className="productPrice">{price}</p>
                </div>
-               <div className="buttonStatusWrapper">
+              </div>
+               <div className="buttonStatusWrapper flex">
                  {inStock &&
                     <Badge label="Utsolgt" warning="warning"/>
                     
                  }
                  {inStock ? 
-                    <LinkButton text="Show" href="" cssClass="linkInStock"/> :
-                    <LinkButton text="Unavailable" href="" cssClass="linkUnavailable"/>
+                    <LinkButton text="Vis    >" href="" cssClass="linkInStock"/> :
+                    <LinkButton text="Utilgjengelig  >" href="" cssClass="linkUnavailable"/>
                  }
                 </div>
             </article>

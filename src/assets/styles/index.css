@@ -1,10 +1,13 @@
 @import "./Header.css";
 @import "./Footer.css";
 @import './ui.css';
+@import "./products.css";
 
 *{
   box-sizing: border-box;
   cursor: auto;
+  padding : 0px 0px;
+  margin: 0px 0px;
 }
 
 :root {
