@@ -2,6 +2,17 @@
     padding: 0 0;
 }
 
+.productSection {
+    flex-direction: column;
+    gap:25px;
+    background-color: rgb(246, 250, 244);
+    padding : 20px 20px;
+    background-image: url("src/assets/images/galaxyBackground.png");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+   
+}
 .productImageTextWrapper {
     gap: 20px;
 }
@@ -11,13 +22,16 @@
     justify-content: space-between;
     padding: 20px 20px 20px 10px;
     width: 40%;
-    background-color: black;
+    background-color: rgba(0,0,0, 0.9);
     border-radius: 10px;
+    
+    
     
 }
 
 .productImg {
     height: 100px;
+    
 }
 
 .productInfoWrapper {
