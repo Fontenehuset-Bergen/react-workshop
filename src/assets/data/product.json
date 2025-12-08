@@ -1,0 +1,74 @@
+[
+    {    
+       "id" : 1,
+        "productName" : "Samsung s24",
+        "price" : "6 990 kr",
+        "description" : "6.2\" Dynamic AMOLED skjerm 120hz. 50mp kamera. Exynos 2400 prosessor",
+        "inStock" : true,
+        "imageUrl" : "src/assets/images/samsungs25Edge.png"
+    },
+    {
+        "id" : 2,
+        "productName" : "Samsung s24 Ultra",
+        "price" : "7 480 kr",
+        "description" : "6.8\" QHD Dynamic AMOLED skjerm 120hz. 200mp kamera. 12gb ram. Snapdragon 8 Gen 3 for Galaxy",
+        "inStock" : true,
+        "imageUrl" : "src/assets/images/samsungs25.png"
+    },
+    {   "id" : 3,
+        "productName" : "Samsung s25 Edge",
+        "price" : "17 990 kr",
+        "description" : "6.7\" QHD+ Dynamic AMOLED skjerm. 200mp kamera.Snapdragon 8 Elite for Galaxy.",
+        "inStock" : true,
+        "imageUrl" : "src/assets/images/samsungs23+.png"
+    },
+    {   "id" : 4,
+        "productName" : "Samsung s24",
+        "price" : "6 990 kr",
+        "description" : "6.2\" Dynamic AMOLED skjerm 120hz. 50mp kamera. Exynos 2400 prosessor",
+        "inStock" : false,
+        "imageUrl" : "src/assets/images/samsungs25Edge.png"
+    },
+    {   "id" : 5,
+        "productName" : "Samsung s24 Ultra",
+        "price" : "7 480 kr",
+        "description" : "6.8\" QHD Dynamic AMOLED skjerm 120hz. 200mp kamera. 12gb ram. Snapdragon 8 Gen 3 for Galaxy",
+        "inStock" : true,
+        "imageUrl" : "src/assets/images/samsungs23+.png"
+    },
+    {   "id" : 6,
+        "productName" : "Samsung s25 Edge",
+        "price" : "17 990 kr",
+        "description" : "6.7\" QHD+ Dynamic AMOLED skjerm. 200mp kamera.Snapdragon 8 Elite for Galaxy.",
+        "inStock" : true,
+        "imageUrl" : "src/assets/images/samsungs25.png"
+    },
+    {   "id" : 7,
+        "productName" : "Samsung s24",
+        "price" : "6 990 kr",
+        "description" : "6.2\" Dynamic AMOLED skjerm 120hz. 50mp kamera. Exynos 2400 prosessor",
+        "inStock" : false,
+        "imageUrl" : "src/assets/images/samsungs25Edge.png"
+    },
+    {   "id" : 8,
+        "productName" : "Samsung s24 Ultra",
+        "price" : "7 480 kr",
+        "description" : "6.8\" QHD Dynamic AMOLED skjerm 120hz. 200mp kamera. 12gb ram. Snapdragon 8 Gen 3 for Galaxy",
+        "inStock" : true,
+        "imageUrl" : "src/assets/images/samsungs23+.png"
+    },
+    {   "id" : 9,
+        "productName" : "Samsung s25 Edge",
+        "price" : "17 990 kr",
+        "description" : "6.7\" QHD+ Dynamic AMOLED skjerm. 200mp kamera.Snapdragon 8 Elite for Galaxy.",
+        "inStock" : true,
+        "imageUrl" : "src/assets/images/samsungs23+.png"
+    },
+     {   "id" : 10,
+        "productName" : "Samsung s25 Edge",
+        "price" : "17 990 kr",
+        "description" : "6.7\" QHD+ Dynamic AMOLED skjerm. 200mp kamera.Snapdragon 8 Elite for Galaxy.",
+        "inStock" : true,
+        "imageUrl" : "src/assets/images/samsungs25.png"
+    }
+]

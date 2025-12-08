@@ -3,7 +3,8 @@
 }
 
 .productSection {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     gap:25px;
     background-color: rgb(246, 250, 244);
     padding : 40px 20px;
@@ -24,7 +25,7 @@
     justify-content: space-between;
     padding: 20px 20px 20px 10px;
     width: 40%;
-    background-color: rgba(0,0,0, 0.8);
+    background-color: rgba(0,0,0, 0.9);
     border-radius: 10px;
     border : 3px solid rgb(0, 0, 0);
         

@@ -3,7 +3,8 @@ import { Badge } from "./badges/Badge";
 import { InStockButton, LinkButton } from "./buttons/LinkButton";
 import { TextButton } from "./buttons/TextButton";
 
-interface Product {
+export interface Product {
+    id : number,
     productName : string,
     price : string,
     description : string,
