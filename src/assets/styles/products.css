@@ -76,7 +76,7 @@
     padding : 10px 10px;    
     font-size : 10px;
     grid-area : availability;
-    width: 100px;
+    
     
 }
 
@@ -87,10 +87,11 @@
 .outOfStockBadge {
     padding: 3px 10px;;
     width: 100px;
-    font-size: 10px;
+    font-size: 12px;
     background-color: inherit;
     color: red;
     grid-area : statusBadge;
+    align-self: self-start;
     
 
 }
