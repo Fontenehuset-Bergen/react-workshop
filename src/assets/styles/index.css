@@ -1,16 +1,21 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --img-width: 180px;
+  --small-img-width: 70px;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+.warning {
+  color: red !important;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.disabled {
+  background-color: gray !important;
+}
+
+body {
+  margin: 0;
+  background-color: white;
+  color: black;
+  font-family: Verdana;
 }
 
 a {
@@ -22,16 +27,10 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  background-color: white;
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
 
 header {
   width: 100%;
@@ -66,17 +65,15 @@ footer .right, footer .left {
 }
 
 h4 {
-  margin: 7px;
+  margin: 7px 0px;
 }
 
 main {
-  padding: 100px;
-
+  margin: auto 100px;
 }
 
 .product {
   display: flex;
-  height: 200px;
   margin-bottom: 20px;
   border: 1px solid gray;
   border-radius: 10px;
@@ -86,6 +83,13 @@ main {
 
 .product img {
   border-right: 1px solid gray;
+  padding: 5px;
+  min-width: var(--small-img-width);
+  width: var(--small-img-width);
+}
+
+.product .productInfo {
+  margin-left: 10px;
 }
 
 .product .productLink {
@@ -94,10 +98,10 @@ main {
   grid-template: 
     "a" 1fr
     "b" 1fr;
-}
-
-.warning {
-  color: red;
+  width: 100px;
+  margin-left: auto;
+  min-width: 100px;
+  font-size: 12px;
 }
 
 .linkButton {
@@ -106,10 +110,11 @@ main {
   color: white;
   height: 40px;
   font-size: 12px;
-}
-
-.disabled {
-  background-color: gray;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  grid-area: b;
+  align-self: end;
 }
 
 .product .badge {
@@ -117,25 +122,19 @@ main {
   align-self: start;
   text-align: right;
 }
-.product .linkButton {
-  grid-area: b;
-  align-self: end;
-  font-size: 16px;
-}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@media(min-width: 1280px) {
+  .product {
+    height: 200px;
   }
-  a:hover {
-    color: #747bff;
-  }
-}
+  .product img {
+    width: var(--img-width);
+    min-width: var(--img-width);
 
-#root {
-  max-width: 1280px;
-  /* margin: 0 auto;
-  padding: 2rem; */
-  text-align: center;
+  }
+  .product .productLink {
+    width: 140px;
+    min-width: 140px;
+  }
+  
 }
