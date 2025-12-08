@@ -15,7 +15,7 @@ Du kan bruke innholdslisten under til å navigere når du besøker prosjektet p�
   - [Grunnleggende React](./1_introduction/4_react_fundaments.md)
   - [React developer tools](./1_introduction/5_react_developer_tools.md)
 - Komponenter
-- Hooks & states
+- States
 - Effects
 
 ## Oppgaver
