@@ -1,0 +1,1 @@
+# Vanlige feil ved bruk av state i React
