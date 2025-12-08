@@ -2,7 +2,6 @@ import "../../../assets/styles/badge.css";
 
 interface StatusBadgeProps {
   label: string;
-  price: number;
   level: "success" | "warning" | "info";
 }
 
