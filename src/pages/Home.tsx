@@ -1,6 +1,6 @@
 import "../assets/styles/example.css";
-import { HomepageHero } from "../components/feature/Hero";
-import { FadeSection } from "../components/feature/Intersection";
+import { HomepageHero } from "../components/features/Hero";
+import { FadeSection } from "../components/examples/Intersection";
 import { StatusBadge } from "../components/ui/badge/Status";
 import { LinkButton } from "../components/ui/buttons/LinkButton";
 import { TextButton } from "../components/ui/buttons/TextButton";
@@ -21,7 +21,7 @@ export default function App() {
           These are my <span style={{ textDecoration: "underline" }}>badges</span>
         </h2>
         <span style={{ display: "flex", gap: "2rem" }}>
-          <StatusBadge />
+          <StatusBadge label="" level="info" />
           <StatusBadge label="50+ tilgjengelig" level="success" />
           <StatusBadge label="utsolgt" level="warning" />
         </span>
