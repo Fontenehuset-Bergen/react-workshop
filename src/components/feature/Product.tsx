@@ -16,7 +16,7 @@ export function DisplayProduct({productName, price, description, inStock, imageU
     return(
         <>
             <article className="productCardDiv flex">
-              <div className="productImageTextWrapper flex">
+              <div className="productImageTextWrapper grid">
                  <img className="productImg" src={imageUrl} alt="product image"/>
                <div className="productInfoWrapper flex">
                  <h3 className="productName">{productName}</h3>

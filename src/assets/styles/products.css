@@ -11,10 +11,12 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-   
+    /* background-attachment: fixed; */
 }
 .productImageTextWrapper {
-    gap: 20px;
+    grid-template-columns: 120px 220px;
+    align-items: center;
+    justify-items: left;
 }
 
 .productCardDiv {
@@ -25,8 +27,7 @@
     background-color: rgba(0,0,0, 0.8);
     border-radius: 10px;
     border : 3px solid rgb(0, 0, 0);
-    
-    
+        
     
 }
 
@@ -50,7 +51,7 @@
 .productDescription {
     font-size: 12px;
     font-weight: normal;
-    width: 70%;
+    /* width: 70%; */
 }
 
 .productPrice {
