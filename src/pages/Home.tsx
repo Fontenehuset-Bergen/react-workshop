@@ -6,6 +6,8 @@ import { TextButton } from "../components/ui/buttons/TextButton";
 import { ProductCard } from "../components/ui/cards/ProductCard";
 import { Section } from "../components/features/Section";
 import { Paragraph } from "../components/ui/text/Paragraph";
+import { ProductList } from "../components/examples/ProductList";
+import { StyledSection } from "../components/examples/StyledSection";
 
 export default function App() {
   return (
@@ -14,7 +16,11 @@ export default function App() {
       <h1>Assignment solution examples</h1>
       <h2>Easy</h2>
       <Section label="1) Layout">
-        <p>You can scroll to the <a href="#example-header">header</a> on the top and the <a href="#example-footer">footer</a> at the bottom by clicking the links</p>
+        <p>
+          You can scroll to the <a href="#example-header">header</a> on the top
+          and the <a href="#example-footer">footer</a> at the bottom by clicking
+          the links
+        </p>
       </Section>
       <Section label="2a) TextButton">
         <p>This is just a dummy button that doesn't do anything yet</p>
@@ -36,7 +42,8 @@ export default function App() {
       <Section label="3d) Badges">
         <p>
           Badges have multiple uses, but mainly we use them for grabbing
-          attention when attaching to other components. I'll reuse them in the product card component below
+          attention when attaching to other components. I'll reuse them in the
+          product card component below
         </p>
         <span style={{ display: "flex", gap: "2rem" }}>
           <StatusBadge label="Snart tomt" level="info" />
@@ -61,6 +68,22 @@ export default function App() {
         />
       </Section>
       <h2>Medium</h2>
+      <Section label="5) Dataset og Iterasjon">
+        <p>
+          We can utilize the previous component we made for showcasing a product
+          with an existing dataset, such as a json file or a database query
+        </p>
+        <ProductList />
+      </Section>
+      <Section label="6) Childrens inside components">
+        <StyledSection
+          title="Styled section"
+          text="This section has different styling compared to the one above"
+          background="light"
+        >
+          <ProductList />
+        </StyledSection>
+      </Section>
       <h2>Hard</h2>
       <h2>Bonus</h2>
     </main>

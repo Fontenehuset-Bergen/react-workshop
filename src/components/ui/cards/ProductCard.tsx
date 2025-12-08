@@ -13,7 +13,6 @@ export function ProductCard(product: ProductCardProps) {
   return (
     <div
       style={{
-        width: "100%",
         height: "200px",
         display: "flex",
         border: "1px solid grey",
@@ -39,9 +38,14 @@ export function ProductCard(product: ProductCardProps) {
           <h4 style={{ fontWeight: "bold", fontSize: 18 }}>
             {product.productName}
           </h4>
-          {!product.inStock && <StatusBadge label="Utsolgt" level="warning" />}
+          <span>
+            {!product.inStock && (
+              <StatusBadge label="Utsolgt" level="warning" />
+            )}
+            {product.isOnSale && <StatusBadge label="Salg" level="success" />}
+          </span>
         </span>
-        <span style={{ color: "GrayText" }}>{product.description}</span>
+        <span style={{ color: "GrayText", width: "100%" }}>{product.description}</span>
         <span
           style={{
             display: "flex",
@@ -53,7 +57,12 @@ export function ProductCard(product: ProductCardProps) {
           <span style={{ fontWeight: "bold", fontSize: 28 }}>
             {product.price.toLocaleString("no-NO")} kr
           </span>
-          <button style={{ height: "fit-content", backgroundColor: product.inStock ? "black": "#00000050" }}>
+          <button
+            style={{
+              height: "fit-content",
+              backgroundColor: product.inStock ? "black" : "#00000050",
+            }}
+          >
             {product.inStock ? "vis" : "utilgjengelig"} &gt;
           </button>
         </span>
