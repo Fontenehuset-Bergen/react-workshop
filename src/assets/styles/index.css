@@ -114,3 +114,31 @@ main {
   border-color: #ffffff10;
   box-shadow: 0px 20px 207px 10px #ffffff10;
 }
+
+/* Some hover states for our example todo list assignment */
+.todo-list {
+  display: "flex";
+  flex-flow: "column nowrap";
+  gap: "0.2rem";
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid white;
+  padding: 0 6px;
+}
+
+.todo-actions {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  opacity: 0;
+  transition: opacity 250ms;
+}
+
+.todo-item:hover .todo-actions {
+  opacity: 1;
+}

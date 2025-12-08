@@ -8,6 +8,7 @@ import { Section } from "../components/features/Section";
 import { Paragraph } from "../components/ui/text/Paragraph";
 import { ProductList } from "../components/examples/ProductList";
 import { StyledSection } from "../components/examples/StyledSection";
+import { TodoList } from "../components/examples/TodoList";
 
 export default function App() {
   return (
@@ -85,6 +86,9 @@ export default function App() {
         </StyledSection>
       </Section>
       <h2>Hard</h2>
+      <Section label="7) Todolist">
+        <TodoList />
+      </Section>
       <h2>Bonus</h2>
     </main>
   );
