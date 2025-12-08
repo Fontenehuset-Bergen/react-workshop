@@ -1,6 +1,6 @@
 export function Header() {
   return (
-    <header>
+    <header id="example-header">
       <img src="/vite.svg" alt="site logo" />
       <nav>menu</nav>
     </header>

@@ -1,10 +1,12 @@
+import { StatusBadge } from "../badge/Status";
+
 interface ProductCardProps {
   productName: string;
   price: number;
   description: string;
   imageUrl: string;
-  inStock: boolean;
-  isOnSale: boolean;
+  inStock?: boolean;
+  isOnSale?: boolean;
 }
 
 export function ProductCard(product: ProductCardProps) {
@@ -33,11 +35,27 @@ export function ProductCard(product: ProductCardProps) {
           color: "black",
         }}
       >
-        <h4>{product.productName}</h4>
-        <span>{product.description}</span>
         <span style={{ display: "flex", justifyContent: "space-between" }}>
-          <p>{product.price} kr</p>
-          <button>{product.inStock ? "vis" : "utilgjengelig"} &gt;</button>
+          <h4 style={{ fontWeight: "bold", fontSize: 18 }}>
+            {product.productName}
+          </h4>
+          {!product.inStock && <StatusBadge label="Utsolgt" level="warning" />}
+        </span>
+        <span style={{ color: "GrayText" }}>{product.description}</span>
+        <span
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "flex-end",
+            marginTop: "auto",
+          }}
+        >
+          <span style={{ fontWeight: "bold", fontSize: 28 }}>
+            {product.price.toLocaleString("no-NO")} kr
+          </span>
+          <button style={{ height: "fit-content", backgroundColor: product.inStock ? "black": "#00000050" }}>
+            {product.inStock ? "vis" : "utilgjengelig"} &gt;
+          </button>
         </span>
       </div>
     </div>

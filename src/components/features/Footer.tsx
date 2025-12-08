@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer>
+    <footer id="example-footer">
       <div style={{ flex: 1 }}>
         <h2 style={{textAlign: "center"}}>Backstory</h2>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quae
