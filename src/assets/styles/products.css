@@ -71,7 +71,7 @@
     
     justify-content: space-between;
     background-color: rgb(233, 226, 226);
-    color : rgb(17, 16, 16);
+    color : rgb(0, 0, 0);
     border-radius: 5px;
     padding : 10px 10px;    
     font-size : 10px;
@@ -81,7 +81,8 @@
 }
 
 .linkUnavailable{
-    color:  rgba(17, 16, 16, 0.5);
+    color:  rgba(127, 113, 113, 0.4);
+    /* background-color:  rgb(233, 226, 216);; */
 }
 
 .outOfStockBadge {
