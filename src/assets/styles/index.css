@@ -25,9 +25,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -75,19 +72,29 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  flex: 1;
   gap: 2rem;
+  padding: 1em;
+  margin: 0 auto;
+
+  min-width: 320px;
+  max-width: 1028px;
+  min-height: 100vh;
 }
 
-.fade-section {
+header {
   display: flex;
-  flex-flow: column nowrap;
-  visibility: hidden;
-  opacity: 0%;
-  transition: all 1s ease-in-out;
+  justify-content: space-between;
 }
 
-.fade-section-visible {
-  visibility: visible;
-  opacity: 100%;
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #1a1a1a;
+  gap: 2em;
+  padding: 1em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
 }
