@@ -22,8 +22,9 @@
     justify-content: space-between;
     padding: 20px 20px 20px 10px;
     width: 40%;
-    background-color: rgba(0,0,0, 0.9);
+    background-color: rgba(0,0,0, 0.8);
     border-radius: 10px;
+    border : 3px solid rgb(97, 97, 72);
     
     
     
@@ -75,6 +76,7 @@
     padding : 10px 10px;    
     font-size : 10px;
     grid-area : availability;
+    width: 100px;
     
 }
 
