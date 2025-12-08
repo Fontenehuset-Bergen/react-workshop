@@ -1,6 +1,6 @@
 import React from "react";
 import { Badge } from "./badges/Badge";
-import { LinkButton } from "./buttons/LinkButton";
+import { InStockButton, LinkButton } from "./buttons/LinkButton";
 import { TextButton } from "./buttons/TextButton";
 
 interface Product {
@@ -24,14 +24,14 @@ export function DisplayProduct({productName, price, description, inStock, imageU
                  <p className="productPrice">{price}</p>
                </div>
               </div>
-               <div className="buttonStatusWrapper flex">
-                 {inStock &&
-                    <Badge label="Utsolgt" warning="warning"/>
+               <div className="buttonStatusWrapper grid">
+                 {inStock === false &&
+                    <Badge label="Utsolgt" warning="none" cssClass="outOfStockBadge"/>
                     
                  }
                  {inStock ? 
-                    <LinkButton text="Vis    >" href="" cssClass="linkInStock"/> :
-                    <LinkButton text="Utilgjengelig  >" href="" cssClass="linkUnavailable"/>
+                    <InStockButton text="Vis" href="" cssClass="linkInStock"/> :
+                    <InStockButton text="Utilgjengelig" href="" cssClass="linkUnavailable"/>
                  }
                 </div>
             </article>

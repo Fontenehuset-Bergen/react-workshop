@@ -1,7 +1,7 @@
 
 // warning type 3 options
 
-type Warning = "success" | "warning" | "info";
+type Warning = "success" | "warning" | "info" | "none";
 
 
 interface Badge {
@@ -25,10 +25,13 @@ export function Badge({ label, warning, cssClass} : Badge)
         case "warning"  : color = "red";
                           break;
 
+        case "none" :      color      = "inherit";
+                           break;
+
         default : break;
     };
 
     return(
-        <span className={`defaultBadge ${cssClass}`} style={{backgroundColor: color}}>{label}</span>
+        <span className={`defaultBadge ${cssClass}` } style={{backgroundColor: color}}>{label}</span>
     )
 }

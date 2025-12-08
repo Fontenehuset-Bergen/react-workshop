@@ -8,6 +8,7 @@
     color: rgb(23, 102, 129);
     padding: 10px 20px;
     background-color: azure;
+    justify-content: space-between;
 }
 
 .defaultBadge {

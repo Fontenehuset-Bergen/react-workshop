@@ -8,10 +8,10 @@ export function HeroPage ()
 {
   return( 
      <>
-      <TextButton text="this is my button"/>
+      {/* <TextButton text="this is my button"/>
       <LinkButton text={"test link"} href="https://www.elkjop.no/" ></LinkButton>
-      <Badge label="Out of Stock" warning="info"/>
-      <DisplayProduct productName="testproduct name" price="25.50" description="Kult produkt som er her" inStock imageUrl="test"/>
+      <Badge label="Out of Stock" warning="info"/> */}
+      <DisplayProduct  productName="Samsung s25" price="10 990 kr" description="Minste modellen i s25 serien. Oled skjerm, Snapdragon prosessor" inStock={true} imageUrl="src/assets/images/samsungs25.png"/>
      </>
   );
 
