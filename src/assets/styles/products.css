@@ -6,10 +6,10 @@
     flex-direction: column;
     gap:25px;
     background-color: rgb(246, 250, 244);
-    padding : 20px 20px;
-    background-image: url("src/assets/images/galaxyBackground.png");
-    background-size: contain;
-    background-position: right;
+    padding : 40px 20px;
+    background-image: url("src/assets/images/background2.jpg");
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
    
 }
@@ -24,7 +24,7 @@
     width: 40%;
     background-color: rgba(0,0,0, 0.8);
     border-radius: 10px;
-    border : 3px solid rgb(97, 97, 72);
+    border : 3px solid rgb(0, 0, 0);
     
     
     
