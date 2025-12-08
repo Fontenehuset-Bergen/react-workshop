@@ -81,6 +81,10 @@
     
 }
 
+.linkInStock {
+  
+}
+
 .linkUnavailable{
     color:  rgba(127, 113, 113, 0.4);
     /* background-color:  rgb(233, 226, 216);; */
