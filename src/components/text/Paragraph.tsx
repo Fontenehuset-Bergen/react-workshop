@@ -1,3 +1,5 @@
+import { Fragment } from 'react/jsx-runtime';
+
 type SizeUnit =
     | 'rem'
     | 'em'
@@ -40,10 +42,10 @@ export function Paragraph(props: ParagraphProps) {
         <>
             <p style={textSize && { fontSize: textSize }}>
                 {lines.map((str, index) => (
-                    <>
+                    <Fragment key={str}>
                         {str}
                         {index < lines.length - 1 && <br />}
-                    </>
+                    </Fragment>
                 ))}
             </p>
         </>

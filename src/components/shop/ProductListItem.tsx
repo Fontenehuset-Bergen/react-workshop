@@ -1,8 +1,10 @@
+import { Fragment, type Key } from 'react';
 import TextButton from '../buttons/TextButton';
 import { Badge } from '../text/Badge';
 import { Paragraph } from '../text/Paragraph';
 
 type ProductListItemProps = {
+    id: number;
     name: string;
     price: number;
     description: string;
@@ -12,7 +14,7 @@ type ProductListItemProps = {
 };
 
 export function ProductListItem(props: ProductListItemProps) {
-    const { name, price, description, imageUrl, inStock, isOnSale } = props;
+    const { id, name, price, description, imageUrl, inStock, isOnSale } = props;
 
     const priceFormatter = new Intl.NumberFormat('no-NO', {
         style: 'currency',
@@ -21,7 +23,7 @@ export function ProductListItem(props: ProductListItemProps) {
     });
 
     return (
-        <>
+        <Fragment key={`item${id}`}>
             <li>
                 <div className="itemPreview">
                     <img src={imageUrl}></img>
@@ -44,6 +46,6 @@ export function ProductListItem(props: ProductListItemProps) {
                     </div>
                 </div>
             </li>
-        </>
+        </Fragment>
     );
 }
