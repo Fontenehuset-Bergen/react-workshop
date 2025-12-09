@@ -1,12 +1,21 @@
 import { type Product } from "./Product";
 import { DisplayProduct } from "./Product";
 
-export function ProductList({products} : { products : Product[]})
+interface ProductList 
+{
+    products : Product[],
+    cssClass : string
+
+
+}
+
+
+export function ProductList({products, cssClass } : ProductList )
 {
 
     return(
         <>  
-            <div className="productSection flex">
+            <div className={cssClass}>
                 {
                     products.map((currentProduct) =>
                     {

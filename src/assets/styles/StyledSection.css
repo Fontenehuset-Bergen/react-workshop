@@ -4,9 +4,16 @@
     gap:25px;
     background-color: rgb(246, 250, 244);
     padding : 40px 20px;
-    background-image: url("src/assets/images/backgroundApple.jpg");
+    background-image: url("src/assets/images/backgroundApple.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
+}
+
+.alternativesDiv {
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: transparent;
+
 }

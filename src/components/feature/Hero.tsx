@@ -44,7 +44,7 @@ export function HeroPage ()
      <>
         
        <StyledSection title={"Alternativer til Samsung Phones"} text={"Her er vårt utvalg av iPhones. Det er begrenset. "} background="dark" 
-          children={<ProductList products={alternativesList}/>} />
+          children={<ProductList products={alternativesList} cssClass="alternativesDiv"/>} />
 
      
      </>
