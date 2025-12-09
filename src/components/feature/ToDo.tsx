@@ -10,12 +10,12 @@ export function ToDoList()
 
      return(
 
-        <form className="inputForm">
+        <form className"inputForm">
             <label htmlFor="">
                 <input type="text" />
             </label>
 
         </form>
-     )
+      )
 
 }
