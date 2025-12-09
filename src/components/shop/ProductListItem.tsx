@@ -1,4 +1,4 @@
-import { Fragment, type Key } from 'react';
+import { Fragment } from 'react';
 import TextButton from '../buttons/TextButton';
 import { Badge } from '../text/Badge';
 import { Paragraph } from '../text/Paragraph';
