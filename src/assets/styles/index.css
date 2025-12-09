@@ -88,6 +88,10 @@ section {
     min-height: 50vh;
 }
 
+p {
+    margin-bottom: 2rem;
+}
+
 a {
     font-weight: 500;
     color: var(--primary);
