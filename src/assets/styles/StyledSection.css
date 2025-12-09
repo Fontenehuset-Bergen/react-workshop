@@ -1,0 +1,12 @@
+.styledSection {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:25px;
+    background-color: rgb(246, 250, 244);
+    padding : 40px 20px;
+    background-image: url("src/assets/images/backgroundApple.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+}

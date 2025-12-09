@@ -5,7 +5,8 @@ import { Header } from "./Header"
 import { DisplayProduct } from "./Product";
 import { ProductList } from "./ProductList";
 import  { type Product} from "./Product"
-
+import { useState } from "react";
+import { StyledSection } from "./StyledSection";
 
 async function getJsonData(url : string) : Promise<Product []>
 {
@@ -30,13 +31,21 @@ async function getJsonData(url : string) : Promise<Product []>
 }
     
 const listToDisplay = await getJsonData("/src/assets/data/product.json");
+const alternativesList = await getJsonData("src/assets/data/alternatives.json")
+
+type brands = "Samsung Galaxy" | "iPhone";
 
 export function HeroPage ()
 {
+    const [brandToDisplay, setBrandToDisplay] = useState<brands>("Samsung Galaxy");
+
    console.log(listToDisplay);
   return( 
      <>
-      <ProductList products={listToDisplay}/>
+        
+       <StyledSection title={"Alternativer til Samsung Phones"} text={"Her er vårt utvalg av iPhones. Det er begrenset. "} background="dark" 
+          children={<ProductList products={alternativesList}/>} />
+
      
      </>
   );

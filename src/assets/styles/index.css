@@ -2,6 +2,7 @@
 @import "./Footer.css";
 @import './ui.css';
 @import "./products.css";
+@import "./StyledSection.css"
 
 *{
   box-sizing: border-box;
