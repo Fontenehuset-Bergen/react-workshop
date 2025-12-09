@@ -28,7 +28,7 @@ type TextSize =
 
 type ParagraphProps = {
     text: string;
-    textSize: TextSize;
+    textSize?: TextSize;
 };
 
 export function Paragraph(props: ParagraphProps) {
@@ -38,7 +38,7 @@ export function Paragraph(props: ParagraphProps) {
 
     return (
         <>
-            <p style={{ fontSize: textSize }}>
+            <p style={textSize && { fontSize: textSize }}>
                 {lines.map((str, index) => (
                     <>
                         {str}
