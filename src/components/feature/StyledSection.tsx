@@ -18,8 +18,8 @@ export function StyledSection({ title, text, background, children} : StyledSecti
 {
     return(
         <>
-            <div className="styledSection" style={background === "dark" ? {backgroundColor : darkMode} : {backgroundColor : lightMode}}>
-                <h2 className="alternatives">{title}</h2>
+            <div className="styledSection flex" style={background === "dark" ? {backgroundColor : darkMode} : {backgroundColor : lightMode}}>
+                <h2 className="alternativesTitle">{title}</h2>
                 <p className="alternativesText">{text}</p>
                 <div className="alternativesChildren">
                     {children}

@@ -3,6 +3,7 @@
 @import './ui.css';
 @import "./products.css";
 @import "./StyledSection.css";
+@import "./hero.css";
 
 *{
   box-sizing: border-box;

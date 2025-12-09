@@ -39,14 +39,32 @@ export function HeroPage ()
 {
     const [brandToDisplay, setBrandToDisplay] = useState<brands>("Samsung Galaxy");
 
-   console.log(listToDisplay);
-  return( 
-     <>
-        
-       <StyledSection title={"Alternativer til Samsung Phones"} text={"Her er vårt utvalg av iPhones. Det er begrenset. "} background="dark" 
-          children={<ProductList products={alternativesList} cssClass="alternativesDiv"/>} />
+    const changeBrand = () => 
+    {  
+       if(brandToDisplay === "Samsung Galaxy") setBrandToDisplay("iPhone");
+       else setBrandToDisplay("Samsung Galaxy");
+    };
 
-     
+   console.log(listToDisplay);
+
+
+
+  return( 
+     <> 
+            <main className="heroPage flex">
+            {
+            brandToDisplay === "Samsung Galaxy" ? <ProductList products={listToDisplay} cssClass="productSection flex"/> :
+                <StyledSection title={"Alternativer til Samsung Phones"} text={"Her er vårt utvalg av iPhones. Det er begrenset. "} background="dark" 
+            children={<ProductList products={alternativesList} cssClass="alternativesDiv"/>} />  
+            }
+            <div className="buttonDiv">
+                { brandToDisplay === "Samsung Galaxy" ? 
+                    <button key={1} onClick={changeBrand} className="alternativesButton iPhoneButton"><img className="logoButtonApple" src="src/assets/icons/iPhonelogoButton.png"/> Alternativer </button> :
+                    <button key={2} onClick={changeBrand} className="alternativesButton samsungButton">Tilbake til <img className="logoButtonSamsung" src="src/assets/icons/samsunglogoButton.png" /></button>
+                }
+            </div>
+     </main>
+  
      </>
   );
 

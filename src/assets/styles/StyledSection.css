@@ -1,19 +1,30 @@
 .styledSection {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap:25px;
-    background-color: rgb(246, 250, 244);
-    padding : 40px 20px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
     background-image: url("src/assets/images/backgroundApple.jpeg");
-    background-size: cover;
+    background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
+
 }
 
 .alternativesDiv {
+    display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    justify-content: center;
+    gap:25px;
     background-color: transparent;
+    padding : 40px 20px;
 
+}
+
+.alternativesTitle {
+    font-size: 30px;
+    font-weight: bolder;
+
+}
+
+.alternativesText {
+    font-size: 18px
 }

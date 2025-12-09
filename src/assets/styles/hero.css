@@ -1,0 +1,58 @@
+.heroPage {
+    /* position: relative; */
+    flex-direction: column;
+    background-color: rgb(145, 72, 72);
+
+}
+
+.buttonDiv {
+
+    position:fixed;
+    right: 20px;
+    top : 150px;
+    background-color: transparent;
+  
+}
+
+@keyframes flipInAlternative {
+    0% { transform: rotateY(90deg);  }
+
+    100% { transform: rotateY(0deg);}
+   
+}
+
+.alternativesButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    height: 80px;
+    width: 100px;
+        font-size:  12px;
+    border : 2px solid white;
+    background-color:rgb(2, 3, 3);
+    color:rgb(221, 221, 221);
+         padding: 10px 15px;
+ 
+}
+
+.logoButtonApple {
+    height: 20px;
+    padding : 3px 4px;
+}
+
+.logoButtonSamsung {
+    height: 30px;
+    padding: 3px 4px;
+
+}
+
+.iPhoneButton, .samsungButton {
+      animation-name: flipInAlternative;
+    animation-duration: 0.5s;
+    animation-delay: 0.1s;
+    animation-timing-function: ease-out
+    ;
+    animation-fill-mode: backwards;
+}
