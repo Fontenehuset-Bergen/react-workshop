@@ -145,6 +145,31 @@ h3 {
     background-color: var(--secondary);
 }
 
+.badge {
+    background-color: var(--bg-light);
+    border: 2px solid var(--border);
+    border-radius: 20%;
+    padding: 0.4rem;
+}
+
+.badge.success {
+    background-color: var(--success);
+    border-color: oklch(from var(--success) l calc(c * 3.2) h);
+    color: oklch(from var(--success) calc(l * 0.4) calc(c * 3.2) h);
+}
+
+.badge.warning {
+    background-color: var(--warning);
+    border-color: oklch(from var(--warning) l calc(c * 3.2) h);
+    color: oklch(from var(--warning) calc(l * 0.4) calc(c * 3.2) h);
+}
+
+.badge.info {
+    background-color: var(--info);
+    border-color: oklch(from var(--info) l calc(c * 3.2) h);
+    color: oklch(from var(--info) calc(l * 0.4) calc(c * 3.2) h);
+}
+
 .socials {
     display: flex;
     gap: 0.5rem;

@@ -1,5 +1,6 @@
 import LinkButton from '../components/buttons/LinkButton';
 import TextButton from '../components/buttons/TextButton';
+import { Badge } from '../components/text/Badge';
 import { Paragraph } from '../components/text/Paragraph';
 
 export default function Home() {
@@ -39,6 +40,15 @@ export default function Home() {
                             href="https://google.com"
                             newTab
                         />
+                    </div>
+                </section>
+                <section>
+                    <h2>My Badges</h2>
+                    <div className="flexRow">
+                        <Badge label="Badge" />
+                        <Badge label="Success!" level="success" />
+                        <Badge label="Warning!!" level="warning" />
+                        <Badge label="INFO" level="info" />
                     </div>
                 </section>
             </main>
