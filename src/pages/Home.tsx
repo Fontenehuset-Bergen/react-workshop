@@ -1,5 +1,6 @@
 import LinkButton from '../components/buttons/LinkButton';
 import TextButton from '../components/buttons/TextButton';
+import { ProductList } from '../components/shop/ProductList';
 import { Badge } from '../components/text/Badge';
 import { Paragraph } from '../components/text/Paragraph';
 
@@ -50,6 +51,10 @@ export default function Home() {
                         <Badge label="Warning!!" level="warning" />
                         <Badge label="INFO" level="info" />
                     </div>
+                </section>
+                <section>
+                    <h2>My Product List</h2>
+                    <ProductList itemCount={10}></ProductList>
                 </section>
             </main>
         </>
