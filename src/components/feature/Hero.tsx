@@ -54,7 +54,7 @@ export function HeroPage ()
             <main className="heroPage flex">
             {
             brandToDisplay === "Samsung Galaxy" ? <ProductList products={listToDisplay} cssClass="productSection flex"/> :
-                <StyledSection title={"Alternativer til Samsung Phones"} text={"Her er vårt utvalg av iPhones. Det er begrenset. "} background="dark" 
+                <StyledSection title={"Alternativer til Samsung Phones"} text={"Her er vårt begrensede utvalg av iPhones. "} background="dark" 
             children={<ProductList products={alternativesList} cssClass="alternativesDiv"/>} />  
             }
             <div className="buttonDiv">
