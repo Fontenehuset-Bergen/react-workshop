@@ -1,26 +1,26 @@
 [
     {    
        "id" : 1,
-        "productName" : "Samsung s24",
-        "price" : "6 990 kr",
-        "description" : "6.2\" Dynamic AMOLED skjerm 120hz. 50mp kamera. Exynos 2400 prosessor",
+        "productName" : "Samsung S24",
+        "price" : "10 790 kr",
+        "description" : "Samsung Galaxy S24 5G smarttelefon er elegant, moderne og ekstremt kraftig. Den har en stor 6,2-tommers Dynamic AMOLED 2x-skjerm med 120 Hz oppdateringsfrekvens, tre kameraer, en kraftig prosessor og et 4000 mAh-batteri med lang levetid",
         "inStock" : true,
-        "imageUrl" : "src/assets/images/samsungs25Edge.png"
+        "imageUrl" : "src/assets/images/samsungs24.jpg"
     },
     {
         "id" : 2,
-        "productName" : "Samsung s24 Ultra",
-        "price" : "7 480 kr",
-        "description" : "6.8\" QHD Dynamic AMOLED skjerm 120hz. 200mp kamera. 12gb ram. Snapdragon 8 Gen 3 for Galaxy",
+        "productName" : "Samsung S25 Ultra",
+        "price" : "17 990 kr",
+        "description" : "Samsung Galaxy S25 Ultra 5G smarttelefon er proppfull av toppmoderne teknologi og KI, og vil gi din mobilopplevelse et løft. Den er utstyrt med en 6,9-tommers Dynamic AMOLED 2x-skjerm, en Snapdragon Elite 8-prosessor, og et hovedkamera på 200MP.",
         "inStock" : true,
-        "imageUrl" : "src/assets/images/samsungs25.png"
+        "imageUrl" : "src/assets/images/samsungs25Ultra.png"
     },
     {   "id" : 3,
-        "productName" : "Samsung s25 Edge",
+        "productName" : "Samsung S25 Edge",
         "price" : "17 990 kr",
-        "description" : "6.7\" QHD+ Dynamic AMOLED skjerm. 200mp kamera.Snapdragon 8 Elite for Galaxy.",
+        "description" : "Samsung Galaxy S25 Ultra 5G smarttelefon er proppfull av toppmoderne teknologi og KI, og vil gi din mobilopplevelse et løft. Den er utstyrt med en 6,9-tommers Dynamic AMOLED 2x-skjerm, en Snapdragon Elite 8-prosessor, og et hovedkamera på 200MP.",
         "inStock" : true,
-        "imageUrl" : "src/assets/images/samsungs23+.png"
+        "imageUrl" : "src/assets/images/samsungs25Edge.png"
     },
     {   "id" : 4,
         "productName" : "Samsung s24",

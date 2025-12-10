@@ -15,7 +15,7 @@
     background-attachment: fixed;
 }
 .productImageTextWrapper {
-    grid-template-columns: 120px 220px;
+    grid-template-columns: 120px 400px;
     align-items: center;
     justify-items: left;
 }
@@ -52,6 +52,7 @@
 .productDescription {
     font-size: 12px;
     font-weight: normal;
+    color: rgb(221, 221, 221);
     /* width: 70%; */
 }
 
