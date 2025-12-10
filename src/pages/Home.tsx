@@ -3,6 +3,7 @@ import TextButton from '../components/buttons/TextButton';
 import { ProductList } from '../components/shop/ProductList';
 import { Badge } from '../components/text/Badge';
 import { Paragraph } from '../components/text/Paragraph';
+import TodoList from '../components/todo/TodoList';
 
 export default function Home() {
     return (
@@ -54,7 +55,11 @@ export default function Home() {
                 </section>
                 <section>
                     <h2>My Product List</h2>
-                    <ProductList itemCount={10}></ProductList>
+                    <ProductList />
+                </section>
+                <section>
+                    <h2>My Todo List</h2>
+                    <TodoList />
                 </section>
             </main>
         </>
