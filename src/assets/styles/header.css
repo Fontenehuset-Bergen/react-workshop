@@ -1,7 +1,7 @@
 .header-style {
     width: 100vw;
     height: 50px; 
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     justify-content: start;
     align-items: start;
 }
@@ -12,6 +12,7 @@
     width: 100%;
     gap: 20px;
     padding: 0, 10, 0, 10;
+    justify-items: center;
 }
 
 .header-logo {
@@ -34,8 +35,9 @@
 }
 
 .header-menu-button {
-    margin-right: 20px;
+    margin: 0 10px 5px 0;
     height: 40px;
+    width: 100px;
 }
 
 

@@ -11,37 +11,44 @@ import ShoppingCard from '../components/cards/shoppingCard'
 
 function App() {
   const [count, setCount] = useState(0)
-  const [person, updatePerson] = useState({
-    name: "Grete",
-    age: 36
-  })
-
-  console.log(person, updatePerson)
 
   return (
     <>
       <div className='homepage'>
-        <Header />
+        <Header />       
         <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
+          <button onClick={() => setCount((bananaindex) => bananaindex + 1)}>
             banana count is {count}
           </button>
-
         </div>
+
+        <ShoppingCard
+          description='Beskrivelse kommer'
+          imageUrl='src/assets/images/hodetelefoner.webp'
+          inStock='inStock' price={2000}
+          productName='Navn kommer'
+        />
+
+        <ShoppingCard
+          description='Beskrivelse kommer'
+          imageUrl='src/assets/images/kontorstol.webp'
+          inStock='soldOut'
+          price={2000}
+          productName='Navn kommer'
+        />
+
         <Paragraph text='lorem etc' textSize={18} />
+
         <div className='test-box'>
           <TextButton textcontent='TextButton' />
           <LinkButton label='LinkButton' ref='' />
-
           <StatusBadge label='Sold out' level='warning' />
           <StatusBadge label='100+' level='success' />
           <StatusBadge label='Few left' level='info' />
         </div>
-        <ShoppingCard description='Beskrivelse kommer' imageUrl='src/assets/images/hodetelefoner.webp' inStock='inStock' price={2000} productName='Navn kommer' />
-        <ShoppingCard description='Beskrivelse kommer' imageUrl='src/assets/images/kontorstol.webp' inStock='soldOut' price={2000} productName='Navn kommer' />
+
         <Footer />
       </div>
-
     </>
   )
 }
