@@ -18,8 +18,7 @@ export default function Header() {
                         onClick={() => setIsDropdownOpen((old) => !old)}
                         className="header-menu-button">Menu</button>
                     {
-                        isDropdownOpen &&
-                        <DropdownMenu />
+                        isDropdownOpen && <DropdownMenu />
                     }
                 </div>
             </div>

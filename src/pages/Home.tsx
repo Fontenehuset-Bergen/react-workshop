@@ -11,11 +11,60 @@ import ShoppingCard from '../components/cards/shoppingCard'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [hobbies, setHobbies] = useState([""])
+  const [input, setInput] = useState("")
+
+  function handleSubmit() {
+    if (input.length > 3)
+      setHobbies((oldHobbies) => [...oldHobbies, input])
+    setInput("")
+  }
 
   return (
     <>
       <div className='homepage'>
-        <Header />       
+        <Header />
+
+        <div style={{
+          padding: "1rem",
+          display: "flex",
+          flexFlow: "column nowrap",
+          backgroundColor: "darkseagreen",
+          color: "darkgreen",
+          borderRadius: 10, margin: 10
+        }}>
+          <p>My hobbies are:</p>
+          <div style={{
+            display: "flex",
+            flexDirection: "row",
+            gap: 10
+          }}>
+            {hobbies.map((hobby) => (
+              <span key={hobby}>
+                {hobby && <p style={{
+                  backgroundColor: "lightcyan",
+                  color: "darkblue",
+                  padding: 5,
+                  borderRadius: 5,
+                }}>
+                  {hobby}
+                </p>
+                }
+              </span>
+            ))}
+          </div>
+          <div>
+            <input
+              type="text"
+              value={input}
+              placeholder='enter hobby'
+              onChange={(e) => setInput(e.currentTarget.value)}
+            />
+            <button onClick={handleSubmit} style={{ marginLeft: 10 }}>Add</button>
+          </div>
+          <p style={{ color: "gray", fontStyle: "italic", textAlign: "start" }}>{input}</p>
+        </div>
+
         <div className="card">
           <button onClick={() => setCount((bananaindex) => bananaindex + 1)}>
             banana count is {count}
