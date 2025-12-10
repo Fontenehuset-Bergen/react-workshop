@@ -5,8 +5,6 @@ interface ProductList
 {
     products : Product[],
     cssClass : string
-
-
 }
 
 
