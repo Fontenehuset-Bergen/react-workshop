@@ -52,6 +52,7 @@
 .productDescription {
     font-size: 12px;
     font-weight: normal;
+    color: rgb(221, 221, 221);
     /* width: 70%; */
 }
 

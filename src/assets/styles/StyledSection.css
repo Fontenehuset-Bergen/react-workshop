@@ -22,9 +22,11 @@
 .alternativesTitle {
     font-size: 30px;
     font-weight: bolder;
+    color: rgb(221, 221, 221);
 
 }
 
 .alternativesText {
-    font-size: 18px
+    font-size: 18px;
+    color : rgb(221, 221, 221);
 }
