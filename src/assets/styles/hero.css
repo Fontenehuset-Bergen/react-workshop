@@ -38,8 +38,8 @@
 }
 
 .logoButtonApple {
-    height: 20px;
-    padding : 3px 4px;
+    height: 35px;
+    padding : 1px 4px;
 }
 
 .logoButtonSamsung {
@@ -49,10 +49,11 @@
 }
 
 .iPhoneButton, .samsungButton {
+
+    padding-bottom : 18px;
       animation-name: flipInAlternative;
     animation-duration: 0.5s;
     animation-delay: 0.1s;
-    animation-timing-function: ease-out
-    ;
+    animation-timing-function: ease-out ;
     animation-fill-mode: backwards;
 }

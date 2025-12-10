@@ -60,7 +60,7 @@ export function HeroPage ()
             <div className="buttonDiv">
                 { brandToDisplay === "Samsung Galaxy" ? 
                     <button key={1} onClick={changeBrand} className="alternativesButton iPhoneButton"><img className="logoButtonApple" src="src/assets/icons/iPhonelogoButton.png"/> Alternativer </button> :
-                    <button key={2} onClick={changeBrand} className="alternativesButton samsungButton">Tilbake til <img className="logoButtonSamsung" src="src/assets/icons/samsunglogoButton.png" /></button>
+                    <button key={2} onClick={changeBrand} className="alternativesButton samsungButton">Tilbake til <img className="logoButtonSamsung" src="src/assets/icons/samsungLogo.png" /></button>
                 }
             </div>
      </main>
