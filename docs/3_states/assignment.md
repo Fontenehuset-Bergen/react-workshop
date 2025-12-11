@@ -11,7 +11,7 @@ src/components/assignment
 Du kan lage din egen branch ved å kjøre følgende kommando i terminalen, eller manuelt via GUI i stackblitz eller ditt IDE. Hvis du bruker kommandoen må du huske å bytte ut `*ditt navn*`
 
 ```console
-git checkout -b week-3-assignment-*ditt navn* origin/week-3-assignment
+git checkout -b week-3-assignment-*ditt navn* origin/main
 ```
 
 ## Easy
@@ -38,7 +38,7 @@ Komponentet skal se slik ut når det er lukket og åpent, du kan forbedre stylin
 
 #### Fin feilene
 
-Det er veldig lett å gjøre feil når vi skal behandle state, i denne oppgaven ønsker jeg at dere skal finne feilene i komponentet og rette dem slik at funksjonaliteten er slik som kommentarene i komponentet beskriver.
+Det er veldig lett å gjøre feil når vi skal behandle state, i denne oppgaven ønsker jeg at dere skal finne de 4 feilene i komponentet og rette dem slik at funksjonaliteten er slik som kommentarene i komponentet beskriver.
 Her kan det være smart å lese på ukens dokumentasjon for [state](./2_state_in_react.md) og [vanlige feil](./4_pitfalls.md). Du kan finne lokasjon til komponentet under, eller følge denne [linken](../../src/components/assignment/SpotTheError.tsx)
 
 ```console
