@@ -1,3 +1,5 @@
+@import "./CounterButtons.css";
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -65,4 +67,14 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+
+  .homePageHero {
+    background-color: rgb(221, 221, 211);
+  }
+}
+
+.homePageHero {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

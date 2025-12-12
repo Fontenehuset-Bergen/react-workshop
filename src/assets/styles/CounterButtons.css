@@ -1,0 +1,56 @@
+:root {
+    --defaultButtonBackground : black;
+    --defaultButtonColor : lightskyblue;
+    --defaultPadding : 10px 20px;
+    --defaultBorder : 2px solid white;
+    --defaultBorderRadius : 5px;
+    --defaultButtonFontSize : 15px;
+}
+h2 {
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.buttonTextWrapper {
+    flex-direction: column;
+    background-color: black;
+    gap : 20px;
+    align-items: center;
+    width : 100%;
+    height : fit-content;
+    padding: 5rem 7rem;
+    border : 2px double lightcoral;
+    border-radius : 5px;
+
+}
+
+.defaultButton {
+
+    padding: var(--defaultPadding);
+    font-size: var(--defaultButtonFontSize);
+    color : var(--defaultButtonColor);
+    background-color: var(--defaultButtonBackground);
+    border: var(--defaultBorder);
+    border-radius: var(--defaultBorderRadius);
+}
+
+.buttonDiv {
+
+    flex-direction: row;
+    gap: 30px;
+    background-color: black;
+}
+
+.counterDisplay {
+    font-size: 25px;
+
+}
+
