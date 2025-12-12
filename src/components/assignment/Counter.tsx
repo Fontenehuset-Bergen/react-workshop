@@ -5,7 +5,7 @@ export function Counter() {
 
     return (
         <>
-            <div className="counter">
+            <div className="counter card">
                 <p>{count}</p>
                 <div className="controls">
                     <button onClick={() => setCount(count + 1)}>ADD</button>
