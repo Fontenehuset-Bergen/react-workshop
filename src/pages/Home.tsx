@@ -24,11 +24,9 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-<<<<<<< Updated upstream
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-=======
 
       <button type="button" onClick={() => setIsDropdownOpen((dropdownstate) => !dropdownstate)}>toggle dropdown</button>
       {isDropdownOpen && <p>This is my dropdown</p>}
@@ -42,7 +40,6 @@ function App() {
         <input type="text" ref={inputRef} placeholder="enter hobby" value={input} onChange={(event) => setInput(event.currentTarget.value)} />
         <p><button onClick={handleSubmit}>submit hobby</button></p>
       </div>
->>>>>>> Stashed changes
     </>
   )
 }
