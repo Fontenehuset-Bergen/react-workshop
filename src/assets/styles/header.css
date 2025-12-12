@@ -4,6 +4,7 @@
     background-color: rgb(255, 255, 255);
     justify-content: start;
     align-items: start;
+    z-index: 1;
 }
 
 .header-box {

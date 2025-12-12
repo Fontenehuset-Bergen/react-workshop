@@ -1,8 +1,11 @@
 import { useState } from "react"
 import "../../assets/styles/header.css"
-import DropdownMenu from "./menu"
+import Menu from "./menu"
+import type { ComponentProps } from "react";
 
-export default function Header() {
+type HeaderProps = ComponentProps<typeof Menu>
+
+export default function Header({setCurrentPage}: HeaderProps) {
 
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
@@ -16,9 +19,10 @@ export default function Header() {
                 <div style={{ display: "flex", flexDirection: "column", padding: 5, alignItems: "end" }}>
                     <button
                         onClick={() => setIsDropdownOpen((old) => !old)}
-                        className="header-menu-button">Menu</button>
+                        className="header-menu-button">Menu</button>               
+
                     {
-                        isDropdownOpen && <DropdownMenu />
+                        isDropdownOpen && <Menu setCurrentPage={setCurrentPage}/>
                     }
                 </div>
             </div>
