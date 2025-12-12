@@ -1,5 +1,6 @@
 import { Counter } from '../components/assignment/Counter';
 import { DropdownMenu } from '../components/assignment/DropdownMenu';
+import { SpotTheError } from '../components/assignment/SpotTheError';
 
 function App() {
     const dropdownLinks = [
@@ -18,6 +19,9 @@ function App() {
         <>
             <Counter />
             <DropdownMenu links={dropdownLinks} />
+            <div className="card">
+                <SpotTheError title="Spot The Error!" />
+            </div>
         </>
     );
 }
