@@ -21,6 +21,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.componentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -34,6 +42,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -60,6 +69,9 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+button:focus:not(:focus-visible) {
+  outline: none;
 }
 
 @media (prefers-color-scheme: light) {

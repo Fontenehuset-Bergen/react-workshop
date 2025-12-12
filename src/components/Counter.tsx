@@ -6,6 +6,12 @@ export function Counter() {
 
     return(
         <>
+
+        <div className="componentContainer">
+            <div className="assignmentIntro">
+                <h2>Assignment - Counter Component</h2>
+            </div>
+
             <div className="countContainer">
                 <p className="countDisplay">{count}</p>
                 <div className="countButtonsBox">
@@ -15,6 +21,9 @@ export function Counter() {
                     {/* Issue: Make the counter stop at 0 and not go into negative numbers */}
                 </div>
             </div>
+
+        </div>
+
         </>
     )
 }

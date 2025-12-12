@@ -2,16 +2,20 @@
     .countContainer {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: .5rem;
+        max-width: fit-content;
     }
 
     .countButtonsBox {
         display: flex;
         justify-content: space-between;
-        gap: 1rem;
+        gap: 
+        .5rem;
     }
 
     .countDisplay {
+        display: flex;
+        justify-content: center;
         background-color: #000;
         border-radius: .5rem;
         font-size: 2rem;
