@@ -1,0 +1,13 @@
+.dropDownMenuNav {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menuTitleText {
+    border : 2px solid white;
+    padding : 10px 20px;
+}
+
+.linkMenuList {
+    list-style-type: none;
+    }
