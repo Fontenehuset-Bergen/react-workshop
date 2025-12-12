@@ -1,3 +1,11 @@
+/* ----- Get rid of ALL padding and margins ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ----- Begone useless spaces I did not ask for ----- */
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
