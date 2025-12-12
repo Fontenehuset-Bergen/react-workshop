@@ -1,12 +1,8 @@
 import { useState } from "react";
 
 // Dette komponentet inneholder 4 feil, klarer du å finne alle?
-export function SpotTheError({
-  title = "Spot the errors",
-}: {
-  title: boolean;
-}) {
-  const [counter, setCounter] = useState<number>();
+export function SpotTheError({ title = "Spot the errors"}: {title: string;}) {
+  const [counter, setCounter] = useState<number>(0);
   const [person, setPerson] = useState({
     name: "Ole Gunnar",
     address: "Små gaten 6",
@@ -15,7 +11,7 @@ export function SpotTheError({
 
   function handleUpdatePerson() {
     // Her skal vi oppdatere personen med ny alder
-    setPerson(old => ({old.age = 27, ...old}))
+    setPerson(old => ({...old, age: 27}))
   }
 
   return (
