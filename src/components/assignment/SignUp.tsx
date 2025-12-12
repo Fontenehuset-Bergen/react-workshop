@@ -1,13 +1,17 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 export function SignUp() {
     const [isValid, setValid] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
 
     const validate = (target: HTMLInputElement) => {
-        const length = target.value.length;
+        const value = target.value;
+        const length = value.length;
 
-        if (length < 4) {
+        if (/(?:^\s|\s$)/.test(value)) {
+            setErrorMessage('* Username cannot start or end with a space! *');
+            setValid(false);
+        } else if (length < 4) {
             setErrorMessage('* Username is too short! *');
             setValid(false);
         } else if (length > 32) {
