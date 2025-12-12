@@ -4,12 +4,18 @@ import { useState } from "react";
 export function SpotTheError({
   title = "Spot the errors",
 }: {
-  title: boolean;
-}) {
-  const [counter, setCounter] = useState<number>();
+  title: string;
+}) 
+
+{  
+  interface person {
+    name: string;
+    age: number;
+  }
+  const [counter, setCounter] = useState<number>(0);
   const [person, setPerson] = useState({
     name: "Ole Gunnar",
-    address: "Små gaten 6",
+    address: "Små gaten 6", 
     age: 18,
   });
 
