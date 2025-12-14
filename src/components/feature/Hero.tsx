@@ -2,6 +2,7 @@ import viteLogo from '/vite.svg'
 import reactLogo from '../../assets/react.svg'
 import { CounterButtons } from '../CounterButtons';
 import { DropDownLinkMenu, type LinkArray } from '../DropDownLinkMenu';
+import { SpotTheError } from '../assignment/SpotTheError';
 
 const myTestLinks : LinkArray = 
 [
@@ -12,9 +13,10 @@ const myTestLinks : LinkArray =
 
 export function HomepageHero() {
     return (
-  <div className='homePageHero flex'>
-      {/* <CounterButtons/> */}
-      <DropDownLinkMenu menuTitle="not used here" items={myTestLinks}/>
-  </div>
+      <div className='homePageHero flex'>
+          {/* <CounterButtons/> */}
+          {/* <DropDownLinkMenu menuTitle="not used here" items={myTestLinks}/> */}
+          <SpotTheError title='Spot the error assignment'/>
+      </div>
     );
 }

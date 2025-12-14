@@ -1,21 +1,18 @@
 import { useState } from "react";
 
 // Dette komponentet inneholder 4 feil, klarer du å finne alle?
-export function SpotTheError({
-  title = "Spot the errors",
-}: {
-  title: boolean;
-}) {
-  const [counter, setCounter] = useState<number>();
+export function SpotTheError({title } : {title : string })
+{
+  const [counter, setCounter] = useState<number>(0);
   const [person, setPerson] = useState({
-    name: "Ole Gunnar",
+      name: "Ole Gunnar",
     address: "Små gaten 6",
     age: 18,
   });
 
   function handleUpdatePerson() {
     // Her skal vi oppdatere personen med ny alder
-    setPerson(old => ({old.age = 27, ...old}))
+    setPerson(old => (old.age = 27, { ...old}))
   }
 
   return (
@@ -27,11 +24,11 @@ export function SpotTheError({
       </p>
       <div style={{ display: "flex", gap: 8 }}>
         <p>Fungerer teller? {counter}</p>
-        <button onClick={() => setCounter(counter + 1)}>+1</button>
+        <button onClick={() => setCounter((prev) => prev + 1)}>+1</button>
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
         <p>Kan du se alle detaljer for personen?</p>
-        <div
+        <div key={person.name + person.age + person.address}
           style={{
             display: "flex",
             flexDirection: "column",
@@ -44,7 +41,7 @@ export function SpotTheError({
           <span>Alder: {person.age}</span>
         </div>
         <p>
-          Selv etter du har trykket{" "}
+           Selv etter du har trykket{" "}
           <span
             onClick={handleUpdatePerson}
             style={{ cursor: "pointer", color: "purple" }}
