@@ -8,8 +8,8 @@ export function DateInput({description, placeholder, cssClassLabel, cssClassInpu
 {
         
     return(
-         <label className={`defaultDateInput ${cssClassLabel}`}> {description}
-            <input value={value} onChange={handleChange} type="date" name="dateInput" className={`textInputDefault ${cssClassInput}`} placeholder={placeholder}/>
+         <label className={`textLabelDate ${cssClassLabel}`}> {description}
+            <input value={value} onChange={handleChange} type="date" name="dateInput" className={`inputDate ${cssClassInput}`} placeholder={placeholder}/>
         </label>
     );
 

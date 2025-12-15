@@ -63,7 +63,8 @@ export function MissionRegForm()
    
     return(
            <>
-               <form className={`defaultForm grid`}>
+               <section className="missionListSection flex">
+                <form className={`defaultForm grid`}>
                     <TextInput value={textInput} description="Enter mission description :" handleChange={handleMissionText} placeholder="enter data here"/>
                     <DateInput value={dateInput} description="Enter mission date :" handleChange={handleMissionDate}/>
                     <PriorityInput value={priorityInput} description="Enter mission priority :" handleChange={handlePriority} />
@@ -78,11 +79,11 @@ export function MissionRegForm()
                 <div>{errorMessage};
                 </div> */}
 
-                <ul className="missionList">
+                <ul className="missionList flex">
                     {missionList.length > 0 ?
                         missionList.map((currentItem) => 
                             (
-                                <li key={currentItem.id}  className="missionListItem">{`${currentItem.mission} ${currentItem.date} ${currentItem.priority}`}</li>
+                                <li key={currentItem.id}  className="missionListItem grid"><span>{currentItem.mission}</span> <span> {currentItem.date} </span> <span> {currentItem.priority}` </span></li>
 
                             )) : <p>No entries found {missionList.length}</p> 
                         
@@ -90,6 +91,7 @@ export function MissionRegForm()
 
 
                 </ul>
+               </section>
              
                 
            </>

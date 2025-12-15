@@ -6,23 +6,81 @@
     display: flex;
 }
 
-.textLabelDefault {
- 
+.missionListSection {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.addMissionButton {
+    padding : 10px 20px;
+    border-radius: 5px;
+    transition: all ease-in-out 0.2s;
+}
+
+.addMissionButton:hover {
+    border-color : rgb(11, 52, 11);
+    background-color: darkgrey;
+    color : rgb(7, 123, 123);
+    scale : 1.05;
+}
+
+.textLabelText {
+
     color : darkred;
+}
+
+.textLabelDate {
+    color : darkblue;
+}
+
+
+.textLabelPriority {
+    color : rgb(8, 22, 8);
+}
+
+.inputPriority, .inputText, .inputDate {
+    margin-left : 10px;
+    padding: 2px 4px;
 
 }
 
-.textInputDefault {
-    margin-left : 10px;
-    width: 200px;
+.inputPriority, .inputDate {
+    width:fit-content;
+}
 
+.inputText {
+    width : 12rem;
 }
 
 
 .defaultForm {
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: 33% 33% 33%;
     align-items: center;
     justify-content: left;
-    column-gap: 12px;
-  
+    width : 100%;
+    column-gap: 5px;
+    background-color: rgb(221, 221 221, 1);
+    border : 2px solid red;
+    border-radius : 8px;
+    padding : 10px 20px;
+}
+
+.missionListItem {
+    display: grid;
+    grid-template-columns: 50% 100px 100px;
+    justify-items: left;
+
+       
+}
+
+.missionList {
+    flex-direction: column;
+    width: 100%;
+    gap : 10px;
+    padding : 10px 20px;
+    border : 2px solid darkblue;
+    
+
 }

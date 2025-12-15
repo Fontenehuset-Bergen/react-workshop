@@ -20,8 +20,8 @@ export function TextInput({description, placeholder, cssClassLabel, cssClassInpu
 {
         
     return(
-         <label className={`textLabelDefault ${cssClassLabel}`}> {description}
-            <input value={value} onChange={handleChange} type="text" name="textInput" className={`textInputDefault ${cssClassInput}`} placeholder={placeholder}/>
+         <label className={`textLabelText ${cssClassLabel}`}> {description}
+            <input value={value} onChange={handleChange} type="text" name="textInput" className={`inputText ${cssClassInput}`} placeholder={placeholder}/>
         </label>
     );
 
