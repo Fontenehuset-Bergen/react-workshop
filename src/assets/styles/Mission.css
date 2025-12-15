@@ -1,0 +1,28 @@
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
+.textLabelDefault {
+ 
+    color : darkred;
+
+}
+
+.textInputDefault {
+    margin-left : 10px;
+    width: 200px;
+
+}
+
+
+.defaultForm {
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    justify-content: left;
+    column-gap: 12px;
+  
+}
