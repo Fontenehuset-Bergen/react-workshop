@@ -2,7 +2,7 @@
 import { useState, useRef} from "react"
 import { TextInput, type InputText} from "./inputs/TextInput"
 import { DateInput, type InputDate } from "./inputs/DateInput";
-import { type Priority, type InputPriority } from "./inputs/PriorityInput";
+import { type Priority, type InputPriority, PriorityInput } from "./inputs/PriorityInput";
 
 
 export interface MissonData 
@@ -39,7 +39,7 @@ export function MissionRegForm()
     return(
            <>
                <form className={`defaultForm grid`}>
-                    <TextInput value={textInput} description="Enter mission desScription :" handleChange={handleMissionText} placeholder="enter data here"/>
+                    <TextInput value={textInput} description="Enter mission description :" handleChange={handleMissionText} placeholder="enter data here"/>
                     <DateInput value={dateInput} description="Enter mission date :" handleChange={handleMissionDate} placeholder="not set"/>
                     <PriorityInput description="Enter mission priority :" handleChange={handleMissionDate}  value="Medium"/>
                 </form>
