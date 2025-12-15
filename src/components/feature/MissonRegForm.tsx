@@ -53,10 +53,11 @@ export function MissionRegForm()
                     <DateInput value={dateInput} description="Enter mission date :" handleChange={handleMissionDate}/>
                     <PriorityInput value={priorityInput} description="Enter mission priority :" handleChange={handlePriority} />
                 </form>
-                <p>{textInput}</p>
-                <p>{dateInput}</p>
-                <p>{priorityInput}</p>
-            
+                <div style={{display:"grid", gridTemplateColumns: "repeat(3, 25rem)"}}>
+                    <p>{textInput}</p>
+                    <p>{dateInput}</p>
+                    <p>{priorityInput}</p>
+                </div>
            </>
 
 
