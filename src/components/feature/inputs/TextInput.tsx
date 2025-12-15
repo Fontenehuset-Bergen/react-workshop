@@ -5,7 +5,7 @@ export interface Input {
     placeholder? : string, 
     cssClassLabel? :  string,
     cssClassInput? : string, 
-    handleChange : (event : ChangeEventHandler<HTMLInputElement>)
+    handleChange : (event : ChangeEventHandler<HTMLInputElement>) => void
 
     // iconUrl: string
 }

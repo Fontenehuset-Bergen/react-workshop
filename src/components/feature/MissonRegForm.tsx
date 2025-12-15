@@ -2,7 +2,7 @@
 import { useState, useRef} from "react"
 import { TextInput, type InputText} from "./inputs/TextInput"
 import { DateInput, type InputDate } from "./inputs/DateInput";
-import { Priority, PriorityInput, type InputPriority } from "./inputs/PriorityInput";
+import {  PriorityInput, type InputPriority } from "./inputs/PriorityInput";
 
 
 export interface MissonData 
