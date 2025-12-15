@@ -29,18 +29,19 @@ export function MissionRegForm()
 
     function handleMissionDate(event)
     {
-        dateInput.setDate(event.target.value);
+        dateInput.setDate(event.target.value.toString());
+        console.log(dateInput);
     }
 
     
     return(
            <>
                <form className={`defaultForm grid`}>
-                    <TextInput value={textInput} description="Enter mission description :" handleChange={handleMissionText} placeholder="enter data here"/>
+                    <TextInput value={textInput} description="Enter mission desScription :" handleChange={handleMissionText} placeholder="enter data here"/>
                     <DateInput value={dateInput} description="Enter mission date :" handleChange={handleMissionDate} placeholder="not set"/>
                     <PriorityInput description="Enter mission priority :" handleChange={handleMissionDate}  value="Medium"/>
                 </form>
-                <p>{dateInput.getDate()}</p>
+            
            </>
 
 
