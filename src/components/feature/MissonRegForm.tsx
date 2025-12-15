@@ -40,6 +40,7 @@ export function MissionRegForm()
                     <DateInput value={dateInput} description="Enter mission date :" handleChange={handleMissionDate} placeholder="not set"/>
                     <PriorityInput description="Enter mission priority :" handleChange={handleMissionDate}  value="Medium"/>
                 </form>
+                <p>{dateInput.getDate()}</p>
            </>
 
 
