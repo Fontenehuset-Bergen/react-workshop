@@ -1,13 +1,16 @@
 
 import { useState, useRef} from "react"
-import { TextInput, type TextInputData} from "./inputs/TextInput"
-import { DateInput, type InputData } from "./inputs/DateInput";
-import { PriorityInput } from "./inputs/PriorityInput";
+import { TextInput, type InputText} from "./inputs/TextInput"
+import { DateInput, type InputDate } from "./inputs/DateInput";
+import { PriorityInput, type InputPriority } from "./inputs/PriorityInput";
 
 
 export interface MissonData 
 {
-    mission : TextInputData,
+    mission : InputText,
+    date : InputDate,
+    priority : InputPriority
+
     cssClass? : string,
 };
 
@@ -33,7 +36,7 @@ export function MissionRegForm()
                <form className={`defaultForm grid`}>
                     <TextInput value={textInput} description="Enter mission description :" handleChange={handleMissionText} placeholder="enter data here"/>
                     <DateInput value={dateInput} description="Enter mission date :" handleChange={handleMissionDate} placeholder="not set"/>
-                    <PriorityInput description="Enter mission priority :" handleChange={handleMissionDate}  priority="Medium"/>
+                    <PriorityInput description="Enter mission priority :" handleChange={handleMissionDate}  value="Medium"/>
                 </form>
            </>
 

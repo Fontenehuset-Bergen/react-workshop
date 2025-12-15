@@ -10,7 +10,8 @@ export interface Input {
     // iconUrl: string
 }
 
-export interface InputText extends Input{
+export interface InputText extends Input
+{
       value : string
 }
 
