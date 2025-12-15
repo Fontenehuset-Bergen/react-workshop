@@ -29,22 +29,20 @@ export function MissionRegForm()
     const  [dateInput, setDateInput] = useState<string>(getTodaysDate());
     const [priorityInput, setPriorityInput] = useState<Priority>("Medium");
     const [missionList, updateList] = useState<MissonData[]>([]);
+    const [errorMessage, setErrorMessage] = useState<String>("");
 
-
-    function handleMissionText(event)
-    {
-        setTextInput(event.target.value);
-    }
+    function handleMissionText(event)  {   setTextInput(event.target.value);  }
 
     function handleMissionDate(event)
     {
         const dateString= event.target.value;
 
+        
         if(dateString) setDateInput(dateString); 
 
     }
     
-    const handlePriority = (event) => setPriorityInput(event.target.value);
+    function handlePriority(event) { setPriorityInput(event.target.value); }
     
     return(
            <>
@@ -57,6 +55,8 @@ export function MissionRegForm()
                     <p>{textInput}</p>
                     <p>{dateInput}</p>
                     <p>{priorityInput}</p>
+                </div>
+                <div>{errorMessage};
                 </div>
            </>
 
