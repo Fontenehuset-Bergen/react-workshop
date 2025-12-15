@@ -5,12 +5,21 @@ import { DateInput, type InputDate } from "./inputs/DateInput";
 import { type Priority, type InputPriority, PriorityInput } from "./inputs/PriorityInput";
 
 
-export interface MissonData 
+// export interface MissonData 
+// {
+//     mission : InputText,
+//     date : InputDate,
+//     priority : InputPriority
+//     cssClass? : string,
+// };
+
+interface MissionData 
 {
-    mission : InputText,
-    date : InputDate,
-    priority : InputPriority
-    cssClass? : string,
+    id : number,
+    mission : string,
+    date : string,
+    priority : Priority
+    iconUrl? : string,
 };
 
 function getTodaysDate() : string 
@@ -28,7 +37,7 @@ export function MissionRegForm()
 
     const  [dateInput, setDateInput] = useState<string>(getTodaysDate());
     const [priorityInput, setPriorityInput] = useState<Priority>("Medium");
-    const [missionList, updateList] = useState<MissonData[]>([]);
+    const [missionList, updateList] = useState<MissionData[]>([]);
     const [errorMessage, setErrorMessage] = useState<String>("");
 
     function handleMissionText(event)  {   setTextInput(event.target.value);  }
@@ -39,11 +48,19 @@ export function MissionRegForm()
 
         
         if(dateString) setDateInput(dateString); 
-
+  
     }
-    
+
     function handlePriority(event) { setPriorityInput(event.target.value); }
-    
+
+    function handleAddMission() : MissionData[]
+    {
+        // do conditionals her hvis nødvendig
+        updateList((prevList) =>  [...prevList, { id : (missionList.length+1), mission : textInput, date : dateInput, priority : priorityInput }]);
+     
+        
+    }
+   
     return(
            <>
                <form className={`defaultForm grid`}>
@@ -51,13 +68,30 @@ export function MissionRegForm()
                     <DateInput value={dateInput} description="Enter mission date :" handleChange={handleMissionDate}/>
                     <PriorityInput value={priorityInput} description="Enter mission priority :" handleChange={handlePriority} />
                 </form>
-                <div style={{display:"grid", gridTemplateColumns: "repeat(3, 25rem)"}}>
+                <button onClick={handleAddMission} className="addMissionButton">Add mission to list</button>
+
+                {/* <div style={{display:"grid", gridTemplateColumns: "repeat(3, 25rem)"}}>
                     <p>{textInput}</p>
                     <p>{dateInput}</p>
                     <p>{priorityInput}</p>
                 </div>
                 <div>{errorMessage};
-                </div>
+                </div> */}
+
+                <ul className="missionList">
+                    {missionList.length > 0 ?
+                        missionList.map((currentItem) => 
+                            (
+                                <li key={currentItem.id}  className="missionListItem">{`${currentItem.mission} ${currentItem.date} ${currentItem.priority}`}</li>
+
+                            )) : <p>No entries found {missionList.length}</p> 
+                        
+                    }
+
+
+                </ul>
+             
+                
            </>
 
 
