@@ -2,7 +2,7 @@
 import { useState, useRef} from "react"
 import { TextInput, type InputText} from "./inputs/TextInput"
 import { DateInput, type InputDate } from "./inputs/DateInput";
-import {  PriorityInput, type InputPriority } from "./inputs/PriorityInput";
+import { type Priority, type InputPriority } from "./inputs/PriorityInput";
 
 
 export interface MissonData 
@@ -17,7 +17,7 @@ export interface MissonData
 export function MissionRegForm()
 {
     const [textInput, setTextInput] =  useState<string>("");
-    const  [dateInput, setDateInput] = useState<Date>(new Date());
+    const  [dateInput, setDateInput] = useState<Date | null>(new Date());
     const [priorityInput, setPriorityInput] = useState<Priority>("Medium");
     const [missionList, updateList] = useState<MissonData[]>([]);
 
@@ -29,10 +29,12 @@ export function MissionRegForm()
 
     function handleMissionDate(event)
     {
-        dateInput.setDate(event.target.value.toString());
-        console.log(dateInput);
-    }
+        const dateString= event.target.value;
 
+        dateString ? setDateInput(new Date(dateString)) : setDateInput(null);
+        console.log(dateInput?.getDate().toString());
+    }
+    
     
     return(
            <>
