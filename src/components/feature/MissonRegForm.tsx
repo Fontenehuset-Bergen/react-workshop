@@ -3,6 +3,7 @@ import { useState, useRef} from "react"
 import { TextInput, type InputText} from "./inputs/TextInput"
 import { DateInput, type InputDate } from "./inputs/DateInput";
 import { type Priority, type InputPriority, PriorityInput } from "./inputs/PriorityInput";
+import { getColor } from "./inputs/PriorityInput";
 
 
 // export interface MissonData 
@@ -83,7 +84,7 @@ export function MissionRegForm()
                     {missionList.length > 0 ?
                         missionList.map((currentItem) => 
                             (
-                                <li key={currentItem.id}  className="missionListItem grid"><span>{currentItem.mission}</span> <span> {currentItem.date} </span> <span> {currentItem.priority}` </span></li>
+                                <li key={currentItem.id}  className="missionListItem grid"><span> {currentItem.date} </span><span>{currentItem.mission}</span>  <span style={{color: getColor(currentItem.priority) }}> {currentItem.priority}</span></li>
 
                             )) : <p>No entries found {missionList.length}</p> 
                         

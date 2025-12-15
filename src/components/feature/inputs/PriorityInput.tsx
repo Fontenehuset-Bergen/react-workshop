@@ -8,7 +8,7 @@ export interface InputPriority extends Input
 
 }
 
-const getColor = (priority : Priority) : string => 
+export const getColor = (priority : Priority) : string => 
 {
     let returnColor : string = "cyan";
     switch(priority)
