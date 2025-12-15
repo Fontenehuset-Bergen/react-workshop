@@ -1,7 +1,7 @@
 import { type Input } from "./TextInput";
 
 export interface InputDate extends Input {
-    value : Date
+    value : string
 }
 
 export function DateInput({description, placeholder, cssClassLabel, cssClassInput , value, handleChange} : InputDate)
@@ -9,7 +9,7 @@ export function DateInput({description, placeholder, cssClassLabel, cssClassInpu
         
     return(
          <label className={`defaultDateInput ${cssClassLabel}`}> {description}
-            <input value={""} onChange={handleChange} type="datetime-local" name="dateInput" className={`textInputDefault ${cssClassInput}`} placeholder={placeholder}/>
+            <input value={value} onChange={handleChange} type="date" name="dateInput" className={`textInputDefault ${cssClassInput}`} placeholder={placeholder}/>
         </label>
     );
 

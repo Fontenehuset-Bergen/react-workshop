@@ -13,11 +13,20 @@ export interface MissonData
     cssClass? : string,
 };
 
+function getTodaysDate() : string 
+{
+  const today = new Date();
+  const offset = today.getTimezoneOffset();
+  today.setMinutes(today.getMinutes() - offset);
+  return today.toISOString().split("T")[0];
+}
 
 export function MissionRegForm()
 {
+  
     const [textInput, setTextInput] =  useState<string>("");
-    const  [dateInput, setDateInput] = useState<Date | null>(new Date());
+
+    const  [dateInput, setDateInput] = useState<string>(getTodaysDate());
     const [priorityInput, setPriorityInput] = useState<Priority>("Medium");
     const [missionList, updateList] = useState<MissonData[]>([]);
 
@@ -31,18 +40,22 @@ export function MissionRegForm()
     {
         const dateString= event.target.value;
 
-        dateString ? setDateInput(new Date(dateString)) : setDateInput(null);
-        console.log(dateInput?.getDate().toString());
+        if(dateString) setDateInput(dateString); 
+
     }
     
+    const handlePriority = (event) => setPriorityInput(event.target.value);
     
     return(
            <>
                <form className={`defaultForm grid`}>
                     <TextInput value={textInput} description="Enter mission description :" handleChange={handleMissionText} placeholder="enter data here"/>
-                    <DateInput value={dateInput} description="Enter mission date :" handleChange={handleMissionDate} placeholder="not set"/>
-                    <PriorityInput description="Enter mission priority :" handleChange={handleMissionDate}  value="Medium"/>
+                    <DateInput value={dateInput} description="Enter mission date :" handleChange={handleMissionDate}/>
+                    <PriorityInput value={priorityInput} description="Enter mission priority :" handleChange={handlePriority} />
                 </form>
+                <p>{textInput}</p>
+                <p>{dateInput}</p>
+                <p>{priorityInput}</p>
             
            </>
 
