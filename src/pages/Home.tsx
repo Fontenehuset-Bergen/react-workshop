@@ -1,7 +1,6 @@
+import "../assets/styles/example.css";
 import { useState } from "react";
 import { HomepageHero } from "../components/feature/Hero";
-import "../assets/styles/example.css";
-import { ExampleUseEffect } from "../components/examples/effects/UseEffect";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -10,7 +9,6 @@ function App() {
   return (
     <>
       <HomepageHero />
-      {showEffectExample && <ExampleUseEffect />}
       <button type="button" onClick={() => setShowEffectExample((old) => !old)}>
         {showEffectExample ? "close" : "open"} useEffect example
       </button>
