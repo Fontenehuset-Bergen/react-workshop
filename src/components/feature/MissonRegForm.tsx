@@ -72,7 +72,9 @@ export function MissionRegForm()
                     <PriorityInput value={priorityInput} description="Enter mission priority :" handleChange={handlePriority} />
             
                      </form>
-                    <button onClick={handleAddMission} className="addMissionButton">Add Mission</button>
+                     
+                     <button onClick={handleAddMission} className="addMissionButton" style={textInput.length > 2 ? {color:"black"} : { color:"gray"}}>Add mission</button>
+                     
                
                   </div>
 
