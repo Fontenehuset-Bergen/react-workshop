@@ -195,29 +195,45 @@ Hvis du f.eks har et objekt som består av flere key-value pairs og du ønsker �
 
 ```tsx
 // ❌ Unødvendig state og effect
-export function UserList({ users }: { users: User[]}) {
-    const [formattedUsers, setFormattedUsers] = useState<string[]>([])
+export function UserList({ users }: { users: User[] }) {
+  const [formattedUsers, setFormattedUsers] = useState<string[]>([]);
 
-    useEffect(() => {
+  useEffect(() => {
     setFormattedUsers(
-      users.map(user => `${user.firstName} ${user.lastName}`)
+      users.map((user) => `${user.firstName} ${user.lastName}`)
     );
   }, [users]);
-    return (
-        <div>
-            {formattedUsers.map(user => <p>...</p>)}
-        </div>
-    )
+  return (
+    <div>
+      {formattedUsers.map((user) => (
+        <p>...</p>
+      ))}
+    </div>
+  );
 }
 
 // ✅ Gjør nødvendig formattering i JSX
-export function UserList({ users }: { users: User[]}) {
-    const [formattedUsers, setFormattedUsers] = useState<string[]>([])
+export function UserList({ users }: { users: User[] }) {
+  const [formattedUsers, setFormattedUsers] = useState<string[]>([]);
 
-    return (
-        <div>
-            {formattedUsers.map(user => <p>{`${user.firstName} ${user.lastName}`}</p>)}
-        </div>
-    )
+  return (
+    <div>
+      {formattedUsers.map((user) => (
+        <p>{`${user.firstName} ${user.lastName}`}</p>
+      ))}
+    </div>
+  );
 }
 ```
+
+## Kort oppsummert
+
+- I motsetning til hendelser, skyldes effekter som følge av selve rendering, ikke en bestemt brukerinteraksjon.
+- Effekter lar deg synkronisere en komponent med et eksternt system (tredjeparts-API, nettverk, DOM osv.).
+- Som standard kjører effekter etter hver `render` (inkludert den første).
+- React hopper over effekten hvis alle avhengighetene har samme verdier som ved forrige render.
+- Du kan ikke "velge" avhengighetene dine, de bestemmes av koden inne i effekten.
+- En tom avhengighetsliste (`[]`) tilsvarer at komponenten mountes (legges til på skjermen).
+- I Strict Mode monterer React komponenter to ganger (kun i `npm run dev` ikke `npm run start`) for å stressteste effektene dine.
+- Hvis effekten ryker på grunn av `remount`, må du implementere en cleanup-funksjon.
+- React kaller cleanup-funksjonen før effekten kjører neste gang, og under `unmount`.

@@ -15,6 +15,7 @@ Denne uken skal vi se nærmere på følgende emner
   - [Dependency-liste](./2_how_to_use.md#dependency-liste)
   - [Opprydding](./2_how_to_use.md#opprydding)
   - [Vanlige feil](./2_how_to_use.md#vanlige-feil)
+  - [Kort oppsummert](./2_how_to_use.md#kort-oppsummert)
 - [Effekter og states](./3_effects_and_states.md)
   - [useState](./3_effects_and_states.md#usestate)
   - [useRef](./3_effects_and_states.md#useref)
