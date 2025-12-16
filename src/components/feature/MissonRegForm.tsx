@@ -53,14 +53,31 @@ export function MissionRegForm()
 
     function handlePriority(event) { setPriorityInput(event.target.value); }
 
-    function handleAddMission() : MissionData[]
+    function handleAddMission()
     {
         // do conditionals her hvis nødvendig
         updateList((prevList) =>  [...prevList, { id : (missionList.length+1), mission : textInput, date : dateInput, priority : priorityInput }]);
+        setDateInput("");
+        setTextInput("");
+        setPriorityInput("Medium");
      
         
     }
    
+    function chackForValidInput() : boolean{
+        if(textInput.length > 2)
+        {
+            const enteredDate = new Date(dateInput);
+            if(!isNaN(enteredDate.getTime()))
+            {
+                const today = new Date();
+                if(enteredDate.getTime() >= today.getTime()) return true;
+            
+            }
+        }
+        return false;
+    }
+
     return(
            <>
               
@@ -73,29 +90,23 @@ export function MissionRegForm()
             
                      </form>
                      
-                     <button onClick={handleAddMission} className="addMissionButton" style={textInput.length > 2 ? {color:"black"} : { color:"gray"}}>Add mission</button>
+                     <button onClick={handleAddMission} className="addMissionButton" style={chackForValidInput() ? {transform :"rotateY(0deg)"  } : { transform: "rotateY(90deg)"}}>Add mission</button>
                      
                
                   </div>
 
-                {/* <div style={{display:"grid", gridTemplateColumns: "repeat(3, 25rem)"}}>
-                    <p>{textInput}</p>
-                    <p>{dateInput}</p>
-                    <p>{priorityInput}</p>
-                </div>
-                <div>{errorMessage};
-                </div> */}
-                <article className="missionListArticle">
-                    <ul className="missionList flex">
-                    {missionList.length > 0 ?
-                        missionList.map((currentItem) => 
-                            (
-                                <li key={currentItem.id}  className="missionListItem grid"><span> {currentItem.date} </span><span>{currentItem.mission}</span>  <span style={{color: getColor(currentItem.priority) }}> {currentItem.priority}</span></li>
+                    <article className="missionListArticle">
+                        <ul className="missionList flex">
+                        {missionList.length > 0 ?
+                            missionList.map((currentItem) => 
+                                (
+                                    <li key={currentItem.id}  className="missionListItem grid"><span> {currentItem.date} </span><span>{currentItem.mission}</span>  <span style={{color: getColor(currentItem.priority) }}> {currentItem.priority}</span></li>
 
-                            )) : <p>No entries found</p> 
-                        
-                    }
-                   </ul></article>
+                                )) : <p>No entries found</p> 
+                            
+                        }
+                    </ul>
+                    </article>
                </section>
              
                 
