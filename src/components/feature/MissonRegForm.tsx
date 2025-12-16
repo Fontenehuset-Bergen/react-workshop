@@ -30,6 +30,20 @@ function getTodaysDate() : string
   return today.toISOString().split("T")[0];
 }
 
+function getProperDateString(dateString : string) : string
+{
+    const date = new Date(dateString);
+    if(!isNaN(date.getTime()))
+    {
+        const day = date.getDate();
+        const month = date.getMonth();
+        const year = date.getFullYear();
+        return `${day}/${month}/${year}`
+    
+    }
+    return dateString;
+}
+
 export function MissionRegForm()
 {
   
@@ -56,7 +70,7 @@ export function MissionRegForm()
     function handleAddMission()
     {
         // do conditionals her hvis nødvendig
-        updateList((prevList) =>  [...prevList, { id : (missionList.length+1), mission : textInput, date : dateInput, priority : priorityInput }]);
+        updateList((prevList) =>  [...prevList, { id : (missionList.length+1), mission : textInput, date : getProperDateString(dateInput), priority : priorityInput }]);
         setDateInput("");
         setTextInput("");
         setPriorityInput("Medium");
@@ -71,7 +85,8 @@ export function MissionRegForm()
             if(!isNaN(enteredDate.getTime()))
             {
                 const today = new Date();
-                if(enteredDate.getTime() >= today.getTime()) return true;
+                if(today.getDate() <= enteredDate.getDate()) return true;
+            
             
             }
         }

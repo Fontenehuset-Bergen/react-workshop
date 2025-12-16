@@ -34,9 +34,11 @@ body {
      background-image: url("src/assets/images/listandpen.jpg");
   background-position: fixed;
   background-size: cover;
+}
 
+h2 {
 
-
+  font-size : 25px;
 }
 
 header {

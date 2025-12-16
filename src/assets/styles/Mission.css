@@ -91,7 +91,7 @@
 .missionListItem {
     display: grid;
     width: 100%;
-    grid-template-columns: auto 85% auto;
+    grid-template-columns: 15% 80% auto;
     justify-items:left;
 
 
