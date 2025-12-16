@@ -67,17 +67,30 @@ export function MissionRegForm()
 
     function handlePriority(event) { setPriorityInput(event.target.value); }
 
+    function doesEntryExists(date: string, mission: string) : boolean
+    {
+        missionList.map((current) =>
+        {
+            if(current.date === date && current.mission === mission) return true;
+        });
+        return false;
+   
+
+    }
+   
     function handleAddMission()
     {
         // do conditionals her hvis nødvendig
-        updateList((prevList) =>  [...prevList, { id : (missionList.length+1), mission : textInput, date : getProperDateString(dateInput), priority : priorityInput }]);
-        setDateInput("");
-        setTextInput("");
-        setPriorityInput("Medium");
-     
+        if(!doesEntryExists(dateInput, textInput))
+        {
+            updateList((prevList) =>  [...prevList, { id : (missionList.length+1), mission : textInput, date : getProperDateString(dateInput), priority : priorityInput }]);
+            // setDateInput("");
+            // setTextInput("");
+            // setPriorityInput("Medium");
+        }
         
     }
-   
+
     function chackForValidInput() : boolean{
         if(textInput.length > 2)
         {
