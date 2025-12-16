@@ -6,11 +6,10 @@ Denne uken skal vi lære om effekter i React, hvordan vi kan bruke det til å he
 
 Denne uken skal vi se nærmere på følgende emner
 
-- [Hva er en effekt?](./1_introduction.md)
-  - [Hvorfor bruker vi effekter i React](./1_introduction.md#hvorfor-bruker-vi-effekter-i-react)
+- [Hva er en Effect?](./1_introduction.md)
+  - [Hvorfor bruker vi Effect i React](./1_introduction.md#hvorfor-bruker-vi-effekter-i-react)
   - [Komponentens livssyklus](./1_introduction.md#komponentens-livssyklus)
-  - [Når må du bruke en effekt](./1_introduction.md#når-må-du-bruke-en-effekt)
-  - [Når du ikke trenger `useEffect`](./1_introduction.md#når-du-ikke-trenger-en-effekter)
+  - [Når du ikke trenger Effect](./1_introduction.md#når-du-ikke-trenger-en-effekter)
 - [Hvordan bruke useEffect](./2_how_to_use.md)
   - [Initialisering](./2_how_to_use.md#initialisering)
   - [Dependency-liste](./2_how_to_use.md#dependency-liste)
