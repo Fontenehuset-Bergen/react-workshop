@@ -8,7 +8,7 @@
   padding: 0;
 }
 :root {
-  --defaultBackground : black;
+  --defaultBackground : rgba(221, 221, 221,0.8);
   --primaryFontFamily : "Orbitron";
 }
 
@@ -17,15 +17,21 @@ button {
   font-weight: bold;
 }
 
-body {
+div {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;;
   /* min-height: 100vh;  */
   height: 100%;
   top: 0;
   font-family: var(--primaryFontFamily);
   font-size: 15px;
-     background-image: url("src/assets/images/coffe.jpg");
+     background-image: url("src/assets/images/listandpen.jpg");
   background-position: fixed;
   background-size: cover;
 
@@ -36,21 +42,24 @@ body {
 header {
   flex-direction: row;
   justify-content: space-between;
-
+  
   align-items: center;
-  padding: 20px 40px;
+  padding: 0px 40px;
   border-radius : 8px;
   border: 2px solid black;
-  position: sticky;
-  width: 100%;
+  position: fixed;
+  width: 98%;
+  height: 120px;
   top: 0;
   z-index: 10;
-  background-color: rgb(221, 221, 221);
+  background-color: var(--defaultBackground);
+  margin: 15px 0px;
 }
 
 main {
-
+  margin-top:140px;
   flex-grow: 1;
+  width:100%;
 
 }
 

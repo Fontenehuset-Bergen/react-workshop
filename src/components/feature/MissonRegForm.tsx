@@ -65,12 +65,16 @@ export function MissionRegForm()
            <>
               
                 <section className="missionListSection flex">
-                <form className={`defaultForm grid`}>
+                  <div className="regButtonWrapper flex">
+                      <form className={`defaultForm grid`}>
                     <TextInput value={textInput} description="Enter mission description :" handleChange={handleMissionText} placeholder="enter data here"/>
                     <DateInput value={dateInput} description="Enter mission date :" handleChange={handleMissionDate}/>
                     <PriorityInput value={priorityInput} description="Enter mission priority :" handleChange={handlePriority} />
-                </form>
-                <button onClick={handleAddMission} className="addMissionButton">Add Mission</button>
+            
+                     </form>
+                    <button onClick={handleAddMission} className="addMissionButton">Add Mission</button>
+               
+                  </div>
 
                 {/* <div style={{display:"grid", gridTemplateColumns: "repeat(3, 25rem)"}}>
                     <p>{textInput}</p>
