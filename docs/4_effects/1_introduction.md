@@ -1,6 +1,7 @@
 # Hva er en effekt
 
-> [!NOTE] > [React docs](https://react.dev/learn/synchronizing-with-effects) har veldig god informasjon om effekter som er verdt å lese!
+> [!NOTE]
+> [React docs](https://react.dev/learn/synchronizing-with-effects) har veldig god informasjon om effekter som er verdt å lese!
 
 I React har begrepet `Effect` en spesiell betyning, det bygger på konseptet om [side-effekter](<https://en.wikipedia.org/wiki/Side_effect_(computer_science)>) der en funksjon kan ha effekter utover det som er inkludert i argumentene eller hva den returnerer. For eksempel hvis en funksjon påvirker en variabel som ikke er et argument eller i samme scope som funksjonen, sier vi at denne endringen er en side-effekt av funksjonen.
 
@@ -21,6 +22,7 @@ Når React skal produsere UI for oss i nettleseren ut i fra komponentene vi har 
 - `Commit` - React oppdaterer DOM (HTML)
 
 Vi kan generallisere dette og si at et komponent har følgende livssykluser
+
 - `Mount` - Når komponentet blir lagt til på skjermen
 - `Updates` - Når komponentet mottar nye props eller state. Ofte som følge av en bruker interaksjon
 - `Unmounts` - Når komponentet blir fjernet fra skjermen.
@@ -28,6 +30,7 @@ Vi kan generallisere dette og si at et komponent har følgende livssykluser
 Dette er bunnprinsippene for rekkefølgen React bruker for å genererer koden vi kan se på skjermen ut i fra koden til komponentet vårt, men `Effects` bør bli håndtert utenom denne flyten. `Effects` har sin egen livssyklus som skjer etter komponentets `commit` steg. `Effect` forklarer til React hvordan states og props kan synkronisere seg til et eksternt system
 
 ## Når du ikke trenger en effekter
+
 Effekter er en rømningsvei fra React. De lar deg "gå utenfor" React og synkronisere komponentene dine med et eksternt system, som en javascript-widgets, et nettverk eller nettleserens DOM. Hvis det ikke er noe eksternt system involvert (for eksempel hvis du vil oppdatere en komponents state når noen props eller state endres), trenger du ikke en effekt. Å fjerne unødvendige effekter gjør koden enklere å forstå, raskere å kjøre og mindre utsatt for feil.
 
 Du trenger ikke effekter for å transformere data til rendering. La oss si at du vil filtrere en liste før du viser den. Det kan være fristende å skrive en effekt som oppdaterer en state-variabel når listen endrer seg. Dette er imidlertid ineffektivt. Når du oppdaterer state, vil React først kalle komponentfunksjonene dine for å beregne hva som skal vises på skjermen. Deretter vil React `committe` disse endringene til DOM-en og oppdatere skjermen. Så vil React kjøre effektene dine. Hvis effekten også umiddelbart oppdaterer state, starter hele prosessen på nytt! For å unngå unødvendige render-pass, transformer all data på toppnivå i komponentene dine. Den koden kjøres automatisk på nytt hver gang props eller state endres.
