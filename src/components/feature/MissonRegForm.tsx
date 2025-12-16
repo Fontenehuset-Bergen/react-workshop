@@ -52,9 +52,10 @@ export function MissionRegForm()
     const  [dateInput, setDateInput] = useState<string>(getTodaysDate());
     const [priorityInput, setPriorityInput] = useState<Priority>("Medium");
     const [missionList, updateList] = useState<MissionData[]>([]);
-    const [errorMessage, setErrorMessage] = useState<String>("");
+    const [errorMsg, setErrorMsg] = useState<string>("");
 
-    function handleMissionText(event)  {   setTextInput(event.target.value);  }
+
+    function handleMissionText(event)  {   setTextInput(event.target.value); setErrorMsg(""); }
 
     function handleMissionDate(event)
     {
@@ -69,6 +70,7 @@ export function MissionRegForm()
 
     function doesEntryExists(date: string, mission: string) : boolean
     {
+        return true;
         missionList.map((current) =>
         {
             if(current.date === date && current.mission === mission) return true;
@@ -81,6 +83,8 @@ export function MissionRegForm()
     function handleAddMission()
     {
         // do conditionals her hvis nødvendig
+
+        console.log(doesEntryExists(getProperDateString(dateInput), textInput));
         if(!doesEntryExists(dateInput, textInput))
         {
             updateList((prevList) =>  [...prevList, { id : (missionList.length+1), mission : textInput, date : getProperDateString(dateInput), priority : priorityInput }]);
@@ -88,7 +92,7 @@ export function MissionRegForm()
             // setTextInput("");
             // setPriorityInput("Medium");
         }
-        
+        else setErrorMsg("Duplicate. Retype");
     }
 
     function chackForValidInput() : boolean{
@@ -118,10 +122,11 @@ export function MissionRegForm()
             
                      </form>
                      
-                     <button onClick={handleAddMission} className="addMissionButton" style={chackForValidInput() ? {transform :"rotateY(0deg)"  } : { transform: "rotateY(90deg)"}}>Add mission</button>
+                  
                      
-               
-                  </div>
+                        <button className={`addMissionButton ${errorMsg ? "duplicate" : ""}`} key={errorMsg ? errorMsg : "newkey"} onClick={handleAddMission}  style={chackForValidInput() ? {transform :"rotateY(0deg)"  } : { transform: "rotateY(90deg)"}}>{errorMsg ? errorMsg: "Add mission"}</button> :
+                        {/* <button key={errorMsg} className="addMissionButton" style={chackForValidInput() ? {transform :"rotateY(0deg)"  } : { transform: "rotateY(90deg)"}}>{errorMsg}</button>  */}
+                                    </div>
 
                     <article className="missionListArticle">
                         <ul className="missionList flex">
