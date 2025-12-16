@@ -4,8 +4,7 @@ import { TextInput, type InputText} from "./inputs/TextInput"
 import { DateInput, type InputDate } from "./inputs/DateInput";
 import { type Priority, type InputPriority, PriorityInput } from "./inputs/PriorityInput";
 import { getColor } from "./inputs/PriorityInput";
-
-
+import { Header} from "./Header"
 // export interface MissonData 
 // {
 //     mission : InputText,
@@ -64,13 +63,14 @@ export function MissionRegForm()
    
     return(
            <>
-               <section className="missionListSection flex">
+              
+                <section className="missionListSection flex">
                 <form className={`defaultForm grid`}>
                     <TextInput value={textInput} description="Enter mission description :" handleChange={handleMissionText} placeholder="enter data here"/>
                     <DateInput value={dateInput} description="Enter mission date :" handleChange={handleMissionDate}/>
                     <PriorityInput value={priorityInput} description="Enter mission priority :" handleChange={handlePriority} />
                 </form>
-                <button onClick={handleAddMission} className="addMissionButton">Add mission to list</button>
+                <button onClick={handleAddMission} className="addMissionButton">Add Mission</button>
 
                 {/* <div style={{display:"grid", gridTemplateColumns: "repeat(3, 25rem)"}}>
                     <p>{textInput}</p>
@@ -79,19 +79,17 @@ export function MissionRegForm()
                 </div>
                 <div>{errorMessage};
                 </div> */}
-
-                <ul className="missionList flex">
+                <article className="missionListArticle">
+                    <ul className="missionList flex">
                     {missionList.length > 0 ?
                         missionList.map((currentItem) => 
                             (
                                 <li key={currentItem.id}  className="missionListItem grid"><span> {currentItem.date} </span><span>{currentItem.mission}</span>  <span style={{color: getColor(currentItem.priority) }}> {currentItem.priority}</span></li>
 
-                            )) : <p>No entries found {missionList.length}</p> 
+                            )) : <p>No entries found</p> 
                         
                     }
-
-
-                </ul>
+                   </ul></article>
                </section>
              
                 

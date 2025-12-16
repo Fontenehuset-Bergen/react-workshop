@@ -1,19 +1,58 @@
 @import "./Mission.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 :root {
   --defaultBackground : black;
-  --primaryFontFamily : "Roboto"
+  --primaryFontFamily : "Orbitron";
+}
+
+button {
+  font-family: var(--primaryFontFamily);
+  font-weight: bold;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  /* min-height: 100vh;  */
+  height: 100%;
+  top: 0;
   font-family: var(--primaryFontFamily);
   font-size: 15px;
-  height: 100vh;
+     background-image: url("src/assets/images/coffe.jpg");
+  background-position: fixed;
+  background-size: cover;
+
+
+
 }
 
+header {
+  flex-direction: row;
+  justify-content: space-between;
 
+  align-items: center;
+  padding: 20px 40px;
+  border-radius : 8px;
+  border: 2px solid black;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  background-color: rgb(221, 221, 221);
+}
 
+main {
+
+  flex-grow: 1;
+
+}
 
 
 
