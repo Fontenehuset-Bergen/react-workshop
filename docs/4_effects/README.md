@@ -22,7 +22,7 @@ Denne uken skal vi se nærmere på følgende emner
   - [useState](./3_effects_and_states.md#usestate)
   - [useRef](./3_effects_and_states.md#useref)
 - [Henting av ekstern data](./4_fetching.md)
-  - [Trygge mønstre](./4_fetching.md)
+  - [Trygge mønstre](./4_fetching.md#trygge-mønstre)
 - [Lage hooks](./5_hooks.md)
 
 ## Oppgaver
