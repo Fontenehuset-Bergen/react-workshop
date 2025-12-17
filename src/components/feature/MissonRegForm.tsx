@@ -70,7 +70,7 @@ export function MissionRegForm()
 
     function doesEntryExists(date: string, mission: string) : boolean
     {
-        return true;
+        // return true;
         missionList.map((current) =>
         {
             if(current.date === date && current.mission === mission) return true;
