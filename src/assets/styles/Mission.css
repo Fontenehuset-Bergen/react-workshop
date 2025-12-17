@@ -9,6 +9,7 @@
 .regButtonWrapper {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     gap: 20px;
     width: 98%;
 }
@@ -32,8 +33,9 @@
     width: 12rem;
     height: 67px;
     border-radius: 5px;
-  animation: rotatIn 0.3s ease-in-out;
-    /* transition: all ease-in-out 0.3s; */
+  /* animation: rotatIn 0.3s ease-in-out; */
+    transition: all ease-in-out 0.3s;
+    white-space: pre-line;
     font-size: 15px;
 }
 
@@ -93,8 +95,8 @@
 
 
 .defaultForm {
-    grid-template-columns: 52% auto auto;
-    /* align-items: center; */
+    grid-template-columns: auto auto auto;
+    align-items: center;
     /* justify-content: left; */
 
     width : 98%;

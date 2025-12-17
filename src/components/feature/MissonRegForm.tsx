@@ -4,7 +4,9 @@ import { TextInput, type InputText} from "./inputs/TextInput"
 import { DateInput, type InputDate } from "./inputs/DateInput";
 import { type Priority, type InputPriority, PriorityInput } from "./inputs/PriorityInput";
 import { getColor } from "./inputs/PriorityInput";
-import { Header} from "./Header"
+import { Footer } from "./Footer";
+import { SortMenu } from "./SortMenu";
+
 // export interface MissonData 
 // {
 //     mission : InputText,
@@ -68,14 +70,14 @@ export function MissionRegForm()
 
     function handlePriority(event) { setPriorityInput(event.target.value); }
 
-    function doesEntryExists(date: string, mission: string) : boolean
+    function doesEntryExists(mission: string, date: string) : boolean
     {
-        return true;
+        let doesExist = false;
         missionList.map((current) =>
         {
-            if(current.date === date && current.mission === mission) return true;
+            if(current.date == date && current.mission === mission) doesExist = true;
         });
-        return false;
+        return doesExist;
    
 
     }
@@ -85,14 +87,14 @@ export function MissionRegForm()
         // do conditionals her hvis nødvendig
 
         console.log(doesEntryExists(getProperDateString(dateInput), textInput));
-        if(!doesEntryExists(dateInput, textInput))
+        if(!doesEntryExists( textInput, getProperDateString(dateInput)))
         {
             updateList((prevList) =>  [...prevList, { id : (missionList.length+1), mission : textInput, date : getProperDateString(dateInput), priority : priorityInput }]);
             // setDateInput("");
             // setTextInput("");
             // setPriorityInput("Medium");
         }
-        else setErrorMsg("Duplicate. Retype");
+        else{ setErrorMsg("Duplicate.\nPlease retype."); }
     }
 
     function chackForValidInput() : boolean{
@@ -112,37 +114,39 @@ export function MissionRegForm()
 
     return(
            <>
-              
-                <section className="missionListSection flex">
-                  <div className="regButtonWrapper flex">
-                      <form className={`defaultForm grid`}>
-                    <TextInput value={textInput} description="Enter mission description :" handleChange={handleMissionText} placeholder="enter data here"/>
-                    <DateInput value={dateInput} description="Enter mission date :" handleChange={handleMissionDate}/>
-                    <PriorityInput value={priorityInput} description="Enter mission priority :" handleChange={handlePriority} />
-            
-                     </form>
-                     
-                  
-                     
-                        <button className={`addMissionButton ${errorMsg ? "duplicate" : ""}`} key={errorMsg ? errorMsg : "newkey"} onClick={handleAddMission}  style={chackForValidInput() ? {transform :"rotateY(0deg)"  } : { transform: "rotateY(90deg)"}}>{errorMsg ? errorMsg: "Add mission"}</button> :
-                        {/* <button key={errorMsg} className="addMissionButton" style={chackForValidInput() ? {transform :"rotateY(0deg)"  } : { transform: "rotateY(90deg)"}}>{errorMsg}</button>  */}
-                                    </div>
-
-                    <article className="missionListArticle">
-                        <ul className="missionList flex">
-                        {missionList.length > 0 ?
-                            missionList.map((currentItem) => 
-                                (
-                                    <li key={currentItem.id}  className="missionListItem grid"><span> {currentItem.date} </span><span>{currentItem.mission}</span>  <span style={{color: getColor(currentItem.priority) }}> {currentItem.priority}</span></li>
-
-                                )) : <p>No entries found</p> 
-                            
-                        }
-                    </ul>
-                    </article>
-               </section>
-             
+           <main>
+            <section className="missionListSection flex">
+                <div className="regButtonWrapper flex">
+                    <form className={`defaultForm grid`}>
+                <TextInput value={textInput} description="Enter mission description :" handleChange={handleMissionText} placeholder="enter data here"/>
+                <DateInput value={dateInput} description="Enter mission date :" handleChange={handleMissionDate}/>
+                <PriorityInput value={priorityInput} description="Enter mission priority :" handleChange={handlePriority} />
+        
+                    </form>
+                    
                 
+                    
+                    <button className={`addMissionButton ${errorMsg ? "duplicate" : ""}`} key={errorMsg ? errorMsg : "newkey"} onClick={handleAddMission}  style={chackForValidInput() ? {transform :"rotateY(0deg)"  } : { transform: "rotateY(90deg)"}}>{errorMsg ? errorMsg: "Add mission"}</button> :
+                    {/* <button key={errorMsg} className="addMissionButton" style={chackForValidInput() ? {transform :"rotateY(0deg)"  } : { transform: "rotateY(90deg)"}}>{errorMsg}</button>  */}
+                                </div>
+
+                <article className="missionListArticle">
+                    <ul className="missionList flex">
+                    {missionList.length > 0 ?
+                        missionList.map((currentItem) => 
+                            (
+                                <li key={currentItem.id}  className="missionListItem grid"><span> {currentItem.date} </span><span>{currentItem.mission}</span>  <span style={{color: getColor(currentItem.priority) }}> {currentItem.priority}</span></li>
+
+                            )) : <p>No entries found</p> 
+                        
+                    }
+                </ul>
+                </article>
+            </section>
+          </main>
+          {/* <Footer key={errorMsg} errorMsg={errorMsg}/>            */}
+
+          <SortMenu/>
            </>
 
 
