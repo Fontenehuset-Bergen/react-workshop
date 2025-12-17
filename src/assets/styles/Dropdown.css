@@ -1,3 +1,28 @@
 .dropdownContainer {
-    background-color: aliceblue;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+}
+
+.dropdownContainer button {
+    width: 200px;
+}
+
+.menuList {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    list-style-type: none;
+    padding: .5rem 0;
+}
+
+.menuList li {
+    display: flex;
+    justify-content: center;
+    padding: .5rem;
+    width: 100%;
+}
+
+.menuList li:hover {
+    background-color: #2e2e2e;
 }
