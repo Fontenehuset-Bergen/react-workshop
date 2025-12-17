@@ -65,6 +65,13 @@ main {
 
 }
 
+footer {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding : 10px 20px;
+  background-color: var(--defaultBackground);
+}
 
 
  @media (prefers-color-scheme: light) {
