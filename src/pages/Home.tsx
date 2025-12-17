@@ -3,6 +3,7 @@ import { HomepageHero } from '../components/feature/Hero'
 import '../assets/styles/example.css'
 import { useRef } from 'react'
 
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -27,6 +28,7 @@ function App() {
   return (
     <>
       <HomepageHero />
+
       <div className="card">
         <button onClick={() => setCount((old) => old + 1)}> 
           {/* "old" here can be called whatever you want, but in this syntax it always refers to the last stored state of setCount's "count" value */}
@@ -52,6 +54,8 @@ function App() {
         <input type="text" ref={inputRef} placeholder="enter hobby" value={input} onChange={(event) => setInput(event.currentTarget.value)} />
         <p><button onClick={handleSubmit}>submit hobby</button></p>
       </div>
+
+      
     </>
   )
 }
