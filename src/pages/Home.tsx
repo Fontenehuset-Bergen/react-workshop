@@ -1,13 +1,17 @@
-import { useState } from 'react'
-import { HomepageHero } from '../components/feature/Hero'
-import '../assets/styles/example.css'
+import "../assets/styles/example.css";
+import { useState } from "react";
+import { HomepageHero } from "../components/feature/Hero";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [showEffectExample, setShowEffectExample] = useState(false);
 
   return (
     <>
       <HomepageHero />
+      <button type="button" onClick={() => setShowEffectExample((old) => !old)}>
+        {showEffectExample ? "close" : "open"} useEffect example
+      </button>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -20,7 +24,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
