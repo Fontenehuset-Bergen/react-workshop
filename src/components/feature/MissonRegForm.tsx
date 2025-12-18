@@ -1,6 +1,6 @@
 
 import { useState, useEffect
-    
+
 } from "react"
 import { TextInput, type InputText} from "./inputs/TextInput"
 import { DateInput, type InputDate } from "./inputs/DateInput";
@@ -65,6 +65,7 @@ export function MissionRegForm()
     const [fireTransition, setNewTransition] = useState<number>(0);
 
 
+
     function handleMissionText(event)  {   setTextInput(event.target.value); setErrorMsg(""); }
 
     function handleMissionDate(event)
@@ -97,6 +98,7 @@ export function MissionRegForm()
         console.log(doesEntryExists(getProperDateString(dateInput), textInput));
         if(!doesEntryExists( textInput, getProperDateString(dateInput)))
         {
+         
             updateList((prevList) =>  [...prevList, { id : (missionList.length+1), mission : textInput, date : getProperDateString(dateInput), priority : priorityInput }]);
             // setDateInput("");
             // setTextInput("");
@@ -169,6 +171,17 @@ export function MissionRegForm()
 
     }
 
+    function setListAnimDelay(start : number, delayInc : number,  newList : MissionData[])
+    {
+        let delay = start;
+        // gå gjennom liste for å gjøre animasjon inn litt senere for hvert item
+        console.log(newList);
+        newList.forEach((item) => { item.animDelay = `${delay}ms`; delay += delayInc});
+        console.log(newList);
+        return newList;
+
+    }
+
     function sortedList()
     {
         let newList : MissionData[];
@@ -179,11 +192,19 @@ export function MissionRegForm()
                     {
                     if(getPriorityNumber(a.priority) == getPriorityNumber(b.priority)) return getDateObject(a.date).getTime() - getDateObject(b.date).getTime();
                     else return getPriorityNumber(a.priority) - getPriorityNumber(b.priority);
+                    
                     });
                 }
                 else newList = [... missionList];
-        return newList;
 
+        // let delay = 0;
+        // const delayInc = 1200;
+        // // gå gjennom liste for å gjøre animasjon inn litt senere for hvert item
+        // console.log(newList);
+        // newList.forEach((item) => { item.animDelay = `${delay}ms`; delay += delayInc});
+        // console.log(newList);
+
+        return setListAnimDelay(0, 300, newList);
     }
 
     return(
@@ -209,7 +230,7 @@ export function MissionRegForm()
                         {missionList.length > 0 ?
                             sortedList().map((currentItem) => 
                             (
-                                <li key={currentItem.id}  className="missionListItem grid"><span style={{color:"darkblue"}}> {currentItem.date} </span><span>{currentItem.mission}</span>  <span style={{color: getColor(currentItem.priority) }}> {currentItem.priority}</span></li>
+                                <li key={currentItem.id}  className="missionListItem grid" style={{animationDelay : currentItem.animDelay ? currentItem.animDelay :"0s"}}><span style={{color:"darkblue"}}> {currentItem.date} </span><span>{currentItem.mission}</span>  <span style={{color: getColor(currentItem.priority) }}> {currentItem.priority}</span></li>
 
                             )) : <p>No entries found</p>
                     
