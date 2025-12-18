@@ -28,7 +28,7 @@
 
 .sortList
 {   
-    margin-top : 20px;
+    margin-top : 10px;
     flex-direction: column;
     justify-content: left;
 
@@ -48,5 +48,14 @@
     scale: 1.01;
 }
 
+.toggleText {
+    color : black;
+    font-size: 8px;
+    margin: 9px 0px;
+}
 
+.toggleKeys {
+    color : darkred;
+    font-size: 8px;
+}
 

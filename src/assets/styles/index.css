@@ -41,6 +41,7 @@ body {
      background-image: url("src/assets/images/listandpen.jpg");
   background-position: fixed;
   background-size: cover;
+  
 }
 
 h2 {
@@ -63,6 +64,7 @@ header {
   z-index: 10;
   background-color: var(--defaultBackground);
   margin: 15px 0px;
+  
 }
 
 main {

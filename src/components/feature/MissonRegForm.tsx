@@ -1,5 +1,7 @@
 
-import { useState, useRef} from "react"
+import { useState, useEffect
+    
+} from "react"
 import { TextInput, type InputText} from "./inputs/TextInput"
 import { DateInput, type InputDate } from "./inputs/DateInput";
 import { type Priority, type InputPriority, PriorityInput } from "./inputs/PriorityInput";
@@ -22,7 +24,8 @@ interface MissionData
     id : number,
     mission : string,
     date : string,
-    priority : Priority
+    priority : Priority,
+    animDelay? : string,
     iconUrl? : string,
 };
 
@@ -127,6 +130,12 @@ export function MissionRegForm()
         return false;
     }
 
+    useEffect( () =>
+    {
+
+
+    }, []);
+
    
     const [sortOrder, setSortOrder] = useState<SortMenuOptions>("unsorted")
 
@@ -162,9 +171,18 @@ export function MissionRegForm()
 
     function sortedList()
     {
-        if(sortOrder === "byDate") return [...missionList].sort((a,b) => getDateObject(a.date).getTime() -getDateObject(b.date).getTime());
-        else if(sortOrder === "byPriority") return [...missionList].sort((a, b) => getPriorityNumber(a.priority) - getPriorityNumber(b.priority));
-        return missionList;
+        let newList : MissionData[];
+        if(sortOrder === "byDate")  newList =  [...missionList].sort((a,b) => getDateObject(a.date).getTime() -getDateObject(b.date).getTime());
+        else    if(sortOrder === "byPriority")
+                {
+                    newList = [...missionList].sort((a, b) => 
+                    {
+                    if(getPriorityNumber(a.priority) == getPriorityNumber(b.priority)) return getDateObject(a.date).getTime() - getDateObject(b.date).getTime();
+                    else return getPriorityNumber(a.priority) - getPriorityNumber(b.priority);
+                    });
+                }
+                else newList = [... missionList];
+        return newList;
 
     }
 
