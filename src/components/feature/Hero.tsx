@@ -1,5 +1,6 @@
 import { MissionRegForm, type MissonData } from './MissonRegForm'
 import { Header } from './Header';
+import { Footer} from "./Footer";
 
 
 export function HomepageHero() 
@@ -12,7 +13,7 @@ export function HomepageHero()
         
           <MissionRegForm />
 
-      
+      <Footer/>
     </>
     );
 }

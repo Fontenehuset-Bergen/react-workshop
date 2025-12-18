@@ -1,18 +1,50 @@
 .sortMenu
 {
     flex-direction: column;
-    padding: 10px 20px;
-    position: fixed;
+    justify-content: left;
+    padding-bottom: 15px;
+    position:fixed;
     z-index: 11;
-    top : 200px;
-    right: 40px;
+    bottom : 125px;
+    right: 125px;
+    background-color: var(--defaultBackground);
+    border : 2px solid black;
+    transition: all 0.7s ease-in-out;
+    transform: rotateY(90deg);
+    background-color:rgb(240, 240, 240);
+    cursor: pointer;
+     border-radius: 5px;
+}
+
+.sortMenuHeading {
+    border-bottom : 2px solid black;
+    padding: 10px 20px;
+    font-size: 11px;
+    margin: 0;
+    color: darkblue;
 }
 
 .sortList
-{
+{   
+    margin-top : 20px;
     flex-direction: column;
+    justify-content: left;
+
     list-style: none;
     font-size: 12px;
 
 }
+
+.sortListItem {
+    font-size: 10px;
+    padding: 3px 0px;
+    transition: all 0.2s ease;
+}
+
+.sortListItem:hover {
+    color: rgb(81, 81, 144);
+    scale: 1.01;
+}
+
+
 

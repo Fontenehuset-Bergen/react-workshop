@@ -4,8 +4,10 @@ import { TextInput, type InputText} from "./inputs/TextInput"
 import { DateInput, type InputDate } from "./inputs/DateInput";
 import { type Priority, type InputPriority, PriorityInput } from "./inputs/PriorityInput";
 import { getColor } from "./inputs/PriorityInput";
+import { createPortal} from "react-dom";
 import { Footer } from "./Footer";
 import { SortMenu } from "./SortMenu";
+
 
 // export interface MissonData 
 // {
@@ -46,6 +48,8 @@ function getProperDateString(dateString : string) : string
     return dateString;
 }
 
+export type SortMenuOptions = "byDate" | "byPriority" | "unsorted";
+
 export function MissionRegForm()
 {
   
@@ -55,6 +59,7 @@ export function MissionRegForm()
     const [priorityInput, setPriorityInput] = useState<Priority>("Medium");
     const [missionList, updateList] = useState<MissionData[]>([]);
     const [errorMsg, setErrorMsg] = useState<string>("");
+    const [fireTransition, setNewTransition] = useState<number>(0);
 
 
     function handleMissionText(event)  {   setTextInput(event.target.value); setErrorMsg(""); }
@@ -62,8 +67,8 @@ export function MissionRegForm()
     function handleMissionDate(event)
     {
         const dateString= event.target.value;
-
         
+        setErrorMsg("");
         if(dateString) setDateInput(dateString); 
   
     }
@@ -72,7 +77,7 @@ export function MissionRegForm()
 
     function doesEntryExists(mission: string, date: string) : boolean
     {
-        // return true;
+        let doesExist = false;
         missionList.map((current) =>
         {
             if(current.date == date && current.mission === mission) doesExist = true;
@@ -94,7 +99,14 @@ export function MissionRegForm()
             // setTextInput("");
             // setPriorityInput("Medium");
         }
-        else{ setErrorMsg("Duplicate.\nPlease retype."); }
+        else
+        { 
+          
+            setErrorMsg("Duplicate.\nPlease retype.");
+              setNewTransition((old) => old + 1);
+        
+   
+        }
     }
 
     function chackForValidInput() : boolean{
@@ -104,12 +116,56 @@ export function MissionRegForm()
             if(!isNaN(enteredDate.getTime()))
             {
                 const today = new Date();
-                if(today.getDate() <= enteredDate.getDate()) return true;
-            
+                if(today.getDate() <= enteredDate.getDate())
+                    {
+                       
+                         return true; 
+                    }
             
             }
         }
         return false;
+    }
+
+   
+    const [sortOrder, setSortOrder] = useState<SortMenuOptions>("unsorted")
+
+    function getDateObject(dateString : string) : Date
+    {
+        const stringArray: string[] = dateString.split("/");
+        const [day, month, year] = stringArray;
+        // console.log(stringArray);
+        return new Date(`${year}-${month}-${day}`);
+
+    }
+
+    function getPriorityNumber(priority : Priority)
+    {
+        let num = 2;
+        switch(priority)
+        {
+            case "High" : num = 1;
+                          break;
+
+            case "Medium" : num = 2;
+                            break;
+                            
+            case "Low" : num = 3;
+                         break;
+                         
+            default: break;                         
+                        
+        }
+        return num;
+
+    }
+
+    function sortedList()
+    {
+        if(sortOrder === "byDate") return [...missionList].sort((a,b) => getDateObject(a.date).getTime() -getDateObject(b.date).getTime());
+        else if(sortOrder === "byPriority") return [...missionList].sort((a, b) => getPriorityNumber(a.priority) - getPriorityNumber(b.priority));
+        return missionList;
+
     }
 
     return(
@@ -123,36 +179,34 @@ export function MissionRegForm()
                 <PriorityInput value={priorityInput} description="Enter mission priority :" handleChange={handlePriority} />
         
                     </form>
-                    
-                    <dialog className="errorDialog " ></dialog>
-                    
-                    <button className="addMissionButton" onClick={handleAddMission}  style={chackForValidInput() ? {transform :"rotateY(0deg)"  } : { transform: "rotateY(90deg)"}}>Add mission</button> :
-                    {/* <button key={errorMsg} className="addMissionButton" style={chackForValidInput() ? {transform :"rotateY(0deg)"  } : { transform: "rotateY(90deg)"}}>{errorMsg}</button>  */}
-                                </div>
-                <div className="errorDiv">
-                   
-
-
-
-
-                </div>
-                <article className="missionListArticle">
-                    <ul className="missionList flex">
-                    {missionList.length > 0 ?
-                        missionList.map((currentItem) => 
+                    {errorMsg.length > 0  ? 
+                    <div key={fireTransition} className="errorMsgDiv">{errorMsg}</div>:
+                     chackForValidInput() ? <button key={fireTransition} className="addMissionButton animateIn" onClick={handleAddMission} style={{transform : "rotateY(0deg)"}} >Add mission</button> :
+                     <button key={fireTransition} className="addMissionButton animateOut" onClick={handleAddMission}>Add mission</button> 
+                     } 
+                 {/* style={chackForValidInput() ? {transform :"rotateY(0deg)" } : { transform: "rotateY(90deg)"} */}
+                  </div>  
+                <article className="missionListArticle grid">
+                    <ul key={sortOrder} className="missionList flex">
+                        {missionList.length > 0 ?
+                            sortedList().map((currentItem) => 
                             (
-                                <li key={currentItem.id}  className="missionListItem grid"><span> {currentItem.date} </span><span>{currentItem.mission}</span>  <span style={{color: getColor(currentItem.priority) }}> {currentItem.priority}</span></li>
+                                <li key={currentItem.id}  className="missionListItem grid"><span style={{color:"darkblue"}}> {currentItem.date} </span><span>{currentItem.mission}</span>  <span style={{color: getColor(currentItem.priority) }}> {currentItem.priority}</span></li>
 
-                            )) : <p>No entries found</p> 
-                        
-                    }
-                </ul>
+                            )) : <p>No entries found</p>
+                    
+                        }
+                    </ul>
+                   
                 </article>
             </section>
+            <SortMenu show={missionList.length > 1 ? true : false} handleSortMenu={setSortOrder}/>
+        
+
           </main>
           {/* <Footer key={errorMsg} errorMsg={errorMsg}/>            */}
 
-          <SortMenu/>
+    
            </>
 
 

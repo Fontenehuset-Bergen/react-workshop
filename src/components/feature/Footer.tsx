@@ -1,19 +1,14 @@
-export interface FooterOptions 
-{
-   errorMsg : string
-}
 
-export function Footer({errorMsg} : FooterOptions)
+export function Footer()
 {
     return(
         <>
             <footer className="flex">
                <div className="flex">
-                 <p>Status : </p>
-                <p>{errorMsg}</p>
+            
                </div>
-                <p>Made by :</p>
-                <p>Harald N.</p>
+                <p>{`Made by: `} <span style={{color:"darkblue"}}>Harald N.</span></p>
+               
             </footer>
         
         

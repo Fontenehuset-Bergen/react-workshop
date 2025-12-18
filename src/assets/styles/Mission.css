@@ -34,29 +34,74 @@
     height: 67px;
     border-radius: 5px;
   /* animation: rotatIn 0.3s ease-in-out; */
+    /* transition: all ease-in-out 0.3s; */
+  
+    white-space: pre-line;
+    font-size: 15px;
+    transform : rotateY(90deg);
+}
+
+.errorMsgDiv {
+    background-color: rgb(221, 221, 221);
+
+}
+
+.errorMsgDiv {
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12rem;
+    height: 67px;
+    font-weight: bold;
+    border-radius: 5px;
+  /* animation: rotatIn 0.3s ease-in-out; */
     transition: all ease-in-out 0.3s;
     white-space: pre-line;
     font-size: 15px;
-}
-
-.addMissionButton:hover {
-    border-color : rgb(11, 52, 11);
+    border-color : rgb(33, 37, 33);
     border: 2px solid rgb(224, 50, 50);
-
-    transform : rotateX(360deg);
+    animation-name: rotateIn;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.4s;
+    animation-fill-mode: backwards;
 
 }
 
-.duplicate {
+.animateIn
+{
+    animation-name: rotateIn;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.4s;
+    animation-fill-mode: backwards;
+
+}
+
+.animateOut
+{
+    animation-name: rotateOut;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.4s;
+    animation-fill-mode: backwards;
+
+}
+
+/* .duplicate {
     animation: rotatIn 0.3s ease-in-out;
     font-size: 12px;
     color: red;
-}
+} */
 
 @keyframes rotateIn 
 {
     0% { transform: rotateY(90deg);}
     100% { transform: rotateY(0deg);}  
+}
+
+@keyframes rotateOut
+{
+    0% { transform: rotateY(0deg);}
+    100% { transform: rotateY(90deg);}  
+
 }
 
 .textLabelText {
@@ -113,24 +158,41 @@
     width: 100%;
     grid-template-columns: 15% 80% auto;
     justify-items:left;
-
-
-       
+    animation-name: scaleIn;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.4s;
+    animation-fill-mode: forwards;
+      
 }
 
+@keyframes scaleIn {
+  0% { transform: scale(0, 0);}
+  5% { transform: scale(0.2, 0.2);}
+  30% { transform: scale(1, 0);}
+  100% {transform : scale(1, 1) ;}
+}
+
+
 .missionListArticle {
+    grid-template-rows: 1fr;
     border-radius : 5px;
     border : 2px solid darkblue;
     width:98%;
     padding: 5px 10px;
     background-color: var(--defaultBackground);
+    transition: grid-template-rows 0.3s ease;
 
+}
+
+.missionListArticle.open{
+    grid-template-rows: 1fr;
 }
 
 .missionList {
     flex-direction: column;
      gap : 10px;
     padding : 10px 20px;
+    overflow: hidden;
  
 
 }
