@@ -192,7 +192,7 @@ export function MissionRegForm()
                     {
                     if(getPriorityNumber(a.priority) == getPriorityNumber(b.priority)) return getDateObject(a.date).getTime() - getDateObject(b.date).getTime();
                     else return getPriorityNumber(a.priority) - getPriorityNumber(b.priority);
-                    
+
                     });
                 }
                 else newList = [... missionList];
@@ -204,7 +204,7 @@ export function MissionRegForm()
         // newList.forEach((item) => { item.animDelay = `${delay}ms`; delay += delayInc});
         // console.log(newList);
 
-        return setListAnimDelay(0, 300, newList);
+        return newList;
     }
 
     return(
