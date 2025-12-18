@@ -24,7 +24,7 @@ export function SortMenu({show, handleSortMenu} : sortOptions)
            <ul className="sortList">
                 <li onClick={() =>handleSortMenu("byDate")} className="sortListItem">Sort by Date</li>
                 <li onClick={() => handleSortMenu("byPriority")} className="sortListItem">Sort by Priority</li>
-                   <li onClick={() => handleSortMenu("unsorted")} className="sortListItem">Leave unsorted</li>
+                   <li onClick={() => handleSortMenu("unsorted")} className="sortListItem">Leave Unsorted</li>
             </ul>
            
          
