@@ -142,7 +142,7 @@
 .defaultForm {
     grid-template-columns: auto auto auto;
     align-items: center;
-    /* justify-content: left; */
+    
 
     width : 98%;
     column-gap: 15px;
