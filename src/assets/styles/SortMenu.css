@@ -14,6 +14,8 @@
     background-color:rgb(240, 240, 240);
     cursor: pointer;
      border-radius: 5px;
+   -webkit-box-shadow: 6px 9px 16px 0px rgba(0,0,0,0.95); 
+    box-shadow: 6px 9px 16px 0px rgba(0,0,0,0.95);
 }
 
 .sortMenuHeading {
