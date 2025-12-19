@@ -6,8 +6,6 @@ import { TextInput, type InputText} from "./inputs/TextInput"
 import { DateInput, type InputDate } from "./inputs/DateInput";
 import { type Priority, type InputPriority, PriorityInput } from "./inputs/PriorityInput";
 import { getColor } from "./inputs/PriorityInput";
-import { createPortal} from "react-dom";
-import { Footer } from "./Footer";
 import { SortMenu } from "./SortMenu";
 
 
@@ -100,17 +98,14 @@ export function MissionRegForm()
         {
          
             updateList((prevList) =>  [...prevList, { id : (missionList.length+1), mission : textInput, date : getProperDateString(dateInput), priority : priorityInput }]);
-            // setDateInput("");
-            // setTextInput("");
-            // setPriorityInput("Medium");
+            setTextInput("");
+            setPriorityInput("Medium");
         }
         else
         { 
-          
             setErrorMsg("Duplicate.\nPlease retype.");
-              setNewTransition((old) => old + 1);
+            setNewTransition((old) => old + 1);
         
-   
         }
     }
 
@@ -132,13 +127,27 @@ export function MissionRegForm()
         return false;
     }
 
-    useEffect( () =>
-    {
+    // useEffect( () =>
+    // {
+    //     const handleMenuToglle = (event) => 
+    //     {
+    //         if(event.ctrlKey && event.key === "m")
+    //         {
+    //             event.preventDefault();
+    //             console.log("ctrl + m detected");
+    //         }
+    //     }                    
+    //      window.addEventListener("keydown", handleMenuToglle(event)
+    //         {
+           
+
+    //         });
+    //     };
+        
 
 
-    }, []);
+    // }, []);
 
-   
     const [sortOrder, setSortOrder] = useState<SortMenuOptions>("unsorted")
 
     function getDateObject(dateString : string) : Date

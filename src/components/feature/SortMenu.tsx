@@ -22,9 +22,9 @@ export function SortMenu({show, handleSortMenu} : sortOptions)
             <p className="sortMenuHeading">Choose how to sort list :</p>
              <p className="toggleText">(<span className="toggleKeys">Ctrl + m</span>) to toggle Sort Menu</p>
            <ul className="sortList">
-                <li onClick={() =>handleSortMenu("byDate")} className="sortListItem">Sort by Date</li>
+                <li onClick={() => handleSortMenu("byDate")} className="sortListItem">Sort by Date</li>
                 <li onClick={() => handleSortMenu("byPriority")} className="sortListItem">Sort by Priority</li>
-                   <li onClick={() => handleSortMenu("unsorted")} className="sortListItem">Leave Unsorted</li>
+                <li onClick={() => handleSortMenu("unsorted")} className="sortListItem">Leave Unsorted</li>
             </ul>
            
          
