@@ -47,7 +47,8 @@ export function ExampleUseEffectFetchAdvanced() {
       });
       const data = await result.json();
 
-      if (data.status === "success") {
+      if (data.status === "success") 
+      {
         setImage(data.message as string);
         setStatus("done");
       } else {
