@@ -61,6 +61,7 @@ export function MissionRegForm()
     const [missionList, updateList] = useState<MissionData[]>([]);
     const [errorMsg, setErrorMsg] = useState<string>("");
     const [fireTransition, setNewTransition] = useState<number>(0);
+    const [showSortMenu, setShowSortMenu] = useState<boolean>(true);
 
 
 
@@ -127,26 +128,25 @@ export function MissionRegForm()
         return false;
     }
 
-    // useEffect( () =>
-    // {
-    //     const handleMenuToglle = (event) => 
-    //     {
-    //         if(event.ctrlKey && event.key === "m")
-    //         {
-    //             event.preventDefault();
-    //             console.log("ctrl + m detected");
-    //         }
-    //     }                    
-    //      window.addEventListener("keydown", handleMenuToglle(event)
-    //         {
-           
+    useEffect( () =>
+    {
+        const handleMenuToggle = (event) => 
+        {
+            if(event.ctrlKey && event.key === "m")
+            {
+                event.preventDefault();
+                console.log("ctrl + m detected");
+                setNewTransition((prev) => prev +1 );
+                setShowSortMenu((prev) => !prev);
 
-    //         });
-    //     };
+            }
+        }                    
+        window.addEventListener("keydown",  handleMenuToggle);
+               
         
+        return () => { window.removeEventListener("keydown", handleMenuToggle) } ;
 
-
-    // }, []);
+    }, []);
 
     const [sortOrder, setSortOrder] = useState<SortMenuOptions>("unsorted")
 
@@ -248,8 +248,9 @@ export function MissionRegForm()
                    
                 </article>
             </section>
-            <SortMenu show={missionList.length > 1 ? true : false} handleSortMenu={setSortOrder}/>
-        
+            {showSortMenu &&
+                <SortMenu show={missionList.length > 1 && showSortMenu ? true : false} handleSortMenu={setSortOrder}/>
+            }
 
           </main>
           {/* <Footer key={errorMsg} errorMsg={errorMsg}/>            */}
