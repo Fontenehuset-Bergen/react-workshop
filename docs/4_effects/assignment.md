@@ -34,3 +34,8 @@ interface Pokemon {
 
 ## Steg 5
 Lag et komponent som kan motta pokemon detaljer som props (bruk `pokemon` interfacen). Bruk disse props'ene til å vise detaljene for en enkelt pokemon. Største utfordringen i denne oppgaven er hvordan du skal velge hvilke `sprite` som skal brukes i `<img />` taggen.
+
+## Steg 6
+Forbedre funksjonaliteten til komponentet som vi lagde i `stage 1` ved å implementere pagination.
+
+Her ønsker jeg at dere begrenser antall pokemon som vises om gangen til bare 10 stykker. Resultatet blir at det kun skal være 10 knapper for å vælge en pokemon. Du må så lage to nye knapper som er ansvarlig for å generere nye lister for 10 forrige/neste pokemon. *Hint: Hvis du ser på resultatet så kan du finne next/prev i resultatet. Kanskje du kan lagre disse i en state?*
