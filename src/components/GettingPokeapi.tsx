@@ -1,5 +1,6 @@
 import   {useState, useEffect} from "react"
 import { GetPokeNames } from "./GetPokeNames";
+import { ShowPokemon } from "./ShowPokemon";
 
 export type Status = "loading" | "error" | "done";
 
@@ -18,7 +19,7 @@ export interface PokeResult {
 
 export interface PokeNames {
     names : PokeResult[]
-    setChosenName : (chosen : string) => void
+    setChosenPoke : (chosen : PokeResult) => void
 }
 
 // interface Ability {
@@ -33,12 +34,12 @@ export function GettingPokeapi()
     const [asyncStatus, setAsyncStatus] = useState<Status>("loading");
     const [pokeResult, setPokemonResult] = useState<PokeResult[]>([]);
     const [pokeNames, setPokeNames] = useState<PokeNames[]>([])
-    const [nameChosen, setChosenName] = useState<string>("none");
+    const [pokeChosen, setChosenPoke] = useState<PokeResult>({ name : "none", url : "none"});
     // setPokemonData((data) =>  { pokeData.name = data;}
 
     // );
 
-    console.log(nameChosen);
+    console.log(pokeChosen);
     useEffect(() =>
     {
         const abortController = new AbortController();
@@ -71,7 +72,11 @@ export function GettingPokeapi()
         <div>
            <p>Status of fetch : {asyncStatus}</p>
            {asyncStatus == "done" &&
-                <GetPokeNames names={pokeResult} setChosenName={setChosenName}/>
+                <GetPokeNames names={pokeResult} setChosenPoke={setChosenPoke}/>
+           }
+           {nameChosen.name, != "none" &&
+              <ShowPokemon name={nameChosen}/>
+           
            }
             
         </div>

@@ -67,13 +67,18 @@ interface Sprites
 
 }
 
-interface Pokemon {
+interface Pokemon 
+{
+
     id : number,
     name : string
     sprites : Sprites
     stats : Stats
-    types : Types
+    types : Types,
+    group : string,
+
 }
+
 
 
 
@@ -89,8 +94,9 @@ export function ShowPokemon({url } : PokeResult)
             const response = await fetch(url);
             if(response.ok)
             {
-                const data = await response.json();
+                const data : Pokemon = await response.json();
                 setLoadedStatus("done");
+                console.log(data);
             } else setLoadedStatus("error");
 
         }
@@ -103,7 +109,7 @@ export function ShowPokemon({url } : PokeResult)
         <>
          <div className="showPokeDiv">
             {isPokeLoaded === "done" &&
-
+             <p>Pokemon loaded</p>
 
 
             }

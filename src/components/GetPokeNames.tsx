@@ -1,13 +1,13 @@
 import { type PokeNames } from "./GettingPokeapi";
 
-export function GetPokeNames( {names, setChosenName} : PokeNames)
+export function GetPokeNames( {names, setChosenPoke} : PokeNames)
 {
     return(
         <>
           {
             names.map((current) =>
             (
-                <button onClick={() => setChosenName(current.name)}>{current.name}</button>
+                <button onClick={() => setChosenPoke(current.name)}>{current.name}</button>
             ))
                     
           }
