@@ -1,13 +1,80 @@
 import { useState, useEffect } from "react"
 import { type PokeResult, type Status } from "./GettingPokeapi"
 
+interface Stats 
+{
+    base_stat : number,
+    effort : number,
+    stat : {
+        name : string,
+        url : string
+    }
+}
+
+interface Types {
+    slot : number,
+    type : {
+        name : string,
+        url : string
+    }
+}
+
+interface Sprites 
+{
+    back_default : string,
+    back_female : string,
+    back_shiny : string,
+    back_shiny_female : string, 
+    front_default : string,
+    front_female : string,
+    front_shiny : string,
+    front_shiny_female : string,
+    other : 
+    {
+        dream_world :
+        {
+             front_default : string,
+             front_female :string
+
+        }
+        
+        home : 
+        {
+            front_default : string, 
+            front_female : null,
+            front_shiny : string,
+            front_shiny_female : null
+        }
+
+        offical_artwork : 
+        {
+            front_default : string,
+            front_shiny : string,
+        }
+
+        showdown : {
+
+            back_default : string,
+            back_female : string,
+            back_shiny : string,
+            back_shiny_female : null,
+            front_default : string,
+            front_female : string,
+            front_shiny : string,
+            front_shiny_female : string
+        }
+    }
+
+}
+
 interface Pokemon {
     id : number,
     name : string
-    sprites
-    stats
-    types
+    sprites : Sprites
+    stats : Stats
+    types : Types
 }
+
 
 
 export function ShowPokemon({url } : PokeResult)
