@@ -217,7 +217,7 @@ export function MissionRegForm()
               {
                   event.preventDefault();
                   console.log("ctrl + m detected");
-                  setTransformType((prev) => prev === "rotateY(0deg)" ? setTransformType("rotateY(-90deg)") : setTransformType("rotateY(0deg)"))
+                  setTransformType((prev) => prev === "rotateY(0deg)" ? "rotateY(90deg)" : "rotateY(0deg)");
                                   
   
               }
