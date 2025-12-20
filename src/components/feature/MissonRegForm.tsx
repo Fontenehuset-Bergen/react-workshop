@@ -50,6 +50,7 @@ function getProperDateString(dateString : string) : string
 }
 
 export type SortMenuOptions = "byDate" | "byPriority" | "unsorted";
+export type Transform = "rotateY(0deg)" | "rotateY(90deg)" | "rotateY(-90deg)";
 
 export function MissionRegForm()
 {
@@ -61,7 +62,9 @@ export function MissionRegForm()
     const [missionList, updateList] = useState<MissionData[]>([]);
     const [errorMsg, setErrorMsg] = useState<string>("");
     const [fireTransition, setNewTransition] = useState<number>(0);
-    const [showSortMenu, setShowSortMenu] = useState<boolean>(true);
+    const [showSortMenu, setShowSortMenu] = useState<boolean>(false);
+    const [transformType, setTransformType] = useState<Transform>("rotateY(90deg)");
+
 
 
 
@@ -98,7 +101,12 @@ export function MissionRegForm()
         if(!doesEntryExists( textInput, getProperDateString(dateInput)))
         {
          
-            updateList((prevList) =>  [...prevList, { id : (missionList.length+1), mission : textInput, date : getProperDateString(dateInput), priority : priorityInput }]);
+            updateList((prevList) => 
+            {
+               if(prevList.length == 1)  setTransformType("rotateY(0deg)");
+               return  [...prevList, { id : (missionList.length+1), mission : textInput, date : getProperDateString(dateInput), priority : priorityInput }];
+            });
+       
             setTextInput("");
             setPriorityInput("Medium");
         }
@@ -108,6 +116,7 @@ export function MissionRegForm()
             setNewTransition((old) => old + 1);
         
         }
+        
     }
 
     function chackForValidInput() : boolean{
@@ -128,25 +137,7 @@ export function MissionRegForm()
         return false;
     }
 
-    useEffect( () =>
-    {
-        const handleMenuToggle = (event) => 
-        {
-            if(event.ctrlKey && event.key === "m")
-            {
-                event.preventDefault();
-                console.log("ctrl + m detected");
-                setNewTransition((prev) => prev +1 );
-                setShowSortMenu((prev) => !prev);
-
-            }
-        }                    
-        window.addEventListener("keydown",  handleMenuToggle);
-               
-        
-        return () => { window.removeEventListener("keydown", handleMenuToggle) } ;
-
-    }, []);
+    
 
     const [sortOrder, setSortOrder] = useState<SortMenuOptions>("unsorted")
 
@@ -216,6 +207,30 @@ export function MissionRegForm()
         return newList;
     }
 
+
+
+    useEffect( () =>
+    {
+          const handleMenuToggle = (event) => 
+          {
+              if(event.ctrlKey && event.key === "m")
+              {
+                  event.preventDefault();
+                  console.log("ctrl + m detected");
+                  setTransformType((prev) => prev === "rotateY(0deg)" ? setTransformType("rotateY(-90deg)") : setTransformType("rotateY(0deg)"))
+                                  
+  
+              }
+          }                    
+          window.addEventListener("keydown",  handleMenuToggle);
+                 
+          
+          return () => { window.removeEventListener("keydown", handleMenuToggle) } ;
+  
+    }, []);
+    
+
+
     return(
            <>
            <main>
@@ -248,10 +263,9 @@ export function MissionRegForm()
                    
                 </article>
             </section>
-            {showSortMenu &&
-                <SortMenu show={missionList.length > 1 && showSortMenu ? true : false} handleSortMenu={setSortOrder}/>
-            }
-
+         
+              <SortMenu show={missionList.length > 1 ? true :  false} handleSortMenu={setSortOrder} transformType={transformType}/>
+            
           </main>
           {/* <Footer key={errorMsg} errorMsg={errorMsg}/>            */}
 

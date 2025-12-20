@@ -1,24 +1,20 @@
 import type { MouseEventHandler } from "react"
-import { type SortMenuOptions } from "./MissonRegForm";
-import React from "react"
-
+import { type SortMenuOptions, type Transform } from "./MissonRegForm";
+import { useEffect, useState } from "react";
 interface sortOptions 
 {
-    show : boolean,    
+    show: boolean, 
+    transformType : Transform
     handleSortMenu : (t:SortMenuOptions) => void,
 }
 
 
-export function SortMenu({show, handleSortMenu} : sortOptions)
+export function SortMenu({show, handleSortMenu, transformType} : sortOptions)
 {
-    const handleClick = (option: SortMenuOptions )=>
-    {
-        handleSortMenu(option);
-
-    }
-
+   
     return(
-        <div className="sortMenu flex" style={show ? {transform: "rotateY(0deg)"}: {transform: "rotateY(90deg)" } }>
+    
+    <div className="sortMenu flex" style={{transform: transformType} }>
             <p className="sortMenuHeading">Choose how to sort list :</p>
              <p className="toggleText">(<span className="toggleKeys">Ctrl + m</span>) to toggle Sort Menu</p>
            <ul className="sortList">
