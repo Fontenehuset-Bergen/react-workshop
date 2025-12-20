@@ -41,9 +41,10 @@ function getProperDateString(dateString : string) : string
     if(!isNaN(date.getTime()))
     {
         const day = date.getDate();
-        const month = date.getMonth();
+        const month = date.getMonth()+1;
         const year = date.getFullYear();
-        return `${day}/${month}/${year}`
+        const monthstr = month < 10 ? `0${month}` : `${month}`
+        return `${day}/${monthstr}/${year}`
     
     }
     return dateString;
@@ -126,6 +127,7 @@ export function MissionRegForm()
             if(!isNaN(enteredDate.getTime()))
             {
                 const today = new Date();
+                if(today.getFullYear() < enteredDate.getFullYear()) return true;
                 if(today.getDate() <= enteredDate.getDate())
                     {
                        
@@ -144,7 +146,9 @@ export function MissionRegForm()
     function getDateObject(dateString : string) : Date
     {
         const stringArray: string[] = dateString.split("/");
-        const [day, month, year] = stringArray;
+        let [day, month, year] = stringArray;
+        
+        if(month.length < 2) month = `0${month}`
         // console.log(stringArray);
         return new Date(`${year}-${month}-${day}`);
 
