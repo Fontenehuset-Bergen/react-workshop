@@ -7,13 +7,13 @@ interface pokemonInt {
 
 interface pokeDex {
     id: number,
-    sprites: {front_default: string},
+    sprites: { front_default: string },
 };
 
 export function PokemonApi() {
     const [ pokemonData, setPokemonData ] = useState<pokemonInt[]>([]);
-    const [ currentPokemon, setCurrentPokemon ] = useState<pokemonInt>({name: , url: });
-    const [ pokeDexInfo, setPokeDexInfo ] = useState<pokeDex[]>([]);
+    const [ currentPokemon, setCurrentPokemon ] = useState<pokemonInt>({name: "", url: ""});
+    const [ pokeDexInfo, setPokeDexInfo ] = useState<pokeDex | null>(null);
     const dexurl = currentPokemon.url;
 
     console.log(`current pokemon is ${currentPokemon.name}`);
@@ -33,16 +33,31 @@ export function PokemonApi() {
             }
             fetchPokemon();
 
-            async function fetchPokeDex() {
-                const pokedexResult = await fetch(dexurl, { signal: abortController.signal });
-                const pokedexData: { results: pokeDex[] } = await pokedexResult.json();
-                const pokeDexEntry = pokedexData.results
-                setPokeDexInfo(pokeDexEntry)
-            }
-            fetchPokeDex();
+            // async function fetchPokeDex() {
+            //     const pokedexResult = await fetch(dexurl, { signal: abortController.signal });
+            //     const pokedexData: { results: pokeDex } = await pokedexResult.json();
+            //     const pokeDexEntry = pokedexData.results
+            //     setPokeDexInfo(pokeDexEntry)
+            //     console.log(`entry is ${pokeDexInfo}`)
+            // }
+            // fetchPokeDex();
 
             return () => abortController.abort();
         }, []);
+
+        useEffect(
+            () => {
+                const abortController = new AbortController();
+                async function fetchPokeDex() {
+                const pokedexResult = await fetch(dexurl, { signal: abortController.signal });
+                const pokedexData: { results: pokeDex } = await pokedexResult.json();
+                const pokeDexEntry = pokedexData.results
+                setPokeDexInfo(pokeDexEntry)
+                console.log(`entry is ${pokeDexInfo}`)
+            }
+            fetchPokeDex();
+            return () => abortController.abort();
+            }, [currentPokemon]);
 
     return(
         <>
@@ -57,11 +72,10 @@ export function PokemonApi() {
             <div>
                 The current pokemon is {currentPokemon.name}
 
-                {pokeDexInfo.map( (apokemonsinfo) =>
+                {pokeDexInfo && (
                 <>
-                <p>Name: {apokemonsinfo.id}</p>
-                <img src={apokemonsinfo.sprites.front_default} alt="sprite" />
-                <img src={pokeDexInfo.sprites.front_default} />
+                <p>Name: {pokeDexInfo.id}</p>
+                <img src={pokeDexInfo.sprites.front_default} alt="sprite" />
                 </>
                 )}
  
