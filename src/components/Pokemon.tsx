@@ -12,11 +12,14 @@ interface pokeDex {
 
 export function PokemonApi() {
     const [ pokemonData, setPokemonData ] = useState<pokemonInt[]>([]);
-    const [ currentPokemon, setCurrentPokemon ] = useState<pokemonInt>({name: "", url: ""});
+    const [ currentPokemon, setCurrentPokemon ] = useState<pokemonInt>({name: , url: });
     const [ pokeDexInfo, setPokeDexInfo ] = useState<pokeDex[]>([]);
-    
+    const dexurl = currentPokemon.url;
 
-    console.log(currentPokemon.url)
+    console.log(`current pokemon is ${currentPokemon.name}`);
+    console.log(`dexurl is ${dexurl}`);
+    console.log(pokemonData);
+    console.log(pokeDexInfo);
 
     useEffect(
         () => {
@@ -30,8 +33,6 @@ export function PokemonApi() {
             }
             fetchPokemon();
 
-            const dexurl = currentPokemon.url;
-            console.log(dexurl)
             async function fetchPokeDex() {
                 const pokedexResult = await fetch(dexurl, { signal: abortController.signal });
                 const pokedexData: { results: pokeDex[] } = await pokedexResult.json();
