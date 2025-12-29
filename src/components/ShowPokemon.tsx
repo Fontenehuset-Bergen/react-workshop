@@ -82,6 +82,10 @@ interface Pokemon
 
 
 
+
+
+
+
 export function ShowPokemon({url } : PokeResult)
 {
     const [isPokeLoaded, setLoadedStatus] = useState<Status>("loading");
