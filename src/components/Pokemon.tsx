@@ -47,14 +47,15 @@ export function PokemonApi() {
 
         useEffect(
             () => {
+                if (!currentPokemon.url) return;
                 const abortController = new AbortController();
+
                 async function fetchPokeDex() {
-                const pokedexResult = await fetch(dexurl, { signal: abortController.signal });
-                const pokedexData: { results: pokeDex } = await pokedexResult.json();
-                const pokeDexEntry = pokedexData.results
-                setPokeDexInfo(pokeDexEntry)
-                console.log(`entry is ${pokeDexInfo}`)
-            }
+                    const pokedexResult = await fetch(dexurl, { signal: abortController.signal });
+                    const pokedexData: pokeDex = await pokedexResult.json();
+                    setPokeDexInfo(pokedexData)
+                    console.log(`entry is ${pokeDexInfo}`)
+                }
             fetchPokeDex();
             return () => abortController.abort();
             }, [currentPokemon]);
@@ -69,12 +70,12 @@ export function PokemonApi() {
                 )}
             </div>
 
-            <div>
+            <div id="pokemoncontainer">
                 The current pokemon is {currentPokemon.name}
 
                 {pokeDexInfo && (
                 <>
-                <p>Name: {pokeDexInfo.id}</p>
+                <p>id: {pokeDexInfo.id}</p>
                 <img src={pokeDexInfo.sprites.front_default} alt="sprite" />
                 </>
                 )}

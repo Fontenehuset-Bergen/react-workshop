@@ -86,3 +86,7 @@ button:focus:not(:focus-visible) {
     background-color: #f9f9f9;
   }
 }
+
+#pokemoncontainer {
+  background-color: #213547;
+}
