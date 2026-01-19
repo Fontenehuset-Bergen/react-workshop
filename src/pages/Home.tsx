@@ -1,26 +1,13 @@
-import { HomepageHero } from "../components/feature/Hero";
-import "../assets/styles/example.css";
-import JuleBakstGalleri from "../components/JuleBakstGalleri";
-import { MyButton } from "../components/ui/buttons/Button";
-// import Julebrus from "../components/Julebrus";
+import { HomepageHero } from '../components/feature/Hero'
+import '../assets/styles/example.css'
 
 function App() {
+
   return (
-    <>
+    <main>
       <HomepageHero />
-      <MyButton label="blambla" className="" />
-      <div className="card">
-        <p>
-          Endre og legg til i <code>src/App.tsx</code> legg til din egen
-          komponent og se resultatet!
-        </p>
-      </div>
-      <div className="app-wrapper">
-        <JuleBakstGalleri />
-        {/* <Julebrus /> */}
-      </div>
-    </>
-  );
+    </main>
+  )
 }
 
 export default App;
