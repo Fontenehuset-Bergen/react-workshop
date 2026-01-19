@@ -9,19 +9,20 @@ Velkommen! Dette repositoriet brukes i en nybegynnervennlig workshop i regi av F
 
 - [Terminologi](./docs/1_introduction/terminology.md)
 - [Dokumentasjon](./docs/README.md)
-    - [Introduksjon](./docs/1_introduction/README.md)
-    - Komponenter
-    - [States](./docs/3_states/README.md)
-    - Effects
+  - [Introduksjon](./docs/1_introduction/README.md)
+  - Komponenter
+  - [States](./docs/3_states/README.md)
+  - [Effects](./docs/4_effects/README.md)
 - Oppgaver
   - Uke 1: [Intro](./docs/1_introduction/assignment/README.md)
   - Uke 2: [Komponenter](./docs/2_components/assignment.md)
-  - Uke 3: States
-  - Uke 4: Effects
+  - Uke 3: [States](./docs/3_states/assignment.md)
+  - Uke 4: [Effects](./docs/4_effects/README.md)
 - Gruppeprosjekt
 - [Velg arbeidsmetode](#velg-arbeidsmåte-stackblitz-eller-lokalt)
 
 ## Velg arbeidsmåte: StackBlitz eller lokalt
+
 Vi kommer til å bruke Stackblitz som en del av undervisning, men for de som er interessert i å prøve seg på lokal utvikling med programmer installert på din egen maskin anbefaler jeg å prøve dette. Vi kan være til hjelp hvis du møter på noen problemer underveis, men dette vill skje utenom undervisning.
 
 ### A. StackBlitz (nettleser)

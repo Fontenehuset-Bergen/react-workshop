@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Kontorstol",
+    "price": 1299,
+    "description": "Ergonomisk kontorstol med justerbar høyde og ryggstøtte. Gir støtte gjennom hele arbeidsdagen og passer godt både på hjemmekontor og i åpent kontorlandskap.",
+    "imageUrl": "/products/kontorstol.webp",
+    "inStock": true,
+    "isOnSale": false
+  },
+  {
+    "name": "Skrivebordslampe",
+    "price": 399,
+    "description": "Justerbar skrivebordslampe som gir behagelig arbeidslys uten å blende. Perfekt når du jobber ved PC-en eller skriver for hånd på kveldstid.",
+    "imageUrl": "/products/skrivebordslampe.png",
+    "inStock": true,
+    "isOnSale": true
+  },
+  {
+    "name": "Laptopstativ",
+    "price": 349,
+    "description": "Stativ til bærbar PC som løfter skjermen opp i øyehøyde. Bidrar til en mer ergonomisk arbeidsstilling og gir bedre plass til tastatur og mus på pulten.",
+    "imageUrl": "/products/laptopstativ.webp",
+    "inStock": true,
+    "isOnSale": false
+  },
+  {
+    "name": "Notatbok A4",
+    "price": 79,
+    "description": "Linjert notatbok i A4-format til møte-notater, planlegging og idémyldring. Solid omslag og god papirkvalitet som gjør det behagelig å skrive med både penn og blyant.",
+    "imageUrl": "/products/notatbok-a4.webp",
+    "inStock": true,
+    "isOnSale": true
+  },
+  {
+    "name": "Kulepenn 10-pakning",
+    "price": 59,
+    "description": "Pakke med 10 blå kulepenner til daglig bruk på kontoret. Skriv jevnt uten å skrape, og ha alltid en ekstra penn tilgjengelig på pulten eller i vesken.",
+    "imageUrl": "/products/kulepenn-pakke.png",
+    "inStock": false,
+    "isOnSale": false
+  },
+  {
+    "name": "Hodetelefoner med mikrofon",
+    "price": 649,
+    "description": "Komfortable hodetelefoner med innebygd mikrofon til videomøter og fokusarbeid. Demper lyd fra omgivelsene og gjør det enklere å høre kollegaer tydelig på nett.",
+    "imageUrl": "/products/hodetelefoner.webp",
+    "inStock": true,
+    "isOnSale": false
+  },
+  {
+    "name": "Musmatte",
+    "price": 99,
+    "description": "Enkel og slitesterk musmatte som gir jevn bevegelse for datamusen. Passer fint på de fleste skrivebord og gjør det mer behagelig å jobbe lenge ved PC-en.",
+    "imageUrl": "/products/musmatte.avif",
+    "inStock": true,
+    "isOnSale": true
+  },
+  {
+    "name": "Dokumentmappe",
+    "price": 89,
+    "description": "Tynn dokumentmappe til oppbevaring av viktige papirer, søknader og møterapporter. Holder arkene rene og pene, og gjør det enklere å holde orden på papirene.",
+    "imageUrl": "/products/dokumentmappe.png",
+    "inStock": false,
+    "isOnSale": false
+  },
+  {
+    "name": "Whiteboard-tavle",
+    "price": 599,
+    "description": "Mellomstor whiteboard-tavle til planlegging, idédugnad og beskjeder. Leveres med oppheng og kan brukes sammen med tusj og magneter for et fleksibelt arbeidsverktøy.",
+    "imageUrl": "/products/whiteboard.webp",
+    "inStock": true,
+    "isOnSale": true
+  },
+  {
+    "name": "Kontorkrus",
+    "price": 89,
+    "description": "Enkelt, hvitt kontorkrus til kaffe, te eller kakao i pausene. Tåler oppvaskmaskin og passer fint inn på skrivebordet ved siden av PC-en og notatboken.",
+    "imageUrl": "/products/kontorkrus.webp",
+    "inStock": true,
+    "isOnSale": false
+  }
+]

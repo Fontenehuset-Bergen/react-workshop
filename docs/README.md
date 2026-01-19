@@ -15,12 +15,21 @@ Du kan bruke innholdslisten under til å navigere når du besøker prosjektet p�
   - [Grunnleggende React](./1_introduction/4_react_fundaments.md)
   - [React developer tools](./1_introduction/5_react_developer_tools.md)
 - Komponenter
-- States
-- Effects
+- [States](./3_states/README.md)
+  - [What is a state](./3_states/1_what_is_state.md)
+  - [State in react](./3_states/2_state_in_react.md)
+  - [Persistance](./3_states/3_persistance.md)
+  - [Pitfalls](./3_states/4_pitfalls.md)
+- [Effects](./4_effects/README.md)
+  - [Effects intro](./4_effects/1_introduction.md)
+  - [How to use](./4_effects/2_how_to_use.md)
+  - [Effects and states](./4_effects/3_effects_and_states.md)
+  - [Fetching](./4_effects/4_fetching.md)
+  - [Hooks](./4_effects/5_hooks.md)
 
 ## Oppgaver
 
 - uke 1: [Javascript recap](./1_introduction/assignment/README.md)
 - uke 2: Komponenter
-- uke 3: Tilstander
-- uke 4: Effekter
+- uke 3: [Tilstander](./3_states/assignment.md)
+- uke 4: [Effekter](./4_effects/assignment.md)
