@@ -1,0 +1,1 @@
+import type { MyDefaultType} from "./export"

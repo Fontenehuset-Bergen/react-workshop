@@ -16,7 +16,7 @@ Velkommen! Dette repositoriet brukes i en nybegynnervennlig workshop i regi av F
 - Oppgaver
   - Uke 1: [Intro](./docs/1_introduction/assignment/README.md)
   - Uke 2: [Komponenter](./docs/2_components/assignment.md)
-  - Uke 3: States
+  - Uke 3: [States](./docs/3_states/assignment.md)
   - Uke 4: [Effects](./docs/4_effects/README.md)
 - Gruppeprosjekt
 - [Velg arbeidsmetode](#velg-arbeidsmåte-stackblitz-eller-lokalt)
