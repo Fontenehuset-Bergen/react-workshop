@@ -1,5 +1,15 @@
 # Statiske komponenter
 
+## JSX
+
+## Attributer
+
+## Små byggeklosser
+
+## Fragmenter
+
+## Key
+
 ---
 
 <table width="100%">

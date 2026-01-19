@@ -1,4 +1,8 @@
-# Props
+# Kondisjoner
+
+## Bettingen UI
+
+## Loading states
 
 ---
 

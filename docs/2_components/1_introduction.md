@@ -1,5 +1,13 @@
 # Introduksjon til komponenter i React
 
+## Hva er et komponent?
+
+## Navnekonvensjoner
+
+## Mappestrukturer
+
+## Vanlige feil
+
 ---
 
 <table width="100%">
